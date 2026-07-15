@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+import_export_timesheets.access_import_timesheet_line_wizard,access_import_timesheet_line_wizard,import_export_timesheets.model_import_timesheet_line_wizard,base.group_user,1,1,1,1
+import_export_timesheets.access_filosoft_export_wizard,access_filosoft_export_wizard,import_export_timesheets.model_filosoft_export_wizard,base.group_user,1,1,1,1

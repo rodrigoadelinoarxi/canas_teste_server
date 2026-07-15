@@ -1,0 +1,38 @@
+<odoo>
+    <!--<record model ="ir.ui.view" id="export_bom_sheet_wizard_form">-->
+        <!--<field name="name">export.bom.sheet.wizard.form</field>-->
+        <!--<field name="model">export.bom.sheet.wizard</field>-->
+        <!--<field name="arch" type="xml">-->
+            <!--<form string="export wizard">-->
+                <!--<label for="for_general" string="This wizard will Export a BoM in Excel Format."/>-->
+                <!--<footer>-->
+                    <!--<button name="print_bom_sheet_excel" type="object" string="Export Excel" class="btn-primary"/>-->
+                    <!--or-->
+                    <!--<button string="Cancel" class="btn-default" special="cancel" />-->
+                <!--</footer>-->
+            <!--</form>-->
+        <!--</field>-->
+    <!--</record>-->
+
+    <!--<record id="view_bom_report_output_excel" model="ir.ui.view">-->
+        <!--<field name="name">Excel Output</field>-->
+        <!--<field name="model">bom.report.output.excel</field>-->
+        <!--<field name="arch" type="xml">-->
+            <!--<form string="Budget Report">-->
+                <!--<separator colspan="4" string="Please save file as .xls excel format"/>-->
+                <!--<field name="name" invisible="1"/>-->
+                <!--<field name="xls_output" filename='name'/>-->
+                <!--<footer>-->
+                    <!--<button string="Cancel" class="oe_link" special="cancel"/>-->
+                <!--</footer>-->
+            <!--</form>-->
+        <!--</field>-->
+    <!--</record>-->
+
+    <!--<record model="ir.actions.act_window" id="export_bom_wizard_action">-->
+        <!--<field name="name">Export Bom In Excel Format</field>-->
+        <!--<field name="res_model">export.bom.sheet.wizard</field>-->
+        <!--<field name="view_mode">form</field>-->
+        <!--<field name="target">new</field>-->
+    <!--</record>-->
+</odoo>

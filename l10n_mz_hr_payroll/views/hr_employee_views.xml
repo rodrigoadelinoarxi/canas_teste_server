@@ -1,0 +1,12 @@
+<odoo>
+    <record id="view_employee_form_l10n_mz_inherit" model="ir.ui.view">
+        <field name="name">view.employee.form.l10n.mz.inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <field name="job_id" position="after">
+                <field name="subject_to_social_security"/>
+            </field>
+        </field>
+    </record>
+</odoo>
