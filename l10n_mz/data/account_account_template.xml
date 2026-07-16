@@ -1,0 +1,3020 @@
+<odoo>
+    <record id="account1" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">1</field>
+        <field name="name">Meios financeiros</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account11" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">11</field>
+        <field name="name">Caixa</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account12" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">12</field>
+        <field name="name">Bancos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account121" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">121</field>
+        <field name="name">Depósitos a ordem</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account122" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">122</field>
+        <field name="name">Depósitos com pré-aviso</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account123" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">123</field>
+        <field name="name">Depósitos a prazo</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account13" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">13</field>
+        <field name="name">Outros instrumentos financeiros</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account131" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">131</field>
+        <field name="name">Derivados</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account132" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">132</field>
+        <field name="name">Detidos para negociação</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account133" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">133</field>
+        <field name="name">Outros instrumentos financeiros ao justo valor através dos resultados</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account2" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">2</field>
+        <field name="name">Inventários e activos biológicos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account21" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">21</field>
+        <field name="name">Compras</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account212" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">212</field>
+        <field name="name">Matérias primas, auxiliares e materiais</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account2121" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">2121</field>
+        <field name="name">Matérias primas</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account2122" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">2122</field>
+        <field name="name">Matérias auxiliares</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account2123" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">2123</field>
+        <field name="name">Materiais</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account21231" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">21231</field>
+        <field name="name">Combustíveis e lubrificantes</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account21232" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">21232</field>
+        <field name="name">Embalagens comerciais</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account21233" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">21233</field>
+        <field name="name">Peças e sobressalentes</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account21239" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">21239</field>
+        <field name="name">Materiais diversos</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account217" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">217</field>
+        <field name="name">Devoluções de compras</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account218" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">218</field>
+        <field name="name">Descontos e abatimentos em compras</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account22" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">22</field>
+        <field name="name">Mercadorias</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account222" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">222</field>
+        <field name="name">Mercadorias em poder de terceiros</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account23" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">23</field>
+        <field name="name">Produtos acabados e intermédios</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account231" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">231</field>
+        <field name="name">Produtos acabados em poder de terceiros</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account24" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">24</field>
+        <field name="name">Subprodutos, desperdícios, resíduos e refugos</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account241" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">241</field>
+        <field name="name">Subprodutos</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account242" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">242</field>
+        <field name="name">Desperdícios, resíduos e refugos</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account25" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">25</field>
+        <field name="name">Produtos ou serviços em curso</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account26" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">26</field>
+        <field name="name">Matérias primas, auxiliares e materiais</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account261" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">261</field>
+        <field name="name">Matérias primas</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account262" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">262</field>
+        <field name="name">Matérias auxiliares</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account263" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">263</field>
+        <field name="name">Materiais</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account2631" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">2631</field>
+        <field name="name">Combustíveis e lubrificantes</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account2632" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">2632</field>
+        <field name="name">Embalagens comerciais</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account2633" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">2633</field>
+        <field name="name">Peças e sobressalentes</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account2639" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">2639</field>
+        <field name="name">Materiais diversos</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account264" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">264</field>
+        <field name="name">Matérias primas, auxiliares e materiais em trânsito</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account27" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">27</field>
+        <field name="name">Activos biológicos</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account271" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">271</field>
+        <field name="name">De produção</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account2711" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">2711</field>
+        <field name="name">Animais</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account2712" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">2712</field>
+        <field name="name">Plantas</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account272" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">272</field>
+        <field name="name">Consumíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account2721" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">2721</field>
+        <field name="name">Animais</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account2722" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">2722</field>
+        <field name="name">Plantas</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account28" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">28</field>
+        <field name="name">Regularização de inventários</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account282" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">282</field>
+        <field name="name">Mercadorias</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account283" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">283</field>
+        <field name="name">Produtos acabados e intermédios</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account284" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">284</field>
+        <field name="name">Subprodutos, desperdícios, resíduos e refugos</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account285" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">285</field>
+        <field name="name">Produtos ou serviços em curso</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account286" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">286</field>
+        <field name="name">Matérias primas, auxiliares e materiais</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account287" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">287</field>
+        <field name="name">Activos biológicos</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account29" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">29</field>
+        <field name="name">Ajustamentos para o valor realizável líquido</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account292" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">292</field>
+        <field name="name">Mercadorias</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account293" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">293</field>
+        <field name="name">Produtos acabados e intermédios</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account294" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">294</field>
+        <field name="name">Subprodutos, desperdícios, resíduos ou refugos</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account295" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">295</field>
+        <field name="name">Produtos ou serviços em curso</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account296" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">296</field>
+        <field name="name">Matérias primas, auxiliares e materiais</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account297" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">297</field>
+        <field name="name">Activos biológicos</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account3" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">3</field>
+        <field name="name">Investimentos de capital</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account31" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">31</field>
+        <field name="name">Investimentos financeiros</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account311" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">311</field>
+        <field name="name">Investimentos em subsidiárias</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account312" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">312</field>
+        <field name="name">Investimentos em associadas</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account313" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">313</field>
+        <field name="name">Investimentos em entidades conjuntamente controladas</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account314" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">314</field>
+        <field name="name">Outros investimentos financeiros</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account315" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">315</field>
+        <field name="name">Investimentos detidos até à maturidade</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account316" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">316</field>
+        <field name="name">Outros investimentos disponíveis para venda</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account32" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">32</field>
+        <field name="name">Activos tangíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account321" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">321</field>
+        <field name="name">Construções</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account3211" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">3211</field>
+        <field name="name">Edifícios industriais</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account3212" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">3212</field>
+        <field name="name">Edifícios administrativos e comerciais</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account3213" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">3213</field>
+        <field name="name">Edifícios para habitação e outros fins sociais</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account3216" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">3216</field>
+        <field name="name">Vias de comunicação e construções afins</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account322" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">322</field>
+        <field name="name">Equipamento básico</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account323" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">323</field>
+        <field name="name">Mobiliário e equipamento administrativo social</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account324" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">324</field>
+        <field name="name">Equipamento de transporte</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account325" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">325</field>
+        <field name="name">Taras e vasilhame</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account326" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">326</field>
+        <field name="name">Ferramentas e utensílios</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account327" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">327</field>
+        <field name="name">Activos de exploração e avaliação de recursos minerais</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account329" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">329</field>
+        <field name="name">Outros activos tangíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account33" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">33</field>
+        <field name="name">Activos intangíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account331" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">331</field>
+        <field name="name">Despesas de desenvolvimento</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account332" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">332</field>
+        <field name="name">Propriedade industrial e outros direitos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account333" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">333</field>
+        <field name="name">Goodwill</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account334" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">334</field>
+        <field name="name">Activos de exploração e avaliação de recursos minerais</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account34" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">34</field>
+        <field name="name">Investimentos em curso</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account342" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">342</field>
+        <field name="name">Activos tangíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account343" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">343</field>
+        <field name="name">Activos intangíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account35" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">35</field>
+        <field name="name">Activos não correntes detidos para venda</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account36" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">36</field>
+        <field name="name">Activos tangíveis de investimento</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account38" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">38</field>
+        <field name="name">Amortizações acumuladas</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account382" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">382</field>
+        <field name="name">Activos tangíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account383" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">383</field>
+        <field name="name">Activos intangíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account386" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">386</field>
+        <field name="name">Activos tangíveis de investimento</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account387" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">387</field>
+        <field name="name">Activos de exploração e avaliação de recursos minerais</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account39" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">39</field>
+        <field name="name">Imparidade acumulada de investimentos de capital</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account391" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">391</field>
+        <field name="name">Investimentos financeiros</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account392" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">392</field>
+        <field name="name">Activos tangíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account393" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">393</field>
+        <field name="name">Activos intangíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account395" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">395</field>
+        <field name="name">Activos não correntes detidos para venda</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account396" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">396</field>
+        <field name="name">Activos tangíveis de investimento</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account397" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">397</field>
+        <field name="name">Activos de exploração e avaliação de recursos minerais</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account4" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4</field>
+        <field name="name">Contas a receber, contas a pagar, acréscimos e diferimentos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account41" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">41</field>
+        <field name="name">Clientes</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account411" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">411</field>
+        <field name="name">Clientes c/c</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account412" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">412</field>
+        <field name="name">Clientes - títulos a receber</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account418" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">418</field>
+        <field name="name">Clientes de cobrança duvidosa</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account419" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">419</field>
+        <field name="name">Adiantamentos de clientes</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account42" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">42</field>
+        <field name="name">Fornecedores</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account421" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">421</field>
+        <field name="name">Fornecedores c/c</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account422" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">422</field>
+        <field name="name">Fornecedores - Títulos a pagar</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account429" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">429</field>
+        <field name="name">Adiantamentos a fornecedores</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account43" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">43</field>
+        <field name="name">Empréstimos obtidos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account431" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">431</field>
+        <field name="name">Empréstimos bancários</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4311" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4311</field>
+        <field name="name">de curto prazo</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4312" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4312</field>
+        <field name="name">de médio e longo prazo</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account432" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">432</field>
+        <field name="name">Empréstimos por obrigações</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4321" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4321</field>
+        <field name="name">Convertíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4322" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4322</field>
+        <field name="name">Não convertíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account433" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">433</field>
+        <field name="name">Empréstimos por títulos de participação</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account439" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">439</field>
+        <field name="name">Outros empréstimos obtidos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account44" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">44</field>
+        <field name="name">Estado</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account441" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">441</field>
+        <field name="name">Imposto sobre o rendimento</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4411" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4411</field>
+        <field name="name">Estimativa de imposto</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4412" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4412</field>
+        <field name="name">Pagamentos por conta</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4413" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4413</field>
+        <field name="name">Pagamento especial por conta</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account442" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">442</field>
+        <field name="name">Impostos retidos na fonte</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4421" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4421</field>
+        <field name="name">Rendimentos de trabalho dependente</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account4422" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4422</field>
+        <field name="name">Rendimentos profissionais</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4423" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4423</field>
+        <field name="name">Rendimentos de capitais</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4424" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4424</field>
+        <field name="name">Rendimentos prediais</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4425" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4425</field>
+        <field name="name">Outros rendimentos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account443" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">443</field>
+        <field name="name">Imposto sobre o valor acrescentado</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4431" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4431</field>
+        <field name="name">IVA suportado</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account44311" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">44311</field>
+        <field name="name">Inventários</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account44312" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">44312</field>
+        <field name="name">Activos tangíveis e intangíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account44313" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">44313</field>
+        <field name="name">Outros bens e serviços</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4432" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4432</field>
+        <field name="name">IVA dedutível</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account44321" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">44321</field>
+        <field name="name">Inventários</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account44322" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">44322</field>
+        <field name="name">Activos tangíveis e intangíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account44323" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">44323</field>
+        <field name="name">Outros bens e serviços</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4433" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4433</field>
+        <field name="name">IVA liquidado</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account44331" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">44331</field>
+        <field name="name">Operações gerais</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account44332" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">44332</field>
+        <field name="name">Autoconsumos e operações gratuitas</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account44333" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">44333</field>
+        <field name="name">Operações especiais</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4434" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4434</field>
+        <field name="name">IVA regularizações</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account44341" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">44341</field>
+        <field name="name">Mensais a favor do sujeito passivo</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account44342" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">44342</field>
+        <field name="name">Mensais a favor do Estado</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account44343" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">44343</field>
+        <field name="name">Anuais por cálculo do pro rata definitivo</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account4435" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4435</field>
+        <field name="name">IVA apuramento</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4436" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4436</field>
+        <field name="name">IVA liquidações oficiosas</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4437" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4437</field>
+        <field name="name">IVA a pagar</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4438" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4438</field>
+        <field name="name">IVA a recuperar</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account4439" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4439</field>
+        <field name="name">IVA reembolsos pedidos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account444" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">444</field>
+        <field name="name">Restantes impostos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4441" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4441</field>
+        <field name="name">Imposto de selo</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4442" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4442</field>
+        <field name="name">Impostos autárquicos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account445" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">445</field>
+        <field name="name">Rectificações de impostos, contribuições e outros tributos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account446" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">446</field>
+        <field name="name">Impostos diferidos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4461" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4461</field>
+        <field name="name">Activos por impostos diferidos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4462" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4462</field>
+        <field name="name">Passivos por impostos diferidos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account449" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">449</field>
+        <field name="name">Contribuições para o INSS</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account45" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">45</field>
+        <field name="name">Outros devedores</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account451" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">451</field>
+        <field name="name">Pessoal</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4511" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4511</field>
+        <field name="name">Adiantamentos aos órgãos sociais</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4512" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4512</field>
+        <field name="name">Adiantamentos aos trabalhadores</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4513" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4513</field>
+        <field name="name">Benefícios pós-emprego</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4518" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4518</field>
+        <field name="name">Outras operações com órgãos sociais</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4519" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4519</field>
+        <field name="name">Outras operações com trabalhadores</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account452" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">452</field>
+        <field name="name">Subscritores de capital</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4521" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4521</field>
+        <field name="name">Estado e outros organismos públicos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4522" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4522</field>
+        <field name="name">Entidades privadas</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4529" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4529</field>
+        <field name="name">Outras entidades</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account453" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">453</field>
+        <field name="name">Obrigacionistas</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account454" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">454</field>
+        <field name="name">Devedores - sócios, accionistas ou proprietários</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4541" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4541</field>
+        <field name="name">Empréstimos concedidos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4542" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4542</field>
+        <field name="name">Adiantamento por conta de lucros</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4543" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4543</field>
+        <field name="name">Resultados atribuídos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4544" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4544</field>
+        <field name="name">Lucros disponíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4549" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4549</field>
+        <field name="name">Outras operações</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account455" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">455</field>
+        <field name="name">Subsídios a receber</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account4551" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4551</field>
+        <field name="name">Estado e outros organismos públicos</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account4552" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4552</field>
+        <field name="name">Entidades privadas</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account459" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">459</field>
+        <field name="name">Devedores diversos</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account46" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">46</field>
+        <field name="name">Outros credores</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account461" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">461</field>
+        <field name="name">Fornecedores de investimentos de capital</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4611" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4611</field>
+        <field name="name">Fornecedores de investimentos de capital c/c</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4612" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4612</field>
+        <field name="name">Fornecedores de investimentos de capital - Títulos a pagar</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4613" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4613</field>
+        <field name="name">Fornecedores de investimentos de capital - Adiantamentos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4614" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4614</field>
+        <field name="name">Fornecedores de investimentos de capital - Locação Financeira</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4619" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4619</field>
+        <field name="name">Outras operações</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account462" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">462</field>
+        <field name="name">Pessoal</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account4621" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4621</field>
+        <field name="name">Remunerações a pagar aos órgãos sociais</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account4622" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4622</field>
+        <field name="name">Remunerações a pagar aos trabalhadores</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account4623" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4623</field>
+        <field name="name">Benefícios pós-emprego</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4628" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4628</field>
+        <field name="name">Outras operações com os órgãos sociais</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4629" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4629</field>
+        <field name="name">Outras operações com os trabalhadores</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account463" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">463</field>
+        <field name="name">Sindicatos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account464" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">464</field>
+        <field name="name">Credores por subscrições não liberadas</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account465" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">465</field>
+        <field name="name">Obrigacionistas</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account466" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">466</field>
+        <field name="name">Consultores, assessores e intermediários</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account467" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">467</field>
+        <field name="name">Credores - sócios, accionistas ou proprietários</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4671" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4671</field>
+        <field name="name">Empréstimos obtidos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4673" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4673</field>
+        <field name="name">Resultados atribuídos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account4674" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4674</field>
+        <field name="name">Lucros disponíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account469" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">469</field>
+        <field name="name">Credores diversos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account47" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">47</field>
+        <field name="name">Perdas por imparidade acumuladas de contas a receber</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account471" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">471</field>
+        <field name="name">Clientes</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account472" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">472</field>
+        <field name="name">Outros devedores</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account48" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">48</field>
+        <field name="name">Provisões</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account481" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">481</field>
+        <field name="name">Processos judiciais em curso</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account482" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">482</field>
+        <field name="name">Acidentes no trabalho e doenças profissionais</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account483" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">483</field>
+        <field name="name">Impostos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account484" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">484</field>
+        <field name="name">Reestruturação de negócios</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account485" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">485</field>
+        <field name="name">Contratos onerosos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account486" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">486</field>
+        <field name="name">Garantias a clientes</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account487" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">487</field>
+        <field name="name">Perdas em contratos de construção</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account489" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">489</field>
+        <field name="name">Outras provisões</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account49" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">49</field>
+        <field name="name">Acréscimos e diferimentos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account491" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">491</field>
+        <field name="name">Acréscimos de gastos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account4911" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4911</field>
+        <field name="name">Juros a pagar</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account4912" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4912</field>
+        <field name="name">Remunerações a pagar</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account4919" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4919</field>
+        <field name="name">Outros acréscimos de gastos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account492" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">492</field>
+        <field name="name">Rendimentos diferidos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account4921" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4921</field>
+        <field name="name">Prémios de emissão de obrigações</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account4922" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4922</field>
+        <field name="name">Prémios de emissão de títulos de participação</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account4923" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4923</field>
+        <field name="name">Réditos de contratos de construção</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account4924" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4924</field>
+        <field name="name">Subsídios para investimentos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account4929" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4929</field>
+        <field name="name">Outros rendimentos diferidos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account493" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">493</field>
+        <field name="name">Acréscimos de rendimentos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account4931" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4931</field>
+        <field name="name">Juros a receber</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account4933" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4933</field>
+        <field name="name">Réditos de contratos de construção</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account4939" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4939</field>
+        <field name="name">Outros acréscimos de rendimentos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account494" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">494</field>
+        <field name="name">Gastos diferidos</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account4941" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4941</field>
+        <field name="name">Desconto de emissão de obrigações</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account4942" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4942</field>
+        <field name="name">Desconto de emissão de títulos de participação</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account4949" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">4949</field>
+        <field name="name">Outros gastos diferidos</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account5" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">5</field>
+        <field name="name">Capital próprio</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account51" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">51</field>
+        <field name="name">Capital</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account52" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">52</field>
+        <field name="name">Acções ou quotas próprias</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account521" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">521</field>
+        <field name="name">Valor nominal</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account522" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">522</field>
+        <field name="name">Descontos e prémios</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account53" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">53</field>
+        <field name="name">Prestações suplementares</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account54" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">54</field>
+        <field name="name">Prémios de emissão de acções ou quotas</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account55" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">55</field>
+        <field name="name">Reservas Reservas Reservas</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account551" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">551</field>
+        <field name="name">Reservas legais</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account552" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">552</field>
+        <field name="name">Reservas estatutárias</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account553" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">553</field>
+        <field name="name">Reservas livres</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account56" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">56</field>
+        <field name="name">Excedentes de rreforização de activos tangíveis e intangíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account561" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">561</field>
+        <field name="name">Rreforizações legais</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account5611" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">5611</field>
+        <field name="name">Antes de impostos diferidos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account5612" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">5612</field>
+        <field name="name">Impostos diferidos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account562" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">562</field>
+        <field name="name">Outros excessos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account5611" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">5611</field>
+        <field name="name">Antes de impostos diferidos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account5612" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">5612</field>
+        <field name="name">Impostos diferidos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account58" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">58</field>
+        <field name="name">Outras variações no capital próprio</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account581" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">581</field>
+        <field name="name">Variações no justo valor de instrumentos financeiros disponíveis para venda</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account582" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">582</field>
+        <field name="name">Ajustamentos por impostos diferidos</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account589" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">589</field>
+        <field name="name">Outras variações</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account59" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">59</field>
+        <field name="name">Resultados transitados</field>
+        <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+    </record>
+    <record id="account6" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6</field>
+        <field name="name">Gastos e perdas</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account61" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">61</field>
+        <field name="name">Custo dos inventários</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account611" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">611</field>
+        <field name="name">Custo dos inventários vendidos ou consumidos</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6112" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6112</field>
+        <field name="name">De mercadorias</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6116" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6116</field>
+        <field name="name">De matérias primas, auxiliares e materiais</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account61161" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">61161</field>
+        <field name="name">Matérias primas</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account61162" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">61162</field>
+        <field name="name">Matérias auxiliares</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account61163" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">61163</field>
+        <field name="name">Materiais</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6117" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6117</field>
+        <field name="name">Activos biológicos</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account612" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">612</field>
+        <field name="name">Variação da produção</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6121" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6121</field>
+        <field name="name">Produtos acabados e intermédios</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6122" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6122</field>
+        <field name="name">Subprodutos, desperdícios, resíduos e refugos</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6123" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6123</field>
+        <field name="name">Produtos e serviços em curso</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account62" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">62</field>
+        <field name="name">Gastos com o pessoal</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account621" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">621</field>
+        <field name="name">Remunerações dos órgãos sociais</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account622" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">622</field>
+        <field name="name">Remunerações dos trabalhadores</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6221" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6221</field>
+        <field name="name">Remuneração Base</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6223" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6223</field>
+        <field name="name">Subsídio Deslocação em Serviço</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6225" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6225</field>
+        <field name="name">Outras Gratificações</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account62911" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">62911</field>
+        <field name="name">Remuneração Base Eventual</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account623" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">623</field>
+        <field name="name">Encargos sobre remunerações</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account624" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">624</field>
+        <field name="name">Benefícios pós-emprego</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account625" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">625</field>
+        <field name="name">Ajudas de custo</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6251" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6251</field>
+        <field name="name">Ajudas de custo tributáveis</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6252" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6252</field>
+        <field name="name">Ajudas de custo não tributáveis</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account626" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">626</field>
+        <field name="name">Indemnizações</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6261" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6261</field>
+        <field name="name">Indemnizações – Risco segurável</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6262" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6262</field>
+        <field name="name">Indemnizações - Outras</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account627" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">627</field>
+        <field name="name">Seguros de acidentes no trabalho e doenças profissionais</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account628" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">628</field>
+        <field name="name">Gastos de acção social</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account629" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">629</field>
+        <field name="name">Outros gastos com pessoal</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63</field>
+        <field name="name">Fornecimentos e serviços de terceiros</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account631" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">631</field>
+        <field name="name">Subcontratos</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account632" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">632</field>
+        <field name="name">Fornecimentos e serviços</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63211" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63211</field>
+        <field name="name">Água</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63212" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63212</field>
+        <field name="name">Electricidade</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63213" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63213</field>
+        <field name="name">Combustíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account632131" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">632131</field>
+        <field name="name">Gasóleo</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6321311" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6321311</field>
+        <field name="name">Gasóleo – Viaturas ligeiras de passageiros</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6321312" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6321312</field>
+        <field name="name">Gasóleo - Outros</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account632132" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">632132</field>
+        <field name="name">Restantes combustíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6321321" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6321321</field>
+        <field name="name">Restantes combustíveis – Viaturas ligeiras de passageiros</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6321322" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6321322</field>
+        <field name="name">Restantes combustíveis - Outros</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account632133" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">632133</field>
+        <field name="name">Lubrificantes</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6321331" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6321331</field>
+        <field name="name">Lubrificantes - Viaturas ligeiras de passageiros</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6321332" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6321332</field>
+        <field name="name">Lubrificantes - Outros</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63214" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63214</field>
+        <field name="name">Ferramentas e utensílios de desgaste rápido</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63215" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63215</field>
+        <field name="name">Material de manutenção e reparação</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account632151" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">632151</field>
+        <field name="name">Material de manutenção e reparação - Viaturas ligeiras de passageiros</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account632152" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">632152</field>
+        <field name="name">Material de manutenção e reparação - Outros</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63216" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63216</field>
+        <field name="name">Material de escritório</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63217" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63217</field>
+        <field name="name">Livros e documentação técnica</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63218" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63218</field>
+        <field name="name">Artigos para oferta</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63221" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63221</field>
+        <field name="name">Manutenção e reparação</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63222" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63222</field>
+        <field name="name">Transportes de carga</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63223" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63223</field>
+        <field name="name">Transportes de pessoal</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63224" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63224</field>
+        <field name="name">Comunicações</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63225" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63225</field>
+        <field name="name">Honorários</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63226" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63226</field>
+        <field name="name">Comissões a intermediários</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63227" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63227</field>
+        <field name="name">Publicidade e propaganda</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account632271" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">632271</field>
+        <field name="name">Publicidade e propaganda – Campanhas publicitárias</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account632272" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">632272</field>
+        <field name="name">Publicidade e propaganda - Outros</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63228" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63228</field>
+        <field name="name">Deslocações e estadias</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account632281" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">632281</field>
+        <field name="name">Deslocações e estadias – Em serviço</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account632282" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">632282</field>
+        <field name="name">Deslocações e estadias – Outras deslocações</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63229" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63229</field>
+        <field name="name">Despesas de representação</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63231" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63231</field>
+        <field name="name">Contencioso e notariado</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63232" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63232</field>
+        <field name="name">Rendas e alugueres</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account632321" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">632321</field>
+        <field name="name">Rendas e alugueres – Locação financeira</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63233" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63233</field>
+        <field name="name">Seguros</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account632331" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">632331</field>
+        <field name="name">Seguro de vida, acidentes pessoais e doença</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63234" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63234</field>
+        <field name="name">Royalties</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63235" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63235</field>
+        <field name="name">Limpeza, higiene e conforto</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63236" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63236</field>
+        <field name="name">Vigilância e segurança</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63237" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63237</field>
+        <field name="name">Trabalhos especializados</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account63299" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">63299</field>
+        <field name="name">Outros fornecimentos e serviços</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account64" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">64</field>
+        <field name="name">Perdas por imparidade do período</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account641" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">641</field>
+        <field name="name">Ajustamentos de inventários para o valor realizável líquido</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account642" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">642</field>
+        <field name="name">Investimentos financeiros</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account643" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">643</field>
+        <field name="name">Activos tangíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account644" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">644</field>
+        <field name="name">Activos intangíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account645" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">645</field>
+        <field name="name">Activos não correntes detidos para venda</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account646" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">646</field>
+        <field name="name">Activos tangíveis de investimento</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account647" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">647</field>
+        <field name="name">Activos de exploração e avaliação de recursos minerais</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account648" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">648</field>
+        <field name="name">Contas a receber</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6481" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6481</field>
+        <field name="name">Contas a receber – ajustamentos dentro dos limites fiscais</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6482" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6482</field>
+        <field name="name">Contas a receber – ajustamentos para além dos limites fiscais</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account65" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">65</field>
+        <field name="name">Amortizações do período</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account651" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">651</field>
+        <field name="name">Activos tangíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account652" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">652</field>
+        <field name="name">Activos intangíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account653" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">653</field>
+        <field name="name">Activos tangíveis de investimento</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account654" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">654</field>
+        <field name="name">Activos de exploração e avaliação de recursos minerais</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account66" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">66</field>
+        <field name="name">Provisões do período</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account661" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">661</field>
+        <field name="name">Processos judiciais em curso</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account662" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">662</field>
+        <field name="name">Acidentes no trabalho e doenças profissionais</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account663" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">663</field>
+        <field name="name">Impostos</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account664" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">664</field>
+        <field name="name">Reestruturação de negócios</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account665" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">665</field>
+        <field name="name">Contratos onerosos</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account666" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">666</field>
+        <field name="name">Garantias a clientes</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account667" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">667</field>
+        <field name="name">Perdas em contratos de construção</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account669" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">669</field>
+        <field name="name">Outras provisões</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account67" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">67</field>
+        <field name="name">Perdas por redução do justo valor</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account671" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">671</field>
+        <field name="name">Instrumentos financeiros</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account672" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">672</field>
+        <field name="name">Activos tangíveis de investimento</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account673" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">673</field>
+        <field name="name">Activos biológicos</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account68" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">68</field>
+        <field name="name">Outros gastos e perdas operacionais</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account681" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">681</field>
+        <field name="name">Despesas de investigação e pesquisa</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account682" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">682</field>
+        <field name="name">Impostos e taxas</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6821" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6821</field>
+        <field name="name">Direitos aduaneiros</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6822" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6822</field>
+        <field name="name">Imposto sobre o Valor Acrescentado</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6823" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6823</field>
+        <field name="name">Imposto de selo</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6824" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6824</field>
+        <field name="name">Impostos sobre veículos</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6825" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6825</field>
+        <field name="name">Impostos autárquicos</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account683" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">683</field>
+        <field name="name">Perdas em Investimentos de capital</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6831" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6831</field>
+        <field name="name">Alienação</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6832" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6832</field>
+        <field name="name">Abates</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6833" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6833</field>
+        <field name="name">Sinistros</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account684" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">684</field>
+        <field name="name">Perdas em inventários e activos biológicos</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6841" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6841</field>
+        <field name="name">Sinistros</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6842" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6842</field>
+        <field name="name">Quebras</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6849" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6849</field>
+        <field name="name">Outras</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account689" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">689</field>
+        <field name="name">Outros gastos operacionais</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6891" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6891</field>
+        <field name="name">Quotizações</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6892" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6892</field>
+        <field name="name">Despesas confidenciais</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6893" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6893</field>
+        <field name="name">Ofertas e amostras de inventários</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6894" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6894</field>
+        <field name="name">Programas de responsabilidade social</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6895" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6895</field>
+        <field name="name">Donativos</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account68951" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">68951</field>
+        <field name="name">Donativos ao Estado</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account68952" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">68952</field>
+        <field name="name">Outros donativos no âmbito do Mecenato</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6896" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6896</field>
+        <field name="name">Multas e penalidades</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6899" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6899</field>
+        <field name="name">Outros</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account69" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">69</field>
+        <field name="name">Gastos e perdas financeiros</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account691" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">691</field>
+        <field name="name">Juros suportados</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6911" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6911</field>
+        <field name="name">Empréstimos bancários</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6912" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6912</field>
+        <field name="name">Empréstimos obrigacionistas e títulos de participação</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6913" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6913</field>
+        <field name="name">Empréstimos de sócios, accionistas ou proprietários</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6914" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6914</field>
+        <field name="name">Outros empréstimos</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6915" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6915</field>
+        <field name="name">Desconto de títulos</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6916" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6916</field>
+        <field name="name">Juros de mora e compensatórios</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account69161" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">69161</field>
+        <field name="name">Juros de mora</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account69162" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">69162</field>
+        <field name="name">Juros compensatórios</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6919" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6919</field>
+        <field name="name">Outros juros</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6941" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6941</field>
+        <field name="name">Realizadas</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6942" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6942</field>
+        <field name="name">Não realizadas</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account695" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">695</field>
+        <field name="name">Descontos de pronto pagamento concedidos</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account698" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">698</field>
+        <field name="name">Outros gastos e perdas financeiros</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6981" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6981</field>
+        <field name="name">Serviços bancários</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account6989" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">6989</field>
+        <field name="name">Diversos não especificados</field>
+        <field name="user_type_id" ref="account.data_account_type_expenses"/>
+    </record>
+    <record id="account7" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7</field>
+        <field name="name">Rendimentos e ganhos</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account71" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">71</field>
+        <field name="name">Vendas</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account712" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">712</field>
+        <field name="name">Produtos acabados e intermédios</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account713" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">713</field>
+        <field name="name">Subprodutos, desperdícios, resíduos e refugos</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account714" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">714</field>
+        <field name="name">Activos biológicos</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account715" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">715</field>
+        <field name="name">IVA das vendas com imposto incluído</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account716" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">716</field>
+        <field name="name">Devolução de vendas</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account717" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">717</field>
+        <field name="name">Descontos e abatimentos</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account72" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">72</field>
+        <field name="name">Prestação de serviços</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account721" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">721</field>
+        <field name="name">IVA da prestação de serviços com imposto incluído</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account726" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">726</field>
+        <field name="name">Descontos e abatimentos</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account73" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">73</field>
+        <field name="name">Investimentos realizados pela própria empresa</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account731" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">731</field>
+        <field name="name">Investimentos financeiros</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account732" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">732</field>
+        <field name="name">Activos tangíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account733" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">733</field>
+        <field name="name">Activos intangíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account734" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">734</field>
+        <field name="name">Investimentos em curso</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account74" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">74</field>
+        <field name="name">Reversões do período</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account741" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">741</field>
+        <field name="name">De perdas por imparidade</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7411" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7411</field>
+        <field name="name">Ajustamentos de inventários para o valor realizável líquido</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7412" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7412</field>
+        <field name="name">Investimentos financeiros</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7413" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7413</field>
+        <field name="name">Activos tangíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7414" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7414</field>
+        <field name="name">Activos intangíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7415" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7415</field>
+        <field name="name">Activos não correntes detidos para venda</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7416" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7416</field>
+        <field name="name">Activos tangíveis de investimento</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7417" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7417</field>
+        <field name="name">Activos de exploração e avaliação de recursos minerais</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7418" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7418</field>
+        <field name="name">Contas a receber</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account742" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">742</field>
+        <field name="name">De amortizações</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7421" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7421</field>
+        <field name="name">Activos tangíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7422" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7422</field>
+        <field name="name">Activos intangíveis</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7423" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7423</field>
+        <field name="name">Activos tangíveis de investimento</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7424" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7424</field>
+        <field name="name">Activos de exploração e avaliação de recursos minerais</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account743" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">743</field>
+        <field name="name">De provisões</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7431" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7431</field>
+        <field name="name">Processos judiciais em curso</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7432" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7432</field>
+        <field name="name">Acidentes no trabalho e doenças profissionais</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7433" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7433</field>
+        <field name="name">Impostos</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7434" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7434</field>
+        <field name="name">Reestruturação de negócios</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7435" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7435</field>
+        <field name="name">Contratos onerosos</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7436" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7436</field>
+        <field name="name">Garantias a clientes</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7437" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7437</field>
+        <field name="name">Perdas em contratos de construção</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7439" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7439</field>
+        <field name="name">Outras provisões</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account75" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">75</field>
+        <field name="name">Rendimentos suplementares</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account751" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">751</field>
+        <field name="name">Serviços sociais</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account752" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">752</field>
+        <field name="name">Aluguer de equipamento</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account753" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">753</field>
+        <field name="name">Venda de energia</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account754" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">754</field>
+        <field name="name">Estudos, projectos pesquisas e investigações</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account755" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">755</field>
+        <field name="name">Assistência técnica</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account756" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">756</field>
+        <field name="name">Royalties</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account757" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">757</field>
+        <field name="name">Cargos sociais exercidos noutras empresas</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account759" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">759</field>
+        <field name="name">Outros rendimentos suplementares inerentes ao valor acrescentado</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account76" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">76</field>
+        <field name="name">Outros rendimentos e ganhos operacionais</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account761" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">761</field>
+        <field name="name">Subsídios para investimentos</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7611" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7611</field>
+        <field name="name">Do Estado e outros organismos públicos</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7619" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7619</field>
+        <field name="name">De outras entidades</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account762" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">762</field>
+        <field name="name">Subsídios à exploração</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7621" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7621</field>
+        <field name="name">Do Estado e outros organismos públicos</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7629" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7629</field>
+        <field name="name">De outras entidades</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account763" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">763</field>
+        <field name="name">Ganhos em investimentos de capital</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7631" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7631</field>
+        <field name="name">Alienação</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7632" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7632</field>
+        <field name="name">Sinistros</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account764" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">764</field>
+        <field name="name">Ganhos em inventários e activos biológicos</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7641" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7641</field>
+        <field name="name">Sinistros</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7642" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7642</field>
+        <field name="name">Sobras</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7649" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7649</field>
+        <field name="name">Outros</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account769" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">769</field>
+        <field name="name">Outros rendimentos alheios ao valor acrescentado</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7691" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7691</field>
+        <field name="name">Restituição de impostos</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7692" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7692</field>
+        <field name="name">Benefícios de penalidades contratuais</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7693" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7693</field>
+        <field name="name">Excesso de estimativa para impostos</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7699" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7699</field>
+        <field name="name">Outros</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account78" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">78</field>
+        <field name="name">Rendimentos e ganhos financeiros</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account781" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">781</field>
+        <field name="name">Juros obtidos</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7811" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7811</field>
+        <field name="name">Depósitos bancários</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7812" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7812</field>
+        <field name="name">Empréstimos</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7813" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7813</field>
+        <field name="name">Obrigações e títulos de participação</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7814" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7814</field>
+        <field name="name">Outras aplicações de tesouraria</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7819" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7819</field>
+        <field name="name">Outros juros</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account782" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">782</field>
+        <field name="name">Rendimentos de activos tangíveis de investimento</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account783" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">783</field>
+        <field name="name">Rendimentos de instrumentos financeiros</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7841" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7841</field>
+        <field name="name">Realizadas</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account7842" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">7842</field>
+        <field name="name">Não realizadas</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account785" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">785</field>
+        <field name="name">Descontos de pronto pagamento obtidos</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account789" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">789</field>
+        <field name="name">Outros rendimentos e ganhos financeiros</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account79" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">79</field>
+        <field name="name">Ganhos por aumento do justo valor</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account791" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">791</field>
+        <field name="name">Instrumentos financeiros</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account792" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">792</field>
+        <field name="name">Activos tangíveis de investimento</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account793" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">793</field>
+        <field name="name">Activos biológicos</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="account8" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">8</field>
+        <field name="name">Resultados</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account81" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">81</field>
+        <field name="name">Resultados operacionais</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account82" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">82</field>
+        <field name="name">Resultados financeiros</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account83" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">83</field>
+        <field name="name">Resultados correntes</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account85" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">85</field>
+        <field name="name">Imposto sobre o rendimento</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account851" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">851</field>
+        <field name="name">Imposto corrente</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account852" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">852</field>
+        <field name="name">Imposto diferido</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account88" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">88</field>
+        <field name="name">Resultado líquido do período</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+    <record id="account89" model="account.account.template">
+        <field name="chart_template_id" ref="l10n_mz_chart_template"/>
+        <field name="code">89</field>
+        <field name="name">Dividendos antecipados</field>
+        <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+    </record>
+</odoo>

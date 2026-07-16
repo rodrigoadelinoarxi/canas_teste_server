@@ -1,0 +1,2 @@
+"id","chart_template_id:id","name","sequence","description","type_tax_use","amount_type","amount","price_include","account_id:id","refund_account_id:id","tag_ids:id","tax_group_id:id"
+"tax_sale_iva17","l10n_mz.l10n_mz_chart_template","IVA 17%",1,"IVA 17%","sale","percent",17,"FALSE",,,,"l10n_mz.tax_group_iva17"
