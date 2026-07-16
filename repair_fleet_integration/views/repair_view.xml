@@ -1,0 +1,82 @@
+<odoo>
+    <record id="canas_view_repair_fleet_vehicle_form" model="ir.ui.view">
+        <field name="name">canas.repair.order.form</field>
+        <field name="model">repair.order</field>
+        <field name="inherit_id" ref="repair.view_repair_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group/group/field[@name='product_id']" position="after">
+                <field name="fleet_vehicle" required="1"/>
+            </xpath>
+            <xpath expr="//button[@name='action_created_invoice']" position="after">
+                <button name="action_view_purchase" type="object" class="oe_stat_button" icon="fa-credit-card">
+                    <field name="total_purchases" widget="statinfo" string="Purchases"/>
+                </button>
+            </xpath>
+            <xpath expr="//group/field[@name='location_id']" position="after">
+                <field name="operation_type"/>
+            </xpath>
+            <xpath expr="//group/field[@name='location_id']" position="attributes">
+                <attribute name="options">{'no_create_edit': True, 'no_open': True}</attribute>
+            </xpath>
+            <xpath expr="//group/field[@name='invoice_method']" position="after">
+                <field name="create_date"/>
+            </xpath>
+            <xpath expr="//group/group/field[@name='product_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='product_qty']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//label[@for='product_qty']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='invoice_method']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='guarantee_limit']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//tree/field[@name='location_dest_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='product_uom']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="canas_view_repair_fleet_vehicle_tree" model="ir.ui.view">
+        <field name="name">canas.repair.order.tree</field>
+        <field name="model">repair.order</field>
+        <field name="inherit_id" ref="repair.view_repair_order_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree/field[@name='product_id']" position="before">
+                <field name="fleet_vehicle"/>
+                <field name="location_id"/>
+                <field name="create_date"/>
+                <field name="total_purchases"/>
+            </xpath>
+            <xpath expr="//tree/field[@name='product_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//tree/field[@name='address_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//tree/field[@name='partner_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//tree/field[@name='company_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//tree/field[@name='guarantee_limit']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

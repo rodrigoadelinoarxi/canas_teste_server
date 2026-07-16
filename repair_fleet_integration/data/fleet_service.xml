@@ -1,0 +1,16 @@
+<odoo>
+    <record id="cost_service" model="fleet.service.type">
+        <field name="name">Custo</field>
+        <field name="category">service</field>
+    </record>
+
+    <record id="repair_service" model="fleet.service.type">
+        <field name="name">Reparação</field>
+        <field name="category">service</field>
+    </record>
+
+    <record id="fuel_service" model="fleet.service.type">
+        <field name="name">Combustível</field>
+        <field name="category">service</field>
+    </record>
+</odoo>

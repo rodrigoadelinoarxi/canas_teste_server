@@ -1,0 +1,16 @@
+<odoo>
+    <record id="view_employee_form" model="ir.ui.view">
+        <field name="name">canas.hr.employee.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="is_machine"/>
+                <field name="employee_number"/>
+            </xpath>
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_view_epi_stock_move_lines" type="object" class="oe_stat_button" icon="fa-suitcase" string="Delivered EPIs"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

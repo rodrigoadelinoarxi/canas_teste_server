@@ -1,0 +1,7 @@
+<odoo noupdate="1">
+    <record id="canas_location_employee" model="stock.location">
+        <field name="name">Employee Stock</field>
+        <field name="location_id">3</field>
+        <field name="usage">customer</field>
+    </record>
+</odoo>

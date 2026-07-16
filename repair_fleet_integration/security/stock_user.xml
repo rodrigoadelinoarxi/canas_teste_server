@@ -1,0 +1,5 @@
+<odoo>
+    <record id="stock_restrictions_group" model="res.groups">
+        <field name="name">Restrições de Armazéns</field>
+    </record>
+</odoo>

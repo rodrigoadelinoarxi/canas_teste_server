@@ -1,0 +1,88 @@
+<odoo>
+    <record id="view_task_form2repair_fleet_integration" model="ir.ui.view">
+        <field name="name">canas.project.task.form</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button string="Current Stock" class="oe_stat_button" icon="fa-building-o" name="action_get_stock"
+                        type="object"/>
+            </xpath>
+
+            <xpath expr="//field[@name='user_ids']" position="after">
+                <field name="location_id" attrs="{'invisible': [('location_id', '=', False)]}"/>
+            </xpath>
+
+            <xpath expr="//button[@name='action_assign_to_me']" position="before">
+                <button name="action_create_shipyard" string="Create Shipyard" type="object" class="oe_highlight"
+                        attrs="{'invisible': [('location_id', '!=', False)]}"/>
+                <button name="action_delete_shipyard" string="Delete Shipyard" type="object"
+                        attrs="{'invisible': [('location_id', '=', False)]}"
+                        confirm="Do you really want to delete this shipyard?"/>
+            </xpath>
+
+            <xpath expr="//notebook/page[@name='extra_info']" position="before">
+                <page name="vehicle" string="Vehicle Time Recording">
+                    <group>
+                        <group>
+                            <field name="vehicle_planned_hours" widget="float_time"/>
+                        </group>
+                        <group>
+                            <field name="vehicle_progress" widget="progressbar"/>
+                        </group>
+                    </group>
+                    <field name="vehicle_timesheet_ids" string="Vehicle Timesheet Activities" mode="tree,kanban"
+                           context="{'default_project_id': project_id, 'default_name':''}">
+                        <tree editable="bottom" default_order="date">
+                            <field name="date"/>
+                            <field name="company_id" invisible="1"/>
+                            <field name="user_id" invisible="1"/>
+                            <field name="employee_id" invisible="1"/>
+                            <field name="fleet_vehicle_id" required="1"/>
+                            <field name="product_id" invisible="1"/>
+                            <field name="name"/>
+                            <field name="unit_amount" widget="timesheet_uom"/>
+                            <field name="project_id" invisible="1"/>
+                        </tree>
+                        <form string="Vehicle Timesheet Activities">
+                            <sheet>
+                                <group>
+                                    <field name="date"/>
+                                    <field name="user_id" invisible="1"/>
+                                    <field name="employee_id"/>
+                                    <field name="name"/>
+                                    <field name="unit_amount" string="Duration" widget="float_time"/>
+                                    <field name="project_id" invisible="1"/>
+                                </group>
+                            </sheet>
+                        </form>
+                    </field>
+                    <group>
+                        <group class="oe_subtotal_footer oe_right" name="project_hours">
+                            <field name="vehicle_effective_hours" widget="float_time"/>
+                            <field name="vehicle_remaining_hours" widget="float_time"
+                                   class="oe_subtotal_footer_separator"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+
+            <xpath expr="//form/sheet/notebook/page[@name='description_page']" position="after">
+                <page name="pickings" string="Purchase Requisitions">
+                    <field name="purchase_ids"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_task_kanban_repair_fleet_integration" model="ir.ui.view">
+        <field name="name">canas.project.task.kanban</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//strong[hasclass('o_kanban_record_title')]" position="after">
+                <br/><field name="location_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

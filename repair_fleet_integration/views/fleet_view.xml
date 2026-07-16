@@ -1,0 +1,129 @@
+<odoo>
+    <record id="fleet_vehicle_view_search_canas_override" model="ir.ui.view">
+        <field name="name">fleet.vehicle.view.search.canas.override</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_view_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="equipment_code" filter_domain="[('equipment_code','ilike',self)]" string="Equipment Code"/>
+                <field name="license_plate" filter_domain="[('license_plate','ilike',self)]" string="License Plate"/>
+            </xpath>
+            <xpath expr="//filter[@name='groupby_status']" position="before">
+                <filter name="groupby_status" context="{'group_by' : 'location_id'}" string="Stock Location"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_fleet_vehicle_kanban_inherit" model="ir.ui.view">
+        <field name="name">canas.fleet.vehicle.kanban.inherit</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_view_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div/div/field[@name='tag_ids']" position="before">
+                <field name="equipment_code"/>
+                <field name="state_tag" invisible="1"/>
+                <p>
+                    <span icon="fa-circle" style="background-color:yellow; color:black; padding: 2px;" attrs="{'invisible':['|', ('state_tag', '!=', 'repairs'), ('id', '=', False)] }">REPAIR</span>
+                    <span icon="fa-circle" style="background-color:green; color:white; padding: 2px;" attrs="{'invisible':['|', ('state_tag', '!=', 'in_use'), ('id', '=', False)] }">IN USE</span>
+                    <span icon="fa-circle" style="background-color:red; color:white; padding: 2px;" attrs="{'invisible':['|', ('state_tag', '!=', 'not_in_use'), ('id', '=', False)] }">STOPPED</span>
+                </p>
+                <field name="computed_location_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_fleet_vehicle_form" model="ir.ui.view">
+        <field name="name">canas.fleet.vehicle.form</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='state_id']" position="before">
+                <button name="action_view_timesheet_reports" string="Vehicle Timesheet" type="object" icon="fa-file-o"/>
+                <button string="Movements" type="object" name="action_view_fleet_stock_move_lines"  class="btn-primary" icon="fa-arrows-v" options="{}"/>
+            </xpath>
+            <xpath expr="//button[@name='open_assignation_logs']" position="before">
+                <button name="action_view_repair" type="object" class="oe_stat_button" icon="fa-gears">
+                    <field name="total_repairs" widget="statinfo" string="Repairs"/>
+                </button>
+            </xpath>
+            <xpath expr="//field[@name='model_year']" position="after">
+                <field name="product_id" string="Product"/>
+            </xpath>
+            <xpath expr="//field[@name='license_plate']" position="after">
+                <br/>
+                <label for="equipment_code"/>
+                <h2>
+                    <field name="equipment_code" class="oe_inline" placeholder="e.g. C01.01"/>
+                </h2>
+            </xpath>
+            <xpath expr="//field[@name='tag_ids']" position="after">
+                <h3>
+                    <field name="state_tag" invisible="1"/>
+                    <span icon="fa-circle" style="background-color:yellow; color:black; padding: 2px;" attrs="{'invisible':['|', ('state_tag', '!=', 'repairs'), ('id', '=', False)] }">REPAIR</span>
+                    <span icon="fa-circle" style="background-color:green; color:white; padding: 2px;" attrs="{'invisible':['|', ('state_tag', '!=', 'in_use'), ('id', '=', False)] }">IN USE</span>
+                    <span icon="fa-circle" style="background-color:red; color:white; padding: 2px;" attrs="{'invisible':['|', ('state_tag', '!=', 'not_in_use'), ('id', '=', False)] }">STOPPED</span>
+                </h3>
+            </xpath>
+            <xpath expr="//field[@name='location']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='model_year']" position="after">
+                <field name="id" invisible="1"/>
+                <field name="location_id" required="1" attrs="{'readonly': [('id', '!=', False)], 'invisible': [('id', '!=', False)]}" string="Initial Location"/>
+                <field name="computed_location_id"  attrs="{'readonly': [('id', '!=', False)], 'invisible': [('id', '=', False)]}" string="Current Location"/>
+                <field name="cost_price" string="Cost/Hour"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_fleet_vehicle_tree" model="ir.ui.view">
+        <field name="name">canas.fleet.vehicle.tree</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='license_plate']" position="after">
+                <field name="equipment_code"/>
+            </xpath>
+            <xpath expr="//field[@name='acquisition_date']" position="after">
+                <field name="computed_location_id"/>
+            </xpath>
+            <xpath expr="//field[@name='acquisition_date']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id='fleet.fleet_vehicle_action' model='ir.actions.act_window'>
+        <field name="name">Vehicles</field>
+        <field name="res_model">fleet.vehicle</field>
+        <field name="view_mode">kanban,tree,form,activity</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new vehicle
+            </p><p>
+            Manage your fleet by keeping track of the contracts, services, odometers and fuel logs associated to each vehicle.
+        </p>
+        </field>
+    </record>
+
+<!--    <record id="fleet_vehicle_costs_view_form_inherit" model="ir.ui.view">-->
+<!--        <field name="name">fleet.vehicle.cost.form.inherit</field>-->
+<!--        <field name="model">fleet.vehicle.cost</field>-->
+<!--        <field name="inherit_id" ref="fleet.fleet_vehicle_costs_view_form"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <xpath expr="//field[@name='date']" position="after">-->
+<!--                <field name="repair_id"/>-->
+<!--            </xpath>-->
+<!--            <xpath expr="//field[@name='description']" position="replace"/>-->
+<!--        </field>-->
+<!--    </record>-->
+
+    <record id="equipment_code_action" model="ir.actions.act_window">
+        <field name="name">Equipment Codes</field>
+        <field name="res_model">equipment.code</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="equipment_code_tree_view" parent="fleet.fleet_configuration"
+              action="equipment_code_action" sequence="404"/>
+</odoo>

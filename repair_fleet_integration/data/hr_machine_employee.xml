@@ -1,0 +1,19 @@
+<odoo noupdate="1">
+    <record id="dep_machine" model="hr.department">
+        <field name="name">Machine</field>
+        <field name="parent_id" ref="hr.dep_administration"/>
+    </record>
+
+    <record id="job_machine" model="hr.job">
+        <field name="name">Machines</field>
+        <field name="department_id" ref="dep_machine"/>
+    </record>
+
+    <record id="employee_machine" model="hr.employee">
+        <field name="name">Máquina</field>
+        <field name="is_machine">True</field>
+        <field name="job_id" ref="repair_fleet_integration.job_machine"/>
+        <field name="department_id" ref="dep_machine"/>
+    </record>
+</odoo>
+

@@ -1,0 +1,7 @@
+<odoo noupdate="1">
+    <record id="categ_fleet" model="product.category">
+        <field name="parent_id" ref="product.product_category_1"/>
+        <field name="name">Vehicle</field>
+        <field name="is_vehicle_categ">True</field>
+    </record>
+</odoo>

@@ -1,0 +1,16 @@
+<odoo>
+    <record id="project_project_view_form_simplified_inherit" model="ir.ui.view">
+        <field name="name">project.project.view.form.simplified</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.project_project_view_form_simplified"/>
+        <field name="priority">24</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="attributes">
+                <attribute name="string">Work Number</attribute>
+            </xpath>
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="location" required="1"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

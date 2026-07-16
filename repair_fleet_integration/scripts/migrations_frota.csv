@@ -1,0 +1,23 @@
+Custo (Valor),Data,Veículo,Vehicle_id,Empresa,Tipo
+2872.5,2021-05-22,Toyota/ACE/AAB-311-MP,749,TAVEL Empreendimentos Lda.,COST
+2413.74,2021-05-17,Toyota/ACE/AAB-311-MP,749,TAVEL Empreendimentos Lda.,COST
+2298.8,2021-05-26,Toyota/ACE/AAB-311-MP,749,TAVEL Empreendimentos Lda.,COST
+433647.27,2021-08-03,Scania/P360 8X4/AIS-248-MC,701,,COST
+1551.75,2021-05-22,Mercedes/ATEGO 815/ACT-018-MP,689,Canas Engenharia S.A.,COST
+2872.5,2021-07-08,Mercedes/ATEGO 815/ACT-018-MP,689,Canas Engenharia S.A.,COST
+3275.79,2021-05-25,Mercedes/ATEGO 815/ACT-018-MP,689,Canas Engenharia S.A.,COST
+5517.12,2021-05-18,Mercedes/ATEGO 815/ACT-018-MP,689,Canas Engenharia S.A.,COST
+55153.2,2022-01-11,Mercedes/ATEGO 815/ACT-018-MP,689,Canas Engenharia S.A.,COST
+861.75,2021-07-31,Himoinsa/4TNV 98 IGEHR/C22.02,735,Canas Engenharia S.A.,COST
+,,,,,
+,,,,,
+Quilometragem,Data,Veículo,Vehicle_id,Empresa,Tipo
+128987,2021-11-15,Toyota/HILUX 2.5 3085M 2014/AFF-011-MP,809,,Km
+599706,2022-03-01,Mercedes/ACTROS 3235/AGF-286-MC,693,Canas Engenharia S.A.,Km
+236,2021-05-10,Scania/P360 8X4/AIS-248-MC,701,,Km
+232,2021-04-23,Caterpillar/320L/C21.01,723,Canas Engenharia S.A.,Km
+6222,2021-05-05,Caterpillar/320L/C21.01,723,Canas Engenharia S.A.,Km
+378,2021-05-05,Caterpillar/320L/C21.01,723,Canas Engenharia S.A.,Km
+228,2021-04-14,Caterpillar/315BL/C21.02,724,Canas Engenharia S.A.,Km
+230,2021-04-16,Caterpillar/315BL/C21.02,724,Canas Engenharia S.A.,Km
+234,2021-04-28,Caterpillar/315BL/C21.02,724,Canas Engenharia S.A.,Km

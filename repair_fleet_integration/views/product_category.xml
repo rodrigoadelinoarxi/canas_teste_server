@@ -1,0 +1,20 @@
+<odoo>
+    <record id="product_category_form_view" model="ir.ui.view">
+        <field name="name">product.category.form - product_sequence</field>
+        <field name="model">product.category</field>
+        <field name="inherit_id" ref="product.product_category_form_view"/>
+        <field name="arch" type="xml">
+            <field name="parent_id" position="after">
+                <label for="code_prefix"/>
+                <div>
+                    <field name="code_prefix" style="padding-right: 1.0em" class="oe_inline"/>
+                    <field name="sequence_id" groups="base.group_no_one"/>
+                </div>
+            </field>
+            <xpath expr="//field[@name='parent_id']" position="after">
+                <field name="is_vehicle_categ" string="Vehicle Category"/>
+                <field name="is_mechanic_categ"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,6 @@
+<odoo noupdate="1">
+    <record id="warehouse_fleet" model="stock.warehouse">
+        <field name="code">EST</field>
+        <field name="name">Estaleiros</field>
+    </record>
+</odoo>

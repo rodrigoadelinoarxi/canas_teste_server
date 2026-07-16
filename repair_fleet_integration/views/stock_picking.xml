@@ -1,0 +1,28 @@
+<odoo>
+    <record id="view_picking_form_inherit_domain" model="ir.ui.view">
+        <field name="name">stock.picking.form.inherited.domain</field>
+        <field name="model">stock.picking</field>
+        <field name="priority">100</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='origin']" position="after">
+                <field name="is_epi_delivery_operation" invisible="1"/>
+                <field name="is_employee_stock_location" invisible="1"/>
+                <field name="employee_id"
+                       attrs="{'required': [('is_epi_delivery_operation', '=', True),('is_employee_stock_location', '=', True)]}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_picking_type_form_inherit_domain" model="ir.ui.view">
+        <field name="name">stock.picking.type.form.inherited.domain</field>
+        <field name="model">stock.picking.type</field>
+        <field name="priority">100</field>
+        <field name="inherit_id" ref="stock.view_picking_type_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='show_reserved']" position="after">
+                <field name="is_delivery_epi_operation"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
