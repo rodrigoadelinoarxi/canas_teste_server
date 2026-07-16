@@ -1,0 +1,8 @@
+<odoo noupdate="1">
+    <record id="mozambique_tag" model="account.analytic.tag">
+        <field name="name">Mozambique</field>
+    </record>
+    <record id="overseas_tag" model="account.analytic.tag">
+        <field name="name">Overseas</field>
+    </record>
+</odoo>

@@ -1,0 +1,45 @@
+<odoo>
+    <record model ="ir.ui.view" id="filosoft_export_wizard_form">
+        <field name="name">filosoft.export.wizard.form</field>
+        <field name="model">filosoft.export.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Filosoft Export Wizard" create="false" edit="false">
+                <group colspan="2">
+                    <group>
+                        <field name="date_from" required="1"/>
+                    </group>
+                    <group>
+                        <field name="date_to" required="1"/>
+                    </group>
+                </group>
+                <group colspan="2">
+                    <group>
+                        <field name="specific_employee"/>
+                    </group>
+                    <group attrs="{'invisible': [('specific_employee', '!=', True)]}">
+                        <field name="employee_id" attrs="{'required': [('specific_employee', '=', True)]}"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="export_filosoft_listing" type="object" string="Export Filosoft Listing" class="btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="filosoft_export_wizard_action" model="ir.actions.act_window">
+        <field name="name">Export Timesheets</field>
+        <field name="res_model">filosoft.export.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="filosoft_export_wizard_form"/>
+    </record>
+
+<!--    <menuitem-->
+<!--            id="menu_filosoft_listing_export"-->
+<!--            name="Filosoft Listing Export"-->
+<!--            parent="hr.menu_open_view_employee_list_my"-->
+<!--            action="filosoft_export_wizard_action"-->
+<!--            sequence="200"/>-->
+</odoo>

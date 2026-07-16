@@ -1,0 +1,219 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* import_export_timesheets
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-10 10:54+0000\n"
+"PO-Revision-Date: 2021-02-10 13:11+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: pt\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#. module: import_export_timesheets
+#: code:addons/import_export_timesheets/wizard/timesheets_line_import.py:124
+#, python-format
+msgid "Business trip: {} -> {}"
+msgstr "Viagem: {} -> {}"
+
+#. module: import_export_timesheets
+#: model_terms:ir.ui.view,arch_db:import_export_timesheets.filosoft_export_wizard_form
+#: model_terms:ir.ui.view,arch_db:import_export_timesheets.timesheet_line_import_wizard_id
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: import_export_timesheets
+#: model:ir.model.fields,field_description:import_export_timesheets.field_filosoft_export_wizard__create_uid
+#: model:ir.model.fields,field_description:import_export_timesheets.field_import_timesheet_line_wizard__create_uid
+msgid "Created by"
+msgstr "Criado por"
+
+#. module: import_export_timesheets
+#: model:ir.model.fields,field_description:import_export_timesheets.field_filosoft_export_wizard__create_date
+#: model:ir.model.fields,field_description:import_export_timesheets.field_import_timesheet_line_wizard__create_date
+msgid "Created on"
+msgstr "Criado em"
+
+#. module: import_export_timesheets
+#: model:ir.model.fields,field_description:import_export_timesheets.field_filosoft_export_wizard__date_from
+msgid "Date From"
+msgstr "Data de"
+
+#. module: import_export_timesheets
+#: model:ir.model.fields,field_description:import_export_timesheets.field_filosoft_export_wizard__date_to
+msgid "Date To"
+msgstr "Data para"
+
+#. module: import_export_timesheets
+#: code:addons/import_export_timesheets/wizard/timesheets_line_import.py:128
+#, python-format
+msgid "Did not work on this project"
+msgstr "Não trabalhou neste projeto"
+
+#. module: import_export_timesheets
+#: model:ir.model.fields,field_description:import_export_timesheets.field_filosoft_export_wizard__display_name
+#: model:ir.model.fields,field_description:import_export_timesheets.field_import_timesheet_line_wizard__display_name
+msgid "Display Name"
+msgstr "Nome a exibir"
+
+#. module: import_export_timesheets
+#: model:ir.model.fields,field_description:import_export_timesheets.field_filosoft_export_wizard__employee_id
+msgid "Employee"
+msgstr "Funcionário"
+
+#. module: import_export_timesheets
+#: code:addons/import_export_timesheets/wizard/timesheets_line_import.py:211
+#, python-format
+msgid "Error while creating account analytic lines!"
+msgstr "Erro ao criar linhas analíticas!"
+
+#. module: import_export_timesheets
+#: model_terms:ir.ui.view,arch_db:import_export_timesheets.filosoft_export_wizard_form
+msgid "Export Filosoft Listing"
+msgstr "Exportar Listagem Filosoft"
+
+#. module: import_export_timesheets
+#: model:ir.actions.act_window,name:import_export_timesheets.filosoft_export_wizard_action
+msgid "Export Timesheets"
+msgstr "Exportar Timesheets"
+
+#. module: import_export_timesheets
+#: model:ir.model,name:import_export_timesheets.model_filosoft_export_wizard
+#: model_terms:ir.ui.view,arch_db:import_export_timesheets.filosoft_export_wizard_form
+msgid "Filosoft Export Wizard"
+msgstr "Wizard de Exportação Filosoft"
+
+#. module: import_export_timesheets
+#: model:ir.ui.menu,name:import_export_timesheets.menu_filosoft_listing_export
+msgid "Filosoft Listing Export"
+msgstr "Exportação de Listagens Filosoft"
+
+#. module: import_export_timesheets
+#: model:ir.model.fields,field_description:import_export_timesheets.field_filosoft_export_wizard__id
+#: model:ir.model.fields,field_description:import_export_timesheets.field_import_timesheet_line_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: import_export_timesheets
+#: model:ir.model.fields,field_description:import_export_timesheets.field_import_timesheet_line_wizard__files
+msgid "Import Excel File"
+msgstr "Importar Ficheiro Excel"
+
+#. module: import_export_timesheets
+#: model:ir.model.fields,field_description:import_export_timesheets.field_import_timesheet_line_wizard__datas_fname
+msgid "Import File Name"
+msgstr "Nome do Ficheiro a Importar"
+
+#. module: import_export_timesheets
+#: model:ir.actions.act_window,name:import_export_timesheets.task_line_import_wizard_action
+msgid "Import Task Timesheet Lines"
+msgstr "Importar Linhas de Timesheet"
+
+#. module: import_export_timesheets
+#: model_terms:ir.ui.view,arch_db:import_export_timesheets.timesheet_line_import_wizard_id
+msgid "Import Timesheet Line"
+msgstr "Importação de Timesheets"
+
+#. module: import_export_timesheets
+#: model:ir.model,name:import_export_timesheets.model_import_timesheet_line_wizard
+msgid "Import Timesheet Line Wizard"
+msgstr "Wizard de Importação de Timesheets"
+
+#. module: import_export_timesheets
+#: model:ir.actions.act_window,name:import_export_timesheets.timesheet_line_import_wizard_action
+#: model:ir.ui.menu,name:import_export_timesheets.menu_timesheet_import
+#: model_terms:ir.ui.view,arch_db:import_export_timesheets.project_task_form_view_id_inherit
+#: model_terms:ir.ui.view,arch_db:import_export_timesheets.timesheet_line_import_wizard_id
+msgid "Import Timesheet Lines"
+msgstr "Importar Timesheet"
+
+#. module: import_export_timesheets
+#: code:addons/import_export_timesheets/wizard/timesheets_line_import.py:115
+#, python-format
+msgid "Invalid time in row #{}: please make sure that all time records are correct!"
+msgstr "Tempo inválido na linha #{}: certifique-se de que todos os registos de tempo estão corretos!"
+
+#. module: import_export_timesheets
+#: code:addons/import_export_timesheets/wizard/timesheets_line_import.py:140
+#, python-format
+msgid "Invalid value in row #{}: please make sure that all records are correct!"
+msgstr "Valor inválido na linha #{}: certifique-se de que todos os registos estão corretos!"
+
+#. module: import_export_timesheets
+#: model:ir.model.fields,field_description:import_export_timesheets.field_filosoft_export_wizard____last_update
+#: model:ir.model.fields,field_description:import_export_timesheets.field_import_timesheet_line_wizard____last_update
+msgid "Last Modified on"
+msgstr "Última Modificação em"
+
+#. module: import_export_timesheets
+#: model:ir.model.fields,field_description:import_export_timesheets.field_filosoft_export_wizard__write_uid
+#: model:ir.model.fields,field_description:import_export_timesheets.field_import_timesheet_line_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Última Atualização por"
+
+#. module: import_export_timesheets
+#: model:ir.model.fields,field_description:import_export_timesheets.field_filosoft_export_wizard__write_date
+#: model:ir.model.fields,field_description:import_export_timesheets.field_import_timesheet_line_wizard__write_date
+msgid "Last Updated on"
+msgstr "Última Atualização em"
+
+#. module: import_export_timesheets
+#: code:addons/import_export_timesheets/wizard/timesheets_line_import.py:108
+#: code:addons/import_export_timesheets/wizard/timesheets_line_import.py:109
+#: model_terms:ir.ui.view,arch_db:import_export_timesheets.timesheet_view_search_import_export_override
+#, python-format
+msgid "Mozambique"
+msgstr "Moçambique"
+
+#. module: import_export_timesheets
+#: code:addons/import_export_timesheets/wizard/timesheets_line_import.py:92
+#, python-format
+msgid "No employee or machine found for row #{}: please make sure that either the ID field or name are correct!"
+msgstr "Nenhum funcionário ou máquina encontrado na linha #{}: certifique-se de que ou o ID ou o nome estão corretos!"
+
+#. module: import_export_timesheets
+#: code:addons/import_export_timesheets/wizard/timesheets_line_import.py:108
+#: code:addons/import_export_timesheets/wizard/timesheets_line_import.py:109
+#: model_terms:ir.ui.view,arch_db:import_export_timesheets.timesheet_view_search_import_export_override
+#, python-format
+msgid "Overseas"
+msgstr "Estrangeiro"
+
+#. module: import_export_timesheets
+#: model:ir.model.fields,field_description:import_export_timesheets.field_import_timesheet_line_wizard__project_id
+msgid "Project"
+msgstr "Projeto"
+
+#. module: import_export_timesheets
+#: code:addons/import_export_timesheets/wizard/timesheets_line_import.py:34
+#, python-format
+msgid "Required formats are not being used. Please verify the Excel file and try again."
+msgstr "O ficheiro não tem a formatação correta. Por favor, verifique o ficheiro Excel e tente de novo."
+
+#. module: import_export_timesheets
+#: model:ir.model.fields,field_description:import_export_timesheets.field_filosoft_export_wizard__specific_employee
+msgid "Specific Employee"
+msgstr "Especificar Funcionário"
+
+#. module: import_export_timesheets
+#: model:ir.model.fields,field_description:import_export_timesheets.field_import_timesheet_line_wizard__task_id
+msgid "Task"
+msgstr "Tarefa"
+
+#. module: import_export_timesheets
+#: model_terms:ir.ui.view,arch_db:import_export_timesheets.timesheet_line_import_wizard_id
+msgid "This wizard will import timesheet lines from the selected excel file. Please make sure you have selected .xls/xlsx excel files"
+msgstr "Este wizard serve para importar as timesheets do ficheiro Excel selecionado. Verifique que selecionou ficheiros Excel (.xls/.xlsx)"
+
+#. module: import_export_timesheets
+#: code:addons/import_export_timesheets/wizard/timesheets_line_import.py:110
+#, python-format
+msgid "{}: {}H - Timesheet batch import done on {}"
+msgstr "{}: {}H - Importação em lote feita a {}"
