@@ -1,0 +1,7 @@
+<odoo>
+    <template id="external_layout_standard" inherit_id="repair.report_repairorder">
+        <xpath expr="//p[@t-field='o.quotation_notes']" position="before">
+            <h2>Notes</h2>
+        </xpath>
+    </template>
+</odoo>

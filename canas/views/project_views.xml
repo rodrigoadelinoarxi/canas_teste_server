@@ -1,0 +1,38 @@
+<odoo>
+    <record id="edit_project_form_view_override" model="ir.ui.view">
+        <field name="name">edit.project.form.view.override</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="before">
+                <group>
+                    <group>
+                        <field name="is_repairs_project"/>
+                    </group>
+                    <group>
+                        <field name="proposal_nr"/>
+                        <field name="contract_nr"/>
+                        <field name="company_currency_id" invisible="1"/>
+                        <field name="contract_value" widget="monetary"
+                               options="{'currency_field': 'company_currency_id'}"/>
+                    </group>
+                </group>
+            </xpath>
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="construction_director"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_task_form2_override" model="ir.ui.view">
+        <field name="name">view.task.form2.override</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='location_id']" position="after">
+                <field name="original_location" force_save="1" readonly="1"
+                       attrs="{'invisible': [('original_location', '=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

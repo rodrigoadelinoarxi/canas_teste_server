@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<odoo>
+    <data noupdate="0">
+        <record id="holiday_entry_type" model="hr.work.entry.type">
+            <field name="name">Holiday</field>
+            <field name="is_leave">True</field>
+            <field name="sequence">35</field>
+            <field name="code">HOLIDAY</field>
+            <field name="round_days">HALF</field>
+            <field name="round_days_type">HALF-UP</field>
+            <field name="color">5</field>
+            <field name="leave_type_ids" eval="[(6,0,[ref('holiday_status_paid')])]"/>
+        </record>
+
+        <record id="marriage_leave_entry_type" model="hr.work.entry.type">
+            <field name="name">Marriage Leave</field>
+            <field name="is_leave">True</field>
+            <field name="sequence">37</field>
+            <field name="code">MARRIAGE_LEAVE</field>
+            <field name="round_days">HALF</field>
+            <field name="round_days_type">HALF-UP</field>
+            <field name="color">1</field>
+            <field name="leave_type_ids" eval="[(6,0,[ref('marriage_leave_status_paid')])]"/>
+        </record>
+
+        <record id="bereavement_leave_2_days_entry_type" model="hr.work.entry.type">
+            <field name="name">Bereavement Leave (2 days)</field>
+            <field name="is_leave">True</field>
+            <field name="sequence">38</field>
+            <field name="code">BEREAVEMENT_LEAVE_2_DAYS</field>
+            <field name="round_days">HALF</field>
+            <field name="round_days_type">HALF-UP</field>
+            <field name="color">2</field>
+            <field name="leave_type_ids" eval="[(6,0,[ref('bereavement_leave_2_days_status_paid')])]"/>
+        </record>
+
+        <record id="bereavement_leave_5_days_entry_type" model="hr.work.entry.type">
+            <field name="name">Bereavement Leave (5 days)</field>
+            <field name="is_leave">True</field>
+            <field name="sequence">39</field>
+            <field name="code">BEREAVEMENT_LEAVE_5_DAYS</field>
+            <field name="round_days">HALF</field>
+            <field name="round_days_type">HALF-UP</field>
+            <field name="color">3</field>
+            <field name="leave_type_ids" eval="[(6,0,[ref('bereavement_leave_5_days_status_paid')])]"/>
+        </record>
+
+        <record id="not_paid_sick_leave_entry_type" model="hr.work.entry.type">
+            <field name="name">Sick Time Off (not paid)</field>
+            <field name="is_leave">True</field>
+            <field name="sequence">40</field>
+            <field name="code">SICK_LEAVE_NOT_PAID</field>
+            <field name="round_days">HALF</field>
+            <field name="round_days_type">HALF-UP</field>
+            <field name="color">4</field>
+            <field name="leave_type_ids" eval="[(6,0,[ref('sick_status_unpaid')])]"/>
+        </record>
+
+        <record id="hr_work_entry_contract.work_entry_type_sick_leave" model="hr.work.entry.type">
+            <field name="leave_type_ids" eval="[(6,0,[ref('hr_holidays.holiday_status_sl')])]"/>
+        </record>
+
+        <!--        <record id="paid_sick_leave_entry_type" model="hr.work.entry.type">-->
+        <!--            <field name="name">Sick Leave (paid)</field>-->
+        <!--            <field name="is_leave">True</field>-->
+        <!--            <field name="sequence">41</field>-->
+        <!--            <field name="code">SICK_LEAVE_PAID</field>-->
+        <!--            <field name="round_days">HALF</field>-->
+        <!--            <field name="round_days_type">HALF-UP</field>-->
+        <!--        </record>-->
+
+        <record id="leave_without_pay_entry_type" model="hr.work.entry.type">
+            <field name="name">Leave without Pay</field>
+            <field name="is_leave">True</field>
+            <field name="sequence">42</field>
+            <field name="code">LEAVE_WITHOUT_PAY</field>
+            <field name="round_days">HALF</field>
+            <field name="round_days_type">HALF-UP</field>
+            <field name="color">5</field>
+            <field name="leave_type_ids" eval="[(6,0,[ref('leave_status_unpaid')])]"/>
+        </record>
+
+        <record id="leave_with_pay_entry_type" model="hr.work.entry.type">
+            <field name="name">Leave with Pay</field>
+            <field name="is_leave">True</field>
+            <field name="sequence">43</field>
+            <field name="code">LEAVE_WITH_PAY</field>
+            <field name="round_days">HALF</field>
+            <field name="round_days_type">HALF-UP</field>
+            <field name="color">6</field>
+            <field name="leave_type_ids" eval="[(6,0,[ref('leave_status_paid')])]"/>
+        </record>
+
+        <record id="unjustified_absence_entry_type" model="hr.work.entry.type">
+            <field name="name">Unjustified Absence</field>
+            <field name="is_leave">True</field>
+            <field name="sequence">44</field>
+            <field name="code">UNJUSTIFIED_ABSENCE</field>
+            <field name="round_days">HALF</field>
+            <field name="round_days_type">HALF-UP</field>
+            <field name="color">7</field>
+            <field name="leave_type_ids" eval="[(6,0,[ref('payroll_arxi.unjustified_absence')])]"/>
+        </record>
+
+        <record id="vacation_entry_type" model="hr.work.entry.type">
+            <field name="name">Vacation</field>
+            <field name="is_leave">True</field>
+            <field name="sequence">45</field>
+            <field name="code">VACATION</field>
+            <field name="round_days">HALF</field>
+            <field name="round_days_type">HALF-UP</field>
+            <field name="color">1</field>
+            <field name="leave_type_ids" eval="[(6,0,[ref('vacation_status_paid')])]"/>
+        </record>
+
+        <!--        Stage II Leaves -->
+
+        <record id="maternity_leave_days_entry_type" model="hr.work.entry.type">
+            <field name="name">Maternity Leave</field>
+            <field name="is_leave">True</field>
+            <field name="sequence">46</field>
+            <field name="code">MATERNITY_LEAVE</field>
+            <field name="round_days">HALF</field>
+            <field name="round_days_type">HALF-UP</field>
+            <field name="color">8</field>
+            <field name="leave_type_ids" eval="[(6,0,[ref('maternity_leave_days_status_paid')])]"/>
+        </record>
+
+        <record id="parental_leave_days_entry_type" model="hr.work.entry.type">
+            <field name="name">Parental Leave</field>
+            <field name="is_leave">True</field>
+            <field name="sequence">47</field>
+            <field name="code">PARENTAL_LEAVE</field>
+            <field name="round_days">HALF</field>
+            <field name="round_days_type">HALF-UP</field>
+            <field name="color">9</field>
+            <field name="leave_type_ids" eval="[(6,0,[ref('parental_leave_days_status_paid')])]"/>
+        </record>
+
+        <record id="breastfeeding_leave_days_entry_type" model="hr.work.entry.type">
+            <field name="name">Breastfeeding Leave</field>
+            <field name="is_leave">True</field>
+            <field name="sequence">48</field>
+            <field name="code">BREASTFEEDING_LEAVE</field>
+            <field name="round_days">HALF</field>
+            <field name="round_days_type">HALF-UP</field>
+            <field name="color">10</field>
+            <field name="leave_type_ids" eval="[(6,0,[ref('breastfeeding_leave_days_status_paid')])]"/>
+        </record>
+
+        <record id="paternity_leave_days_entry_type" model="hr.work.entry.type">
+            <field name="name">Paternity Leave</field>
+            <field name="is_leave">True</field>
+            <field name="sequence">49</field>
+            <field name="code">PATERNITY_LEAVE</field>
+            <field name="round_days">HALF</field>
+            <field name="round_days_type">HALF-UP</field>
+            <field name="color">11</field>
+            <field name="leave_type_ids" eval="[(6,0,[ref('paternity_leave_days_status_paid')])]"/>
+        </record>
+
+        <record id="worker_student_leave_days_entry_type" model="hr.work.entry.type">
+            <field name="name">Worker-Student Leave</field>
+            <field name="is_leave">True</field>
+            <field name="sequence">49</field>
+            <field name="code">WORKER_STUDENT_LEAVE</field>
+            <field name="round_days">HALF</field>
+            <field name="round_days_type">HALF-UP</field>
+            <field name="color">12</field>
+            <field name="leave_type_ids" eval="[(6,0,[ref('worker_student_leave_days_status_paid')])]"/>
+        </record>
+
+        <record id="extra_hours_days_entry_type" model="hr.work.entry.type">
+            <field name="name">Extra Hours</field>
+            <field name="is_leave">False</field>
+            <field name="sequence">50</field>
+            <field name="code">EXTRA_HOURS</field>
+            <field name="round_days">HALF</field>
+            <field name="round_days_type">HALF-UP</field>
+            <field name="color">7</field>
+        </record>
+
+        <record id="resting_day_worked_days_entry_type" model="hr.work.entry.type">
+            <field name="name">Resting Day Worked</field>
+            <field name="is_leave">False</field>
+            <field name="sequence">51</field>
+            <field name="code">RESTING_WORKED</field>
+            <field name="round_days">HALF</field>
+            <field name="round_days_type">HALF-UP</field>
+            <field name="color">8</field>
+        </record>
+    </data>
+</odoo>

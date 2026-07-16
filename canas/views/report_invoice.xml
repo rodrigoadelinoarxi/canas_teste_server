@@ -1,0 +1,67 @@
+<odoo>
+    <template id="document_tax_totals_canas" inherit_id="account.document_tax_totals" primary="True">
+        <xpath expr="//tr" position="attributes">
+            <attribute name="class">border-black</attribute>
+        </xpath>
+
+        <xpath expr="//tr[hasclass('o_total')]" position="replace">
+            <tr class="border-black o_total">
+                <td><strong style="color:#000000;">Total</strong></td>
+                <td class="text-right small" style="color:#000000;">
+                    <span t-esc="tax_totals['formatted_amount_total']"/>
+                </td>
+            </tr>
+        </xpath>
+
+        <xpath expr="//tr//strong" position="replace">
+            <span t-esc="subtotal['name']" class="small"/>
+        </xpath>
+
+        <xpath expr="//span[@t-att-class='oe_subtotal_footer_separator']//parent::td" position="attributes">
+            <attribute name="class">text-right small</attribute>
+        </xpath>
+
+        <xpath expr="//t[@t-as='subtotal']" position="before">
+            <t t-if="tax_totals.get('discount')">
+                <t t-foreach="tax_totals['discount']" t-as="discount">
+                    <tr>
+                        <td>
+                            <span class="text-nowrap small" t-esc="discount['name']"/>
+                        </td>
+                        <td class="text-right small">
+                            <span class="text-nowrap" t-esc="discount['formatted_amount']"/>
+                        </td>
+                    </tr>
+                </t>
+            </t>
+        </xpath>
+
+        <xpath expr="//t[@t-call='account.tax_groups_totals']" position="replace">
+            <t t-call="canas.tax_groups_totals_canas"/>
+        </xpath>
+    </template>
+
+    <template id="tax_groups_totals_canas">
+        <t t-foreach="tax_totals['groups_by_subtotal'][subtotal_to_show]" t-as="amount_by_group">
+            <tr>
+                <t t-if="len(tax_totals['groups_by_subtotal'][subtotal_to_show]) > 1">
+                    <td>
+                        <span t-esc="amount_by_group['tax_group_name']" class="small"/>
+                        <span class="text-nowrap small"> on
+                            <t t-esc="amount_by_group['formatted_tax_group_base_amount']"/>
+                        </span>
+                    </td>
+                    <td class="text-right small">
+                        <span class="text-nowrap" t-esc="amount_by_group['formatted_tax_group_amount']"/>
+                    </td>
+                </t>
+                <t t-else="">
+                    <td><span class="text-nowrap small" t-esc="amount_by_group['tax_group_name']"/></td>
+                    <td class="text-right small">
+                        <span class="text-nowrap" t-esc="amount_by_group['formatted_tax_group_amount']"/>
+                    </td>
+                </t>
+            </tr>
+        </t>
+    </template>
+</odoo>

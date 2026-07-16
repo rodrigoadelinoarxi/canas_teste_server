@@ -1,0 +1,12 @@
+<odoo>
+    <record id="product_product_expense_form_override" model="ir.ui.view">
+        <field name="name">product.product.expense.form.override</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="hr_expense.product_product_expense_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='standard_price']" position="before">
+                <field name="is_fuel_expense"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="canas_report_payslip" inherit_id="hr_payroll.report_payslip">
+        <h2 t-field="o.name"/>
+        <xpath expr="//h2[@t-field='o.name']" position="replace">
+            <h3 t-field="o.name"/>
+            <p class="w-25">
+                <span t-if="print_type == 1">
+                    Original
+                </span>
+                <span t-if="print_type == 2">Duplicate</span>
+            </p>
+        </xpath>
+        <xpath expr="//table[@name='employee-infos']" position="replace">
+            <table name="employee-infos" class="table table-sm table-bordered">
+                <tr>
+                    <td class="w-25">
+                        <strong>Employee Nº</strong>
+                    </td>
+                    <td class="w-25">
+                        <strong>NUIT</strong>
+                    </td>
+                    <td class="w-25">
+                        <strong>NISS</strong>
+                    </td>
+                    <td class="w-25">
+                        <strong>Pay Period</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span t-field="o.employee_id.employee_number"/>
+                    </td>
+                    <td>
+                        <span t-field="o.employee_id.vat"/>
+                    </td>
+                    <td>
+                        <span t-field="o.employee_id.niss"/>
+                    </td>
+                    <td>
+                        <t t-if="o.date_from &lt; o.contract_id.date_start">
+                            <span t-field="o.contract_id.date_start"/>
+                        </t>
+                        <t t-else="">
+                            <span t-field="o.date_from"/>
+                        </t>
+                        -
+                        <t t-if="o.contract_id.date_end and o.date_to &gt; o.contract_id.date_end">
+                            <span t-field="o.contract_id.date_end"/>
+                        </t>
+                        <t t-else="">
+                            <span t-field="o.date_to"/>
+                        </t>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Contract Start Date</strong>
+                    </td>
+                    <td>
+                        <strong>Vacation Days Left</strong>
+                    </td>
+                    <td>
+                        <strong>Marital Status</strong>
+                    </td>
+                    <td>
+                        <strong>Insurance Company</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span t-field="o.employee_id.first_contract_date"/>
+                    </td>
+                    <td>
+                        <span t-esc="o.vacations_days_left()"/>
+                    </td>
+                    <td>
+                        <span t-field="o.employee_id.marital"/>
+                    </td>
+                    <!--                    <td><span t-field="o.compute_date"/></td>-->
+                    <td>
+                        <span t-field="o.employee_id.insurance"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w-25">
+                        <strong>Bank Account</strong>
+                    </td>
+                    <td class="w-25">
+                        <strong>Designation</strong>
+                    </td>
+                    <td class="w-25">
+                        <strong>Dependents</strong>
+                    </td>
+                    <td class="w-25">
+                        <strong>Insurance Policy</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span t-field="o.employee_id.bank_account_id"/>
+                    </td>
+                    <td>
+                        <span t-field="o.employee_id.job_title"/>
+                    </td>
+                    <td name="personne-in-charge">
+                        <t t-esc="o.employee_id.children"/>
+                    </td>
+                    <td>
+                        <span t-field="o.employee_id.policy_number"/>
+                    </td>
+                    <!--                    <td><span t-esc="o.contract_id._get_contract_wage()" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/></td>-->
+                </tr>
+
+            </table>
+        </xpath>
+        <xpath expr="//div[@id='total']" position="replace">
+            <div id="total">
+                <table class="table table-sm">
+                    <thead class="o_black_border">
+                        <tr>
+                            <th>Name</th>
+                            <th class="text-right">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <span>
+                            <tr style="background-color:#e9ecef">
+                                <td>
+                                    <b>Allowances</b>
+                                </td>
+                                <td/>
+                            </tr>
+                        </span>
+                        <span t-foreach="o.allowances_section_payslip()" t-as="line">
+                            <t t-set="line_style"/>
+                            <t t-set="line_class"/>
+                            <t t-if="line.amount > 0">
+                                <t t-if="line.code == 'NET'">
+                                    <t t-set="line_class" t-value="'o_total o_border_bottom font-weight-bold'"/>
+                                </t>
+                                <t t-if="(line.code == 'BASIC') or (line.code == 'GROSS')">
+                                    <!-- <t t-set="line_class" t-value="'o_subtotal o_border_bottom'"/> -->
+                                </t>
+
+                                <tr t-att-class="line_class">
+                                    <td>
+                                        <span t-field="line.name"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-esc="line.total if line.code != 'BASIC' else o.employee_id.contract_id.wage"
+                                              t-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'
+                                        />
+                                    </td>
+                                </tr>
+                            </t>
+                        </span>
+                        <span>
+                            <tr style="background-color:#e9ecef">
+                                <td>
+                                    <b>Absences</b>
+                                </td>
+                                <td/>
+                            </tr>
+                        </span>
+                        <span t-foreach="o.get_not_worked_days_lines(o.worked_days_line_ids)" t-as="worked_days">
+                            <t t-if="worked_days['code'] not in ['OUT','TRABALHO']">
+                                <tr style="color:none">
+                                    <td>
+                                        <span t-esc="worked_days['name']"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-esc="-1 * worked_days['amount']" digits="[42, 2]"
+                                              t-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </span>
+                        <span>
+                            <tr style="background-color:#e9ecef">
+                                <td>
+                                    <b>Discounts</b>
+                                </td>
+                                <td/>
+                            </tr>
+                        </span>
+                        <span t-foreach="o.discount_section_payslip()" t-as="line">
+                            <t t-set="line_style"/>
+                            <t t-set="line_class"/>
+                            <t t-if="line.code == 'NET'">
+                                <t t-set="line_class" t-value="'o_total o_border_bottom font-weight-bold'"/>
+                            </t>
+                            <t t-if="(line.code == 'BASIC') or (line.code == 'GROSS')">
+                                <t t-set="line_class" t-value="'o_subtotal o_border_bottom'"/>
+                            </t>
+                            <tr t-att-class="line_class">
+                                <td>
+                                    <span t-field="line.name"/>
+                                </td>
+                                <td class="text-right">
+                                    <span t-esc="line.total"
+                                          t-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'
+                                    />
+                                </td>
+                            </tr>
+                        </span>
+                    </tbody>
+                </table>
+            </div>
+        </xpath>
+        <xpath expr="//div[@id='total']" position="after">
+            <table class="table table-sm">
+                <thead class="o_black_border">
+                    <tr>
+                        <th>Notas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-foreach="o.get_not_worked_days_line_notes(o.worked_days_line_ids)" t-as="worked_days">
+                        <t t-if="worked_days.code != 'OUT' and worked_days.code != 'TRABALHO'">
+                            <tr style="color:none">
+                                <td>
+                                    <span t-field="worked_days.name"/>
+                                    :
+                                    <span class="m-0" t-esc="o.not_worked_days_method(worked_days)"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </t>
+                </tbody>
+            </table>
+            <div style="text-align: center; display:block;" name="signature">
+                <br/>
+                <br/>
+                <br/>
+                <span>Signature</span>
+                <br/>
+                <br/>
+                <hr class="mx-auto" style="border-top: 2px solid; width: 50%;"/>
+            </div>
+        </xpath>
+        <xpath expr="//div[hasclass('page')]" position="attributes">
+            <attribute name="style">font-size: 70%</attribute>
+        </xpath>
+        <xpath expr="//p[@t-if='o.net_wage &gt;= 0']" position="replace"/>
+    </template>
+
+    <template id="report_payslip_lang" inherit_id="hr_payroll.report_payslip_lang">
+        <xpath expr="//t[@t-call='web.html_container']" position="replace">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-foreach="range(2)" t-as="i">
+                        <t t-set="lang" t-value="o.employee_id.lang"/>
+                        <t t-call="hr_payroll.report_payslip" t-lang="lang">
+                            <t t-set="print_type" t-value="i+1"/>
+                        </t>
+                    </t>
+                </t>
+            </t>
+        </xpath>
+    </template>
+</odoo>

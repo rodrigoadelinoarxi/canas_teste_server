@@ -1,0 +1,7 @@
+<odoo>
+    <record id="repair_project" model="project.project">
+        <field name="name">Repair Project</field>
+        <field name="privacy_visibility">followers</field>
+        <field name="allow_timesheets">1</field>
+    </record>
+</odoo>

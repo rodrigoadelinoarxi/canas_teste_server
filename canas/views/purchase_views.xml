@@ -1,0 +1,99 @@
+<odoo>
+
+    <record id="view_purchase_order_filter" model="ir.ui.view">
+        <field name="name">purchase.order.list.select.inherit</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.view_purchase_order_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_id']" position="after">
+                <field name="equipment_code"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="purchase_order_view_search" model="ir.ui.view">
+        <field name="name">purchase.order.list.select.inherit</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_view_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_id']" position="after">
+                <field name="equipment_code"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="purchase_order_form_view_override" model="ir.ui.view">
+        <field name="name">purchase.order.form.view.override</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']/form//field[@name='product_id']" position="after">
+                <field name="equipment_code_required" invisible="1"/>
+                <field name="equipment_code" attrs="{'invisible': [('equipment_code_required', '=', False)],'required': [('equipment_code_required', '=', True)]}"/>
+            </xpath>
+
+            <xpath expr="//field[@name='tax_totals_json']" position="before">
+                <field name="amount_no_discount" widget="monetary" options="{'currency_field': 'currency_id'}" colspan="2"/>
+                <field name="amount_total_discount" widget="monetary" options="{'currency_field': 'currency_id'}" colspan="2"/>
+            </xpath>
+
+            <xpath expr="//field[@name='order_line']/tree/field[@name='date_planned']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='order_line']/tree/field[@name='product_id']" position="after">
+                <field name="equipment_code_required" invisible="1"/>
+                <field name="equipment_code" attrs="{'required': [('equipment_code_required', '=', True)]}"/>
+            </xpath>
+
+            <xpath expr="//field[@name='order_line']/tree/field[@name='product_qty']" position="after">
+                <field name="product_virtual_qty"/>
+            </xpath>
+
+            <xpath expr="//field[@name='order_line']/form//field[@name='price_unit']" position="before">
+                <field name="product_virtual_qty"/>
+            </xpath>
+
+            <xpath expr="//field[@name='price_subtotal']" position="after">
+                <field name="is_logistica_pt" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//field[@name='company_id']" position="before">
+                <field name="user_has_account_manager_group" invisible="1"/>
+                <field name="is_import" invisible="1"/>
+                <field name="user_has_logistic_group" invisible="1"/>
+                <field name="pre_payment" string="Prepayment Done" attrs="{'readonly': [('user_has_account_manager_group','=',False)]}"/>
+            </xpath>
+
+            <xpath expr="//field[@name='price_subtotal']" position="after">
+                <field name="is_request" string="PT Request"
+                       attrs="{'column_invisible': [('parent.is_import','=',False)], 'readonly': [('parent.user_has_logistic_group','=',False)]}"/>
+            </xpath>
+
+            <xpath expr="//field[@name='date_order']" position="before">
+                <field name="work_project_id" string="Work Number"/>
+                <field name="is_import"/>
+                <field name="pre_payment"/>
+            </xpath>
+
+            <xpath expr="//label[@for='date_approve']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//div[@name='date_approve']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//label[@for='date_planned']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//div[@name='date_planned_div']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='date_order']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,65 @@
+<odoo>
+    <record id="hr_expense_view_form_arxi_override" model="ir.ui.view">
+        <field name="name">hr.expense.view.form.arxi.override</field>
+        <field name="model">hr.expense</field>
+        <field name="inherit_id" ref="hr_expense.hr_expense_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='account_id']" position="attributes">
+                <attribute name="required">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='employee_id']" position="attributes">
+                <attribute name="groups">hr_expense.group_hr_expense_manager</attribute>
+            </xpath>
+            <!--            <xpath expr="//field[@name='sale_order_id']" position="attributes">-->
+            <!--                <attribute name="invisible">1</attribute>-->
+            <!--            </xpath>-->
+            <xpath expr="//field[@name='analytic_account_id']" position="attributes">
+                <attribute name="options">{'no_create_edit': True, 'no_create': True, 'no_open': True}</attribute>
+            </xpath>
+            <xpath expr="//label[@for='quantity']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//label[@for='quantity']/following-sibling::div[1]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='unit_amount']" position="replace">
+                <label for="unit_amount" string="Expense Amount"/>
+                <div>
+                    <field name="unit_amount" required="1" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                </div>
+            </xpath>
+            <xpath expr="//field[@name='unit_amount']/parent::div" position="after">
+                <field name="is_fuel"/>
+            </xpath>
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field name="equipment_code" attrs="{'invisible': [('is_fuel','=',False)], 'required': [('is_fuel','=',True)]}"/>
+                <field name="km_work_hours" attrs="{'invisible': [('is_fuel','=',False)]}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_view_employee_form_arxi_override" model="ir.ui.view">
+        <field name="name">hr.view.employee.form.arxi.override</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field name="is_expense_approver" attrs="{'invisible': [('user_id','=',False)]}"/>
+                <field name="expense_approval_employee_ids" widget="many2many_tags"
+                       attrs="{'invisible': [('is_expense_approver','=',False)]}"/>
+            </xpath>
+            <xpath expr="//field[@name='job_title']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='coach_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <!--            <xpath expr="//field[@name='vehicle']" position="attributes">-->
+            <!--                <attribute name="invisible">1</attribute>-->
+            <!--            </xpath>-->
+            <!--            <xpath expr="//field[@name='vehicle']" position="after">-->
+            <!--                <field name="company_vehicle"/>-->
+            <!--            </xpath>-->
+        </field>
+    </record>
+</odoo>

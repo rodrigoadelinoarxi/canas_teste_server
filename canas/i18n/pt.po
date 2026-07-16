@@ -1,0 +1,1097 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* canas
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-03 14:31+0000\n"
+"PO-Revision-Date: 2023-11-03 14:31+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.canas_report_payslip
+msgid "<b>Absences</b>"
+msgstr "<b>Ausências</b>"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.canas_report_payslip
+msgid "<b>Allowances</b>"
+msgstr "<b>Abonos</b>"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.canas_report_payslip
+msgid "<b>Discounts</b>"
+msgstr "<b>Descontos</b>"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.canas_report_payslip
+msgid ""
+"<br/>\n"
+"                <br/>\n"
+"                <br/>\n"
+"                <span>Signature</span>\n"
+"                <br/>\n"
+"                <br/>"
+msgstr ""
+"<br/>\n"
+"                <br/>\n"
+"                <br/>\n"
+"                <span>Assinatura</span>\n"
+"                <br/>\n"
+"                <br/>"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.repair_form_override
+msgid "<span> planned hours</span>"
+msgstr "<span> horas planeadas</span>"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.document_tax_totals_canas
+msgid "<strong style=\"color:#000000;\">Total</strong>"
+msgstr ""
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.canas_report_payslip
+msgid "<strong>Bank Account</strong>"
+msgstr "<strong>Conta Bancária</strong>"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.canas_report_payslip
+msgid "<strong>Contract Start Date</strong>"
+msgstr "<strong>Data de início de Contrato</strong>"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.canas_report_payslip
+msgid "<strong>Dependents</strong>"
+msgstr "<strong>Dependentes</strong>"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.canas_report_payslip
+msgid "<strong>Designation</strong>"
+msgstr "<strong>Categoria</strong>"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.canas_report_payslip
+msgid "<strong>Employee Nº</strong>"
+msgstr "<strong>Nº Funcionário</strong>"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.canas_report_payslip
+msgid "<strong>Insurance Company</strong>"
+msgstr "<strong>Seguro</strong>"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.canas_report_payslip
+msgid "<strong>Insurance Policy</strong>"
+msgstr "<strong>Apólice</strong>"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.canas_report_payslip
+msgid "<strong>Marital Status</strong>"
+msgstr "<strong>Estado Civil</strong>"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.canas_report_payslip
+msgid "<strong>NISS</strong>"
+msgstr ""
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.canas_report_payslip
+msgid "<strong>NUIT</strong>"
+msgstr ""
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.canas_report_payslip
+msgid "<strong>Pay Period</strong>"
+msgstr "<strong>Período</strong>"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.canas_report_payslip
+msgid "<strong>Vacation Days Left</strong>"
+msgstr "<strong>Dias de Férias Restantes</strong>"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_repair_order__analytic_account_active
+msgid "Active"
+msgstr "Ativo"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.canas_report_payslip
+msgid "Amount"
+msgstr "Valor"
+
+#. module: canas
+#: code:addons/canas/models/purchase.py:0
+#, python-format
+msgid "Amount W/O Discount"
+msgstr "Montante S/ Desconto"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_purchase_order__amount_no_discount
+msgid "Amount Without Discount"
+msgstr "Montante Sem Desconto"
+
+#. module: canas
+#: model:ir.model,name:canas.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "Linha de Analítica"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_task_checklist_repair__user_id
+msgid "Assigned to"
+msgstr "Atribuído a"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_purchase_order_line__product_virtual_qty
+#: model:ir.model.fields,field_description:canas.field_repair_line__product_available_qty
+msgid "Available Product Quantity"
+msgstr "Quantidade Em Mão"
+
+#. module: canas
+#: model:hr.leave.type,name:canas.bereavement_leave_2_days_status_paid
+#: model:hr.work.entry.type,name:canas.bereavement_leave_2_days_entry_type
+msgid "Bereavement Leave (2 days)"
+msgstr "Licença por Luto (2 dias)"
+
+#. module: canas
+#: model:hr.leave.type,name:canas.bereavement_leave_5_days_status_paid
+#: model:hr.work.entry.type,name:canas.bereavement_leave_5_days_entry_type
+msgid "Bereavement Leave (5 days)"
+msgstr "Licença por Luto (5 dias)"
+
+#. module: canas
+#: model:hr.leave.type,name:canas.breastfeeding_leave_days_status_paid
+#: model:hr.work.entry.type,name:canas.breastfeeding_leave_days_entry_type
+msgid "Breastfeeding Leave"
+msgstr "Licença de Amamentação"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.repair_form_override
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: canas
+#: model:ir.model.fields.selection,name:canas.selection__task_checklist_repair__state__cancel
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.repair_form_override
+msgid "Checklist"
+msgstr ""
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_repair_order__checklist_done
+msgid "Checklist Done"
+msgstr "Checklist Completa"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_hr_employee__company_vehicle
+msgid "Company Vehicle"
+msgstr "Veículo da Empresa"
+
+#. module: canas
+#: model:ir.model.fields.selection,name:canas.selection__task_checklist_repair__state__done
+msgid "Completed"
+msgstr "Completo"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_hr_work_entry__construction
+msgid "Construction"
+msgstr "Obra"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_project_project__construction_director
+msgid "Construction Director"
+msgstr "Diretor de Obra"
+
+#. module: canas
+#: model:ir.model,name:canas.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_project_project__contract_nr
+msgid "Contract Nr."
+msgstr "Contrato Nº"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_project_project__contract_value
+msgid "Contract Value"
+msgstr "Valor do Contrato"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.repair_form_override
+msgid "Create Quotation"
+msgstr "Criar Cotação"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_repair_quotation_selection_wizard__create_uid
+#: model:ir.model.fields,field_description:canas.field_task_checklist_repair__create_uid
+msgid "Created by"
+msgstr "Criado por"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_repair_quotation_selection_wizard__create_date
+#: model:ir.model.fields,field_description:canas.field_task_checklist_repair__create_date
+msgid "Created on"
+msgstr "Criado em"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_project_project__company_currency_id
+msgid "Currency"
+msgstr "Moeda"
+
+#. module: canas
+#: model:ir.model.fields,help:canas.field_repair_line__product_available_qty
+msgid ""
+"Current quantity of products.\n"
+"In a context with a single Stock Location, this includes goods stored at this Location, or any of its children.\n"
+"In a context with a single Warehouse, this includes goods stored in the Stock Location of this Warehouse, or any of its children.\n"
+"stored in the Stock Location of the Warehouse of this Shop, or any of its children.\n"
+"Otherwise, this includes goods stored in any Stock Location with 'internal' type."
+msgstr ""
+"Quantidade atual dos artigos.\n"
+"Num contexto de uma única Localização de Stock, inclui produtos armazenados nesta localização, ou numa das suas descendentes.\n"
+"Num contexto com um único Armazém, inclui os produtos armazenados na localização de stock deste Armazém, ou numa das suas descendentes.\n"
+"Num contexto com Loja, inclui os produtos armazenados na localização de stock do Armazém desta Loja, ou numa das suas descendentes.\n"
+"Caso contrário, inclui mercadorias armazenadas na localização de stock do tipo 'interno'."
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.hr_contracts_inherit
+msgid "Default Structure"
+msgstr ""
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_repair_quotation_selection_wizard__display_name
+#: model:ir.model.fields,field_description:canas.field_task_checklist_repair__display_name
+msgid "Display Name"
+msgstr "Nome a exibir"
+
+#. module: canas
+#: model:ir.model.fields,help:canas.field_repair_order__progress
+msgid "Display progress of current task."
+msgstr "Mostra o progresso da tarefa atual."
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.repair_form_override
+msgid "Done"
+msgstr "Concluído"
+
+#. module: canas
+#: model:ir.model.fields.selection,name:canas.selection__task_checklist_repair__state__draft
+#: model_terms:ir.ui.view,arch_db:canas.repair_form_override
+msgid "Draft"
+msgstr "Rascunho"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.canas_report_payslip
+msgid "Duplicate"
+msgstr "Duplicado"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.repair_form_override
+msgid "Duration"
+msgstr "Duração"
+
+#. module: canas
+#: model:ir.model,name:canas.model_hr_employee
+msgid "Employee"
+msgstr "Funcionário"
+
+#. module: canas
+#: model:res.partner.category,name:canas.res_partner_employee_category
+msgid "Employees"
+msgstr "Funcionários"
+
+#. module: canas
+#: model:ir.model.fields,help:canas.field_repair_order__allow_timesheets
+msgid "Enable timesheeting on the project."
+msgstr "Ative timesheets no projeto."
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_project_project__date_to
+msgid "End Date"
+msgstr "Data Final"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_purchase_order__equipment_code
+msgid "Equipment"
+msgstr "Equipamento"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_hr_expense__equipment_code
+#: model:ir.model.fields,field_description:canas.field_purchase_order_line__equipment_code
+#: model:ir.model.fields,field_description:canas.field_repair_order__code_equipment_related
+msgid "Equipment Code"
+msgstr "Código de Equipamento"
+
+#. module: canas
+#: model:ir.model,name:canas.model_hr_expense
+msgid "Expense"
+msgstr "Despesa"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.hr_expense_view_form_arxi_override
+msgid "Expense Amount"
+msgstr "Valor da Despesa"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_hr_employee__expense_approval_employee_ids
+msgid "Expense Approvals"
+msgstr "Aprovações de Despesas"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_hr_employee__is_expense_approver
+msgid "Expense Approver"
+msgstr "Aprovador de Despesas"
+
+#. module: canas
+#: model:hr.work.entry.type,name:canas.extra_hours_days_entry_type
+msgid "Extra Hours"
+msgstr "Horas Extras"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_res_partner__fax
+#: model:ir.model.fields,field_description:canas.field_res_users__fax
+msgid "Fax"
+msgstr ""
+
+#. module: canas
+#: model:ir.model.fields,help:canas.field_res_partner__fax
+#: model:ir.model.fields,help:canas.field_res_users__fax
+msgid "Fax Contact"
+msgstr "Contacto Fax"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_repair_quotation_selection_wizard__fees_lines
+msgid "Fees Lines"
+msgstr "Linhas de Despesas"
+
+#. module: canas
+#: model:hr.work.entry.type,name:canas.holiday_entry_type
+msgid "Feriado"
+msgstr ""
+
+#. module: canas
+#: model:ir.model.fields,help:canas.field_purchase_order_line__product_virtual_qty
+msgid ""
+"Forecast quantity (computed as Quantity On Hand - Outgoing + Incoming)\n"
+"In a context with a single Stock Location, this includes goods stored in this location, or any of its children.\n"
+"In a context with a single Warehouse, this includes goods stored in the Stock Location of this Warehouse, or any of its children.\n"
+"Otherwise, this includes goods stored in any Stock Location with 'internal' type."
+msgstr ""
+"Quantidade Prevista (calculada como Quantidade em Mão - A sair + A entrar)\n"
+"No contexto de uma única localização de stock, inclui mercadorias guardadas nesta localização, ou em localizações descendentes.\n"
+"No contexto de um único armazém, inclui mercadorias guardadas na localização de stock deste armazém, ou em localizações descendentes.\n"
+"Caso contrário, inclui mercadorias guardadas na localização de stock com o tipo \"interno\"."
+
+#. module: canas
+#: model:product.product,name:canas.canas_expense_product_product_gas_passenger_car
+msgid "Gasolina - Ligeiros Passageiros"
+msgstr ""
+
+#. module: canas
+#: model:product.product,name:canas.canas_expense_product_product_diesel_passenger_car
+msgid "Gasóleo - Ligeiros Passageiros"
+msgstr ""
+
+#. module: canas
+#: model:product.product,name:canas.canas_expense_product_product_diesel_mixed_merchandise
+msgid "Gasóleo - Mistos / Mercadorias"
+msgstr ""
+
+#. module: canas
+#: model:product.product,name:canas.canas_expense_product_product_diesel_machines_heavy_duty_others
+msgid "Gasóleo - Máquinas/Pesados/Outros"
+msgstr ""
+
+#. module: canas
+#: model:ir.model.fields,help:canas.field_task_checklist_repair__sequence
+msgid "Gives the sequence order when displaying a list"
+msgstr "Retorna a ordem da sequência ao apresentar uma lista"
+
+#. module: canas
+#: model:ir.model,name:canas.model_hr_work_entry
+msgid "HR Work Entry"
+msgstr "Entrada de Ponto RH"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_purchase_order__has_equipment_code_lines
+msgid "Has Equipment Code Lines"
+msgstr ""
+
+#. module: canas
+#: model:hr.leave.type,name:canas.holiday_status_paid
+msgid "Holiday"
+msgstr "Feriado"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_repair_order__effective_hours
+msgid "Hours Spent"
+msgstr "Horas Gastas"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_repair_quotation_selection_wizard__id
+#: model:ir.model.fields,field_description:canas.field_task_checklist_repair__id
+msgid "ID"
+msgstr ""
+
+#. module: canas
+#: model:ir.model.fields,help:canas.field_repair_order__analytic_account_active
+msgid ""
+"If the active field is set to False, it will allow you to hide the account "
+"without removing it."
+msgstr ""
+"Se o campo \"activo\" estiver desactivado, permitirá ocultar a conta sem a "
+"remover."
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_repair_order__planned_hours
+msgid "Initially Planned Hours"
+msgstr "Horas planeadas inicialmente"
+
+#. module: canas
+#: model:product.product,name:canas.canas_expense_product_product_periodic_inspection
+msgid "Inspecao Automóvel"
+msgstr ""
+
+#. module: canas
+#: model:ir.model,name:canas.model_mail_wizard_invite
+msgid "Invite wizard"
+msgstr "Wizard de convites"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_hr_expense__is_fuel
+msgid "Is Fuel"
+msgstr "É Combustível"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_product_product__is_fuel_expense
+msgid "Is Fuel Expense"
+msgstr "Despesa de Combustível"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_purchase_order__is_import
+msgid "Is Import"
+msgstr "É Importação"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_purchase_order_line__is_request
+msgid "Is Request"
+msgstr "Pedido"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_hr_expense__km_work_hours
+msgid "Km/Work Hours"
+msgstr "Km/Horas de Trabalho"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_repair_quotation_selection_wizard____last_update
+#: model:ir.model.fields,field_description:canas.field_task_checklist_repair____last_update
+msgid "Last Modified on"
+msgstr "Última Modificação em"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_repair_quotation_selection_wizard__write_uid
+#: model:ir.model.fields,field_description:canas.field_task_checklist_repair__write_uid
+msgid "Last Updated by"
+msgstr "Última Atualização por"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_repair_quotation_selection_wizard__write_date
+#: model:ir.model.fields,field_description:canas.field_task_checklist_repair__write_date
+msgid "Last Updated on"
+msgstr "Última Atualização em"
+
+#. module: canas
+#: model:hr.leave.type,name:canas.leave_status_paid
+msgid "Leave Paid"
+msgstr "Licença com Vencimento"
+
+#. module: canas
+#: model:hr.leave.type,name:canas.leave_status_unpaid
+msgid "Leave Unpaid"
+msgstr "Licença sem Vencimento"
+
+#. module: canas
+#: model:hr.work.entry.type,name:canas.leave_with_pay_entry_type
+msgid "Leave with Pay"
+msgstr "Licença com Vencimento"
+
+#. module: canas
+#: model:hr.work.entry.type,name:canas.leave_without_pay_entry_type
+msgid "Leave without Pay"
+msgstr "Licença sem Vencimento"
+
+#. module: canas
+#: model:res.groups,name:canas.group_limited_purchase_order_view
+msgid "Limited Purchase Order View"
+msgstr ""
+
+#. module: canas
+#: model:ir.model.fields,help:canas.field_hr_employee__expense_approval_employee_ids
+msgid "List of employees whose expense approvals are done by this employee"
+msgstr ""
+"Lista de funcionários cujas aprovações de despesas são feitas por este "
+"funcionário"
+
+#. module: canas
+#: model:ir.model.fields,help:canas.field_mail_wizard_invite__partner_ids
+msgid ""
+"List of partners that will be added as follower of the current document."
+msgstr ""
+"Lista de parceiros que serão adicionados como seguidores do documento "
+"actual."
+
+#. module: canas
+#: model:product.product,uom_name:canas.canas_expense_product_product_diesel_machines_heavy_duty_others
+#: model:product.product,uom_name:canas.canas_expense_product_product_diesel_mixed_merchandise
+#: model:product.product,uom_name:canas.canas_expense_product_product_diesel_passenger_car
+#: model:product.product,uom_name:canas.canas_expense_product_product_gas_passenger_car
+msgid "Liter(s)"
+msgstr ""
+
+#. module: canas
+#: model:res.groups,name:canas.logistica_pt
+msgid "Logística_PT"
+msgstr ""
+
+#. module: canas
+#: model:product.product,name:canas.canas_expense_product_product_maintenance_repairs_passenger_car
+msgid "Manutenção Reparação - Ligeiros Passageiros"
+msgstr ""
+
+#. module: canas
+#: model:product.product,name:canas.canas_expense_product_product_maintenance_repairs_mixed_merchandise
+msgid "Manutenção Reparação - Mistos/Mercadorias"
+msgstr ""
+
+#. module: canas
+#: model:product.product,name:canas.canas_expense_product_product_maintenance_repairs_machines_heavy_duty_others
+msgid "Manutenção Reparação - Máquinas/Pesados/Outros"
+msgstr ""
+
+#. module: canas
+#: model:hr.leave.type,name:canas.marriage_leave_status_paid
+#: model:hr.work.entry.type,name:canas.marriage_leave_entry_type
+msgid "Marriage Leave"
+msgstr "Licença de Casamento"
+
+#. module: canas
+#: model:ir.model,name:canas.model_material_purchase_requisition
+msgid "Material Purchase Requisition"
+msgstr "Requisição de Compra de Material"
+
+#. module: canas
+#: model:ir.model,name:canas.model_material_purchase_requisition_line
+msgid "Material Purchase Requisition line"
+msgstr "Linha de Requisição de Compra de Material"
+
+#. module: canas
+#: model:product.product,name:canas.canas_expense_product_product_repairs_equipment_passenger_car
+msgid "Material Reparação - Ligeiros Passageiros"
+msgstr ""
+
+#. module: canas
+#: model:product.product,name:canas.canas_expense_product_product_repairs_equipment_mixed_merchandise
+msgid "Material Reparação - Mistos/Mercadorias"
+msgstr ""
+
+#. module: canas
+#: model:product.product,name:canas.canas_expense_product_product_repairs_equipment_machines_heavy_duty_others
+msgid "Material Reparação - Máquinas /Pesados/Outros"
+msgstr ""
+
+#. module: canas
+#: model:hr.leave.type,name:canas.maternity_leave_days_status_paid
+#: model:hr.work.entry.type,name:canas.maternity_leave_days_entry_type
+msgid "Maternity Leave"
+msgstr "Licença de Maternidade "
+
+#. module: canas
+#: model:product.product,name:canas.canas_expense_product_product_fines
+msgid "Multas"
+msgstr ""
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_task_checklist_repair__name
+#: model_terms:ir.ui.view,arch_db:canas.canas_report_payslip
+msgid "Name"
+msgstr "Nome"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.canas_report_payslip
+msgid "Notas"
+msgstr ""
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.external_layout_standard
+msgid "Notes"
+msgstr "Notas"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_repair_quotation_selection_wizard__operations
+#: model:ir.model.fields.selection,name:canas.selection__repair_quotation_selection_wizard__state__operations
+msgid "Operations"
+msgstr "Operações"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.canas_report_payslip
+msgid "Original"
+msgstr ""
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_project_task__original_location
+#: model:ir.model.fields,field_description:canas.field_repair_order__original_location
+msgid "Original Location"
+msgstr "Localização Original"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.purchase_order_form_view_override
+msgid "PT Request"
+msgstr "Pedido PT"
+
+#. module: canas
+#: model:hr.leave.type,name:canas.parental_leave_days_status_paid
+#: model:hr.work.entry.type,name:canas.parental_leave_days_entry_type
+msgid "Parental Leave"
+msgstr "Licença de Assistência a Filhos Menores"
+
+#. module: canas
+#: model:ir.model.fields.selection,name:canas.selection__repair_quotation_selection_wizard__state__parts
+msgid "Parts"
+msgstr "Partes"
+
+#. module: canas
+#: model:hr.leave.type,name:canas.paternity_leave_days_status_paid
+#: model:hr.work.entry.type,name:canas.paternity_leave_days_entry_type
+msgid "Paternity Leave"
+msgstr "Licença de Paternidade"
+
+#. module: canas
+#: model:ir.model,name:canas.model_hr_payslip_worked_days
+msgid "Payslip Worked Days"
+msgstr "Dias Trabalhados do Recibos de vencimento"
+
+#. module: canas
+#: code:addons/canas/models/repair.py:0
+#, python-format
+msgid "Please fill lines in the repair!"
+msgstr "Por favor preencha as linhas na reparação!"
+
+#. module: canas
+#: model:product.product,name:canas.canas_expense_product_product_tolls_parking
+msgid "Portagens / Estacionamentos"
+msgstr ""
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_purchase_order__pre_payment
+msgid "Pre Payment"
+msgstr "Pré-pagamento Feito"
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.purchase_order_form_view_override
+msgid "Prepayment Done"
+msgstr "Pré-pagamento Feito"
+
+#. module: canas
+#: model:ir.model,name:canas.model_product_product
+msgid "Product"
+msgstr "Artigo"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_repair_order__progress
+msgid "Progress"
+msgstr "Progresso"
+
+#. module: canas
+#: model:ir.model,name:canas.model_project_project
+#: model:ir.model.fields,field_description:canas.field_fleet_vehicle_log_services__project_id
+#: model:ir.model.fields,field_description:canas.field_repair_order__project_id
+msgid "Project"
+msgstr "Projeto"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_project_project__project_description
+msgid "Project Description"
+msgstr "Descrição do Projeto"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_project_project__proposal_nr
+msgid "Proposal Nr."
+msgstr "Proposta Nº"
+
+#. module: canas
+#: model:ir.model,name:canas.model_purchase_order
+msgid "Purchase Order"
+msgstr "Ordem de Compra"
+
+#. module: canas
+#: model:ir.model,name:canas.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Linha de Encomenda de Compra"
+
+#. module: canas
+#: model:res.groups,name:canas.group_purchase_access_followed_projects
+msgid "Purchase: Access to Followed Projects Only"
+msgstr ""
+
+#. module: canas
+#: model:res.groups,name:canas.group_group_purchase_access_own_documents_followed_projects
+msgid "Purchase: Access to Own Documents and Followed Projects"
+msgstr ""
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_mail_wizard_invite__partner_ids
+msgid "Recipients"
+msgstr "Destinatários"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_repair_order__remainqing_hours
+msgid "Remaining Hours"
+msgstr "Horas Restantes"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_account_analytic_line__repair_id
+#: model:ir.model.fields,field_description:canas.field_repair_order__task_checklist_ids
+#: model:ir.model.fields,field_description:canas.field_task_checklist_repair__repair_id
+msgid "Repair"
+msgstr "Reparação"
+
+#. module: canas
+#: model:ir.model,name:canas.model_repair_line
+msgid "Repair Line (parts)"
+msgstr "Linha de Reparação (peças)"
+
+#. module: canas
+#: model:ir.model,name:canas.model_repair_order
+#: model:ir.model.fields,field_description:canas.field_project_task__repair_order
+#: model:ir.model.fields,field_description:canas.field_repair_quotation_selection_wizard__repair_order_id
+msgid "Repair Order"
+msgstr "Ordem de Reparação"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_project_project__is_repairs_project
+#: model:project.project,name:canas.repair_project
+msgid "Repair Project"
+msgstr "Projeto de Reparação"
+
+#. module: canas
+#: model:ir.model,name:canas.model_repair_quotation_selection_wizard
+msgid "Repair Quotation Selection Wizard"
+msgstr "Wizard de Seleção da Cotação de Reparação"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_purchase_order_line__equipment_code_required
+msgid "Require Equipment Code"
+msgstr ""
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_repair_order__responsible_id
+msgid "Responsible"
+msgstr "Responsável"
+
+#. module: canas
+#: model:hr.work.entry.type,name:canas.resting_day_worked_days_entry_type
+msgid "Resting Day Worked"
+msgstr "Dia de Descanso Trabalhado"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_hr_contract__salary_structure
+msgid "Salary Structure"
+msgstr "Estrutura Salarial"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_hr_contract__structure_type_id_default
+msgid "Salary Structure Type"
+msgstr "Tipo de Estrutura Salarial"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_task_checklist_repair__sequence
+msgid "Sequence"
+msgstr "Sequência"
+
+#. module: canas
+#: model:ir.model,name:canas.model_fleet_vehicle_log_services
+msgid "Services for vehicles"
+msgstr "Serviços para veículos"
+
+#. module: canas
+#: model:hr.work.entry.type,name:canas.not_paid_sick_leave_entry_type
+msgid "Sick Leave (not paid)"
+msgstr "Licença médica (não remunerada)"
+
+#. module: canas
+#: model:hr.work.entry.type,name:canas.paid_sick_leave_entry_type
+msgid "Sick Leave (paid)"
+msgstr "Licença médica (remunerada)"
+
+#. module: canas
+#: model:hr.leave.type,name:canas.sick_status_paid
+msgid "Sick Leave Paid"
+msgstr "Licença Médica Remunerada"
+
+#. module: canas
+#: model:hr.leave.type,name:canas.sick_status_unpaid
+msgid "Sick Leave Unpaid"
+msgstr "Licença Médica Não Remunerada"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_project_project__date_from
+msgid "Start Date"
+msgstr "Data de início"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_repair_quotation_selection_wizard__state
+#: model:ir.model.fields,field_description:canas.field_task_checklist_repair__state
+msgid "State"
+msgstr "Estado"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_hr_payslip__structure
+msgid "Structure"
+msgstr "Estrutura"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_repair_order__subtask_count
+msgid "Sub-task Count"
+msgstr "Número de Sub-tarefas"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_repair_order__subtask_effective_hours
+msgid "Sub-tasks Hours Spent"
+msgstr "Horas Gastas em Sub-tarefas"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_repair_order__subtask_planned_hours
+msgid "Sub-tasks Planned Hours"
+msgstr "Horas planeadas das Sub-tarefas"
+
+#. module: canas
+#: model:ir.model.fields,help:canas.field_repair_order__subtask_planned_hours
+msgid ""
+"Sum of the time planned of all the sub-tasks linked to this task. Usually "
+"less than or equal to the initially planned time of this task."
+msgstr ""
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_res_partner__supplier_code
+#: model:ir.model.fields,field_description:canas.field_res_users__supplier_code
+msgid "Supplier Code"
+msgstr "Código de Fornecedor"
+
+#. module: canas
+#: model:ir.model,name:canas.model_project_task
+#: model:ir.model.fields,field_description:canas.field_repair_order__task_id
+msgid "Task"
+msgstr "Tarefa"
+
+#. module: canas
+#: model:ir.model,name:canas.model_task_checklist_repair
+msgid "Task Checklist"
+msgstr "Checklist da Tarefa"
+
+#. module: canas
+#: model:project.project,label_tasks:canas.repair_project
+msgid "Tasks"
+msgstr "Tarefas"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_hr_expense__tax_ids
+msgid "Taxes"
+msgstr "Impostos"
+
+#. module: canas
+#: model:ir.model.fields,help:canas.field_hr_expense__tax_ids
+msgid "The taxes should be \"Included In Price\""
+msgstr "As taxas devem ser \"Incluído no Preço\""
+
+#. module: canas
+#: code:addons/canas/wizard/repair_quotation_selection_wizard.py:0
+#, python-format
+msgid "There are no operations for quotation creation!"
+msgstr "Não existem operações para criar uma cotação!"
+
+#. module: canas
+#: code:addons/canas/wizard/repair_quotation_selection_wizard.py:0
+#, python-format
+msgid "There are no parts for quotation creation!"
+msgstr "Não existem partes para criar uma cotação!"
+
+#. module: canas
+#: model:ir.model.fields,help:canas.field_repair_order__planned_hours
+msgid "Time planned to achieve this task (including its sub-tasks)."
+msgstr ""
+
+#. module: canas
+#: model:ir.model.fields,help:canas.field_repair_order__subtask_effective_hours
+msgid "Time spent on the sub-tasks (and their own sub-tasks) of this task."
+msgstr ""
+
+#. module: canas
+#: model:ir.model.fields,help:canas.field_repair_order__effective_hours
+msgid "Time spent on this task, excluding its sub-tasks."
+msgstr ""
+
+#. module: canas
+#: model:ir.model.fields,help:canas.field_repair_order__total_hours_spent
+msgid "Time spent on this task, including its sub-tasks."
+msgstr ""
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.repair_form_override
+msgid "Timesheet Activities"
+msgstr "Registo de Horas das Atividades"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_repair_order__allow_timesheets
+#: model:ir.model.fields,field_description:canas.field_repair_order__timesheet_ids
+#: model_terms:ir.ui.view,arch_db:canas.repair_form_override
+msgid "Timesheets"
+msgstr "Registos de Horas"
+
+#. module: canas
+#: code:addons/canas/models/purchase.py:0
+#: model:ir.model.fields,field_description:canas.field_purchase_order__amount_total_discount
+#, python-format
+msgid "Total Discount"
+msgstr "Desconto Total"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_repair_order__total_hours_spent
+msgid "Total Hours"
+msgstr "Total de Horas"
+
+#. module: canas
+#: model:ir.model.fields,help:canas.field_repair_order__remainqing_hours
+msgid ""
+"Total remaining time, can be re-estimated periodically by the assignee of "
+"the task."
+msgstr ""
+"Tempo total restante, pode ser re-estimado periodicamente pelo responsável "
+"pela tarefa."
+
+#. module: canas
+#: model:product.product,uom_name:canas.canas_expense_product_product_fines
+#: model:product.product,uom_name:canas.canas_expense_product_product_maintenance_repairs_machines_heavy_duty_others
+#: model:product.product,uom_name:canas.canas_expense_product_product_maintenance_repairs_mixed_merchandise
+#: model:product.product,uom_name:canas.canas_expense_product_product_maintenance_repairs_passenger_car
+#: model:product.product,uom_name:canas.canas_expense_product_product_periodic_inspection
+#: model:product.product,uom_name:canas.canas_expense_product_product_repairs_equipment_machines_heavy_duty_others
+#: model:product.product,uom_name:canas.canas_expense_product_product_repairs_equipment_mixed_merchandise
+#: model:product.product,uom_name:canas.canas_expense_product_product_repairs_equipment_passenger_car
+#: model:product.product,uom_name:canas.canas_expense_product_product_tolls_parking
+msgid "Unit(s)"
+msgstr ""
+
+#. module: canas
+#: model:hr.work.entry.type,name:canas.unjustified_absence_entry_type
+#: model:ir.model.fields,field_description:canas.field_hr_work_entry__unjustified_absence
+msgid "Unjustified Absence"
+msgstr "Falta Injustificada"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_hr_work_entry__unproductive
+msgid "Unproductive"
+msgstr "improdutivo"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_hr_work_entry__unsuccessful_maintenance
+msgid "Unsuccessful Maintenance"
+msgstr "Manutenção sem sucesso"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_purchase_order__user_has_account_manager_group
+msgid "User Has Account Manager Group"
+msgstr ""
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_purchase_order__user_has_logistic_group
+#: model:ir.model.fields,field_description:canas.field_purchase_order_line__is_logistica_pt
+msgid "User Has Logistic Group"
+msgstr ""
+
+#. module: canas
+#: model:hr.leave.type,name:canas.vacation_status_paid
+#: model:hr.work.entry.type,name:canas.vacation_entry_type
+msgid "Vacation"
+msgstr "Férias"
+
+#. module: canas
+#: model:ir.model,name:canas.model_fleet_vehicle
+msgid "Vehicle"
+msgstr "Veículo"
+
+#. module: canas
+#: model:ir.model,name:canas.model_holiday_wizard
+msgid "Wizard to get national holidays"
+msgstr "Assistente de feriados"
+
+#. module: canas
+#: code:addons/canas/models/hr_work_entry.py:0
+#, python-format
+msgid "Work Entry"
+msgstr ""
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.purchase_order_form_view_override
+msgid "Work Number"
+msgstr "Nº Obra"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_purchase_order__work_project_id
+msgid "Work Project"
+msgstr "Nº Obra"
+
+#. module: canas
+#: model:hr.leave.type,name:canas.worker_student_leave_days_status_paid
+#: model:hr.work.entry.type,name:canas.worker_student_leave_days_entry_type
+msgid "Worker-Student Leave"
+msgstr "Licença Trabalhador-Estudante"
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_purchase_order__x_studio__importao
+msgid "X Studio  Importao"
+msgstr ""
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_purchase_order_line__x_studio_pedido
+msgid "X Studio Pedido"
+msgstr ""
+
+#. module: canas
+#: model:ir.model.fields,field_description:canas.field_purchase_order__x_studio_pr_pagamento
+msgid "X Studio Pr Pagamento"
+msgstr ""
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.repair_form_override
+msgid ""
+"You can not log timesheets on this project since is linked to an inactive analytic account.\n"
+"                            Please change it, or reactivate the current one to timesheet on the project."
+msgstr ""
+"Não pode registar tempo neste projeto pois está ligado a uma conta analítica desativada.\n"
+"                            Por favor altere a conta analítica ou ative a atual para poder registar horas no projeto."
+
+#. module: canas
+#: model:ir.model,name:canas.model_hr_contract
+msgid "hr.contract Inherit"
+msgstr ""
+
+#. module: canas
+#: model:ir.model,name:canas.model_hr_payslip
+msgid "hr_payslip_inherit"
+msgstr ""
+
+#. module: canas
+#: model_terms:ir.ui.view,arch_db:canas.tax_groups_totals_canas
+msgid "on"
+msgstr ""

@@ -1,0 +1,6 @@
+<odoo noupdate="0">
+    <record id="res_partner_employee_category" model="res.partner.category">
+        <field name="name">Employees</field>
+        <field name="color" eval="4"/>
+    </record>
+</odoo>

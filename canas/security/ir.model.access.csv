@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_task_checklist_repair,access_task_checklist_repair,model_task_checklist_repair,base.group_user,1,1,1,1
+canas.access_repair_quotation_selection_wizard,access_repair_quotation_selection_wizard,canas.model_repair_quotation_selection_wizard,base.group_user,1,1,1,1

@@ -1,0 +1,86 @@
+<odoo>
+    <template id="canas_report_purchaseorder_document" inherit_id="purchase_line_discount.discount_report_purchaseorder_document">
+        <!--    H2 name tags    -->
+        <xpath expr="//div[@id='informations']" position="before">
+            <p t-if="o.state in ['draft', 'sent', 'to approve']">Request for Quotation #<span t-field="o.name"/></p>
+            <p t-if="o.state in ['purchase', 'done']">Purchase Order #<span t-field="o.name"/></p>
+            <p t-if="o.state == 'cancel'">Cancelled Purchase Order #<span t-field="o.name"/></p>
+            <t t-if="o.user_id">
+                <p>Responsável da Compra: <span t-field="o.user_id.name"/></p>
+            </t>
+        </xpath>
+
+        <xpath expr="//h2" position="replace"/>
+        <xpath expr="//h2" position="replace"/>
+        <xpath expr="//h2" position="replace"/>
+
+        <!--    INFORMATIONS DIV    -->
+        <xpath expr="//p[@t-if='o.partner_id.vat']" position="after">
+            <span t-if="o.partner_ref"><strong>Quotation #</strong><span t-field="o.partner_ref"/></span>
+        </xpath>
+
+        <xpath expr="//div[@id='informations']//div[@t-if='o.user_id']" position="replace"/>
+        <xpath expr="//div[@id='informations']//div[@t-if='o.partner_ref']" position="replace"/>
+
+        <xpath expr="//div[@id='informations']//p[@t-field='o.date_order']" position="replace">
+            <p t-esc="o.date_order.strftime('%Y-%m-%d')" class="m-0"/>
+        </xpath>
+
+        <xpath expr="//div[@t-if='o.date_order']" position="attributes">
+            <attribute name="class">col-3 bm-2 small</attribute>
+        </xpath>
+
+        <xpath expr="//div[@id='informations']" position="inside">
+            <div t-if="o.work_project_id" class="col-3 bm-2 small">
+                <strong>Work Nº:</strong>
+                <p t-field="o.sudo().work_project_id.name" class="m-0"/>
+            </div>
+        </xpath>
+
+        <!--    TABLE    -->
+        <xpath expr="//th[@name='th_description']" position="after">
+            <th t-if="o.has_equipment_code_lines" class="text-right" style="width:100px;">
+                <strong>Equipment Code</strong>
+            </th>
+        </xpath>
+
+        <xpath expr="//td[@id='product']" position="after">
+            <td t-if="o.has_equipment_code_lines" class="text-right" style="width:100px;">
+                <span t-field="line.equipment_code"/>
+            </td>
+        </xpath>
+
+        <xpath expr="//th[@name='th_date_req']" position="replace"/>
+        <xpath expr="//span[@t-field='line.date_planned']//parent::td" position="replace"/>
+
+        <xpath expr="//th[@name='th_taxes']//parent::tr/th[last()]" position="before">
+            <xpath expr="//th[@name='th_taxes']" position="move"/>
+        </xpath>
+
+        <xpath expr="//td[@name='td_taxes']//parent::t/td[last()]" position="before">
+            <xpath expr="//td[@name='td_taxes']" position="move"/>
+        </xpath>
+
+        <xpath expr="//th[@name='th_price_unit']" position="attributes">
+            <attribute name="class" add="text-nowrap" separator=" "/>
+        </xpath>
+
+        <!--    Notes field    -->
+        <xpath expr="//p[@t-field='o.notes']" position="attributes">
+            <attribute name="class">small</attribute>
+        </xpath>
+
+        <!--    TOTAL JSON    -->
+        <xpath expr="//t[@t-call='account.document_tax_totals']" position="replace">
+            <t t-call="canas.document_tax_totals_canas"/>
+        </xpath>
+    </template>
+
+    <template id="canas_report_purchasequotation_document" inherit_id="purchase.report_purchasequotation_document">
+        <xpath expr="//div[hasclass('page')]//h2[1]" position="after">
+            <t t-if="o.user_id">
+                <h5>Responsável da Compra: <span t-field="o.user_id.name"/></h5>
+            </t>
+        </xpath>
+    </template>
+</odoo>
