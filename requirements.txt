@@ -1,0 +1,3 @@
+holidays
+pycryptodome
+pygount
