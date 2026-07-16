@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_account_payment_form" model="ir.ui.view">
+        <field name="name">account.payment.form.inherit.account_cancel_reason</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_form"/>
+        <field name="arch" type="xml">
+            <!--Add a new cancel button to call the wizard action-->
+            <xpath expr="//button[@name='action_cancel']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_cancel']" position="after">
+                <button name="%(account_cancel_wizard_action_payment)d"
+                        type="action"
+                        states="posted,sent,reconciled"
+                        string="Cancel"
+                        groups="account.group_account_invoice"/>
+            </xpath>
+            <xpath expr="//field[@name='ref']" position="after">
+                <field name="reason" attrs="{'invisible': [('reason', '=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

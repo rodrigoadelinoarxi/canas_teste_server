@@ -1,0 +1,32 @@
+<odoo>
+    <record id="view_order_form" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.sale_cancel_reason</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_cancel']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_cancel']" position="after">
+                <button name="action_cancel_with_reason" states="sent,sale" type="object" string="Cancel"/>
+            </xpath>
+            <xpath expr="//button[@name='action_draft']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='reference']" position="after">
+                <field name="reason" readonly="1" attrs="{'invisible': [('reason', '=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="rewrite" model="ir.actions.server">
+        <field name="name">Rewrite</field>
+        <field name="model_id" ref="sale.model_sale_order"/>
+        <field name="binding_model_id" ref="sale.model_sale_order"/>
+        <field name="state">code</field>
+        <field name="code">
+            if record:
+            action = record.action_rewrite()
+        </field>
+    </record>
+</odoo>

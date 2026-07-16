@@ -1,0 +1,27 @@
+<odoo>
+    <!-- Wizard View To Sale Cancel Reason-->
+    <record id="sale_reason_wizard_view_form" model="ir.ui.view">
+        <field name="name">sale.reason.wizard.form</field>
+        <field name="model">sale.reason.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Cancel Sale">
+                <group>
+                    <field name="reason"/>
+                    <field name="is_rewrite" invisible="1"/>
+                </group>
+                <footer>
+                    <button name="confirm" string="Confirm" type="object" class="oe_highlight"/>
+                    <button string="Cancel" special="cancel" class="oe_highlight"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="sale_reason_wizard_action" model="ir.actions.act_window">
+        <field name="name">Sale Reason Wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.reason.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>
