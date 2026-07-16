@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<odoo>
-    <!-- Inherit quotation report (from module sale) -->
-    <template id="report_payment_inherit" inherit_id="account.report_payment_receipt_document">
-        <xpath expr="//div[hasclass('page')]/h3" position="after">
-            <p t-if="o.state == 'cancel'">Reason: <span t-field="o.reason"/></p>
-        </xpath>
-    </template>
-</odoo>
