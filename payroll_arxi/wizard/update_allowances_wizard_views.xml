@@ -1,0 +1,39 @@
+<odoo>
+    <record id="update_allowances_wizard_form" model="ir.ui.view">
+        <field name="name">update.allowances.wizard.form</field>
+        <field name="model">update.allowances.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Form">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="update_date"/>
+                            <field name="salary_structure_type_ids" widget="many2many_tags"/>
+                        </group>
+                        <group>
+                            <field name="food_allowance"/>
+                            <field name="transport_allowance"/>
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="update_allowances" string="Validate" class="btn-primary" type="object"/>
+                    <button string="Cancel" class="btn-default" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="update_allowances_wizard_action" model="ir.actions.act_window">
+        <field name="name">Update Allowances</field>
+        <field name="res_model">update.allowances.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem action="update_allowances_wizard_action"
+              id="menu_item_update_allowances_wizard"
+              groups="base.group_no_one"
+              parent="hr_payroll.menu_hr_salary_configuration"
+              sequence="40" name="Update Allowances"/>
+</odoo>

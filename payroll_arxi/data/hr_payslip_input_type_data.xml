@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="0">
+    <record id="input_productivity_bonus" model="hr.payslip.input.type">
+        <field name="name">Prémio de Produtividade</field>
+        <field name="code">PROD_BONUS</field>
+        <field name="country_id" eval="False"/>
+    </record>
+    <record id="input_maintenance_bonus" model="hr.payslip.input.type">
+        <field name="name">Prémio de Manutenção</field>
+        <field name="code">MAINT_BONUS</field>
+        <field name="country_id" eval="False"/>
+    </record>
+    <record id="input_assiduity_bonus" model="hr.payslip.input.type">
+        <field name="name">Prémio de Assiduidade</field>
+        <field name="code">ASSID_BONUS</field>
+        <field name="country_id" eval="False"/>
+    </record>
+    <record id="input_food_allowance" model="hr.payslip.input.type">
+        <field name="name">Subsídio de Alimentação</field>
+        <field name="code">FOOD_ALLW</field>
+        <field name="country_id" eval="False"/>
+    </record>
+    <record id="input_transport_allowance" model="hr.payslip.input.type">
+        <field name="name">Subsídio de Transporte</field>
+        <field name="code">TRANSP_ALLW</field>
+        <field name="country_id" eval="False"/>
+    </record>
+    <record id="input_advance" model="hr.payslip.input.type">
+        <field name="name">Adiantamentos</field>
+        <field name="code">advance</field>
+        <field name="country_id" eval="False"/>
+    </record>
+    <record id="input_loan" model="hr.payslip.input.type">
+        <field name="name">Empréstimos</field>
+        <field name="code">loan</field>
+        <field name="country_id" eval="False"/>
+    </record>
+    <record id="input_contract_penalty" model="hr.payslip.input.type">
+        <field name="name">Penalização Contratual</field>
+        <field name="code">cont_penalty</field>
+        <field name="country_id" eval="False"/>
+    </record>
+    <record id="input_premium_reversal" model="hr.payslip.input.type">
+        <field name="name">Estorno de Prémio</field>
+        <field name="code">prem_reverse</field>
+        <field name="country_id" eval="False"/>
+    </record>
+    <record id="input_judicial_attachment" model="hr.payslip.input.type">
+        <field name="name">Penhora Judicial</field>
+        <field name="code">jud_attach</field>
+        <field name="country_id" eval="False"/>
+    </record>
+    <record id="input_other_bonus_attachment" model="hr.payslip.input.type">
+        <field name="name">Outros Prémios</field>
+        <field name="code">other_bonus</field>
+        <field name="country_id" eval="False"/>
+    </record>
+    <record id="input_retroactive_attachment" model="hr.payslip.input.type">
+        <field name="name">Retroactivos</field>
+        <field name="code">retroactive</field>
+        <field name="country_id" eval="False"/>
+    </record>
+    <record id="input_indemnity_attachment" model="hr.payslip.input.type">
+        <field name="name">Indemnização</field>
+        <field name="code">indemnity</field>
+        <field name="country_id" eval="False"/>
+    </record>
+    <record id="input_vac_prop_attachment" model="hr.payslip.input.type">
+        <field name="name">Proporcionais de Férias</field>
+        <field name="code">vac_prop</field>
+        <field name="country_id" eval="False"/>
+    </record>
+</odoo>

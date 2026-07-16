@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="unjustified_absence" model="hr.leave.type">
+        <field name="name">Unjustified Absence</field>
+        <field name="requires_allocation">no</field>
+        <field name="leave_validation_type">no_validation</field>
+        <field name="employee_requests">no</field>
+        <field name="color_name">red</field>
+        <field name="leave_notif_subtype_id" ref="hr_holidays.mt_leave"/>
+        <field name="responsible_id" ref="base.user_admin"/>
+        <field name="time_type">other</field>
+    </record>
+</odoo>

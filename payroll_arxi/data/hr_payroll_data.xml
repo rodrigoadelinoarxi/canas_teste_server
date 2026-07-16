@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="advance" model="hr.salary.rule.category">
+            <field name="name">Advance</field>
+            <field name="code">advance</field>
+        </record>
+
+        <record id="loan" model="hr.salary.rule.category">
+            <field name="name">Loan</field>
+            <field name="code">loan</field>
+        </record>
+
+        <record id="cont_penalty" model="hr.salary.rule.category">
+            <field name="name">Contract penalty</field>
+            <field name="code">cont_penalty</field>
+        </record>
+
+        <record id="prem_reverse" model="hr.salary.rule.category">
+            <field name="name">Premium Reversal</field>
+            <field name="code">prem_reverse</field>
+        </record>
+
+        <record id="judicial_attachment" model="hr.salary.rule.category">
+            <field name="name">Judicial Attachment</field>
+            <field name="code">jud_attach</field>
+        </record>
+
+        <record id="attachment" model="hr.salary.rule.category">
+            <field name="name">Attachment</field>
+            <field name="code">attachment</field>
+        </record>
+
+        <record id="niss4" model="hr.salary.rule.category">
+            <field name="name">Social Security 4%</field>
+            <field name="code">NISS4</field>
+        </record>
+
+        <record id="indemn" model="hr.salary.rule.category">
+            <field name="name">Indemnity</field>
+            <field name="code">indemnity</field>
+        </record>
+
+        <record id="pay" model="hr.salary.rule.category">
+            <field name="name">To Pay</field>
+            <field name="code">pay</field>
+        </record>
+    </data>
+</odoo>

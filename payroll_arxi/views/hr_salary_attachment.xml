@@ -1,0 +1,100 @@
+<odoo>
+    <record id="hr_salary_addition_view_form" model="ir.ui.view">
+        <field name="name">hr.salary.attachment.form</field>
+        <field name="model">hr.salary.attachment</field>
+        <field name="arch" type="xml">
+            <form string="Salary Attachment" target="new">
+                <header>
+                    <button name="action_done" type="object" string="Mark as Completed"
+                            states="open,cancel"/>
+                    <button name="action_open" type="object" string="Running"
+                            states="close,cancel"/>
+                    <button name="action_cancel" type="object" string="Cancel"
+                            states="open"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="open,close"/>
+                </header>
+                <div role="alert" class="alert alert-warning text-center"
+                     attrs="{'invisible': [('has_similar_attachment', '=', False)]}">
+                    <field name="has_similar_attachment_warning"/>
+                    <field name="has_similar_attachment" invisible="1"/>
+                </div>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button type="object" name="action_open_payslips" class="oe_stat_button"
+                                icon="fa-money" id="open_payslips" attrs="{'invisible': [('payslip_count', '=', 0)]}">
+                            <field name="payslip_count" widget="statinfo" string="Payslips"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <label for="employee_id"/>
+                        <h1>
+                            <field name="employee_id"/>
+                        </h1>
+                    </div>
+                    <field name="company_id" invisible="1"/>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="has_total_amount" invisible="1"/>
+                    <field name="attachment_name" invisible="1"/>
+                    <group>
+                        <group>
+                            <field name="description"/>
+                            <field name="addition_type"/>
+                            <field name="date_start" string="Date"/>
+                            <field name="attachment" filename="attachment_name"/>
+                        </group>
+                        <group>
+                            <field name="monthly_amount" string="Total Amount" attrs="{'invisible': [('addition_type', '=', 'vac_prop')]}"/>
+                            <field name="number_of_days" attrs="{'invisible': [('addition_type', '!=', 'vac_prop')]}"/>
+                            <field name="paid_amount" attrs="{'invisible': [('paid_amount', '=', 0)]}"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="hr_salary_attachment_view_form" model="ir.ui.view">
+        <field name="name">hr.salary.attachment.form</field>
+        <field name="model">hr.salary.attachment</field>
+        <field name="inherit_id" ref="hr_payroll.hr_salary_attachment_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='deduction_type']" position="replace">
+                <field name="deduction_type_select"/>
+            </xpath>
+        </field>
+    </record>
+
+
+    <record id="hr_payroll.hr_salary_attachment_action" model="ir.actions.act_window">
+        <field name="name">Salary Attachment</field>
+        <field name="res_model">hr.salary.attachment</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('deduction_type', 'not in', ('other_bonus', 'retroactive', 'indemnity', 'vac_prop'))]</field>
+    </record>
+
+    <record id="hr_salary_addition_action" model="ir.actions.act_window">
+        <field name="name">Salary Addition</field>
+        <field name="res_model">hr.salary.attachment</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+        (0, 0, {'view_mode': 'tree', 'view_id': ref('hr_payroll.hr_salary_attachment_view_tree')}),
+        (0, 0, {'view_mode': 'form', 'view_id': ref('payroll_arxi.hr_salary_addition_view_form')}),]"></field>
+        <field name="domain">[('deduction_type', 'in', ('other_bonus', 'retroactive', 'indemnity', 'vac_prop'))]</field>
+        <field name="view_id" ref="hr_payroll.hr_salary_attachment_view_tree"/>
+    </record>
+
+
+    <menuitem
+            id="hr_menu_salary_additions"
+            name="Salary Additions"
+            action="hr_salary_addition_action"
+            parent="hr_payroll.menu_hr_payroll_employees_root"
+            sequence="36"/>
+
+</odoo>

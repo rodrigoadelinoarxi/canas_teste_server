@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="work_entry_regeneration_wizard_view_inherit" model="ir.ui.view">
+            <field name="name">work_entry_regeneration_wizard</field>
+            <field name="model">hr.work.entry.regeneration.wizard</field>
+            <field name="inherit_id" ref="hr_work_entry_contract.hr_work_entry_regeneration_wizard"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='employee_id']" position="before">
+                    <field name="construction_id" options="{'no_create': True}"/>
+                </xpath>
+                <xpath expr="//field[@name='employee_id']" position="attributes">
+                    <attribute name="required">0</attribute>
+                    <attribute name="options">{'no_create': True}</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

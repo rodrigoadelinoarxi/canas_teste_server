@@ -1,0 +1,2983 @@
+<odoo>
+
+    <!--    BASIC-->
+    <record id="mz_employees_monthly_base" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.BASIC"/>
+        <field name="name">Base Salary</field>
+        <field name="code">BASIC</field>
+        <field name="sequence">1</field>
+        <field name="condition_select">none</field>
+        <field name="appears_on_payslip" eval="True"/>
+        <field name="amount_select">code</field>
+        <field name="account_debit" ref="l10n_mz.account6221"/>
+        <field name="amount_python_compute">
+total = contract.wage
+if worked_days.SICK_LEAVE_NOT_PAID:
+    total -= (contract.wage / 30) * round(worked_days.SICK_LEAVE_NOT_PAID.number_of_days)
+if worked_days.LEAVE_WITHOUT_PAY:
+    total -= (contract.wage / 30) * round(worked_days.LEAVE_WITHOUT_PAY.number_of_days)
+if worked_days.UNJUSTIFIED_ABSENCE:
+    total -= (contract.wage / 30) * round(worked_days.UNJUSTIFIED_ABSENCE.number_of_days)
+if worked_days.MATERNITY_LEAVE:
+    total -= (contract.wage / 30) * round(worked_days.MATERNITY_LEAVE.number_of_days)
+if worked_days.PARENTAL_LEAVE:
+    total -= (contract.wage / 30) * round(worked_days.PARENTAL_LEAVE.number_of_days)
+if worked_days.PATERNITY_LEAVE:
+    total -= (contract.wage / 30) * round(worked_days.PATERNITY_LEAVE.number_of_days)
+result = total
+        </field>
+        <field name="struct_id" ref="l10n_mz_hr_payroll.hr_payroll_structure_mz_employee_salary"/>
+    </record>
+    <record id="mz_employees_union_monthly_base" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.BASIC"/>
+        <field name="name">Base Salary</field>
+        <field name="code">BASIC</field>
+        <field name="sequence">1</field>
+        <field name="condition_select">none</field>
+        <field name="appears_on_payslip" eval="True"/>
+        <field name="amount_select">code</field>
+        <field name="account_debit" ref="l10n_mz.account6221"/>
+        <field name="amount_python_compute">
+total = contract.wage
+if worked_days.SICK_LEAVE_NOT_PAID:
+    total -= (contract.wage / 30) * round(worked_days.SICK_LEAVE_NOT_PAID.number_of_days)
+if worked_days.LEAVE_WITHOUT_PAY:
+    total -= (contract.wage / 30) * round(worked_days.LEAVE_WITHOUT_PAY.number_of_days)
+if worked_days.UNJUSTIFIED_ABSENCE:
+    total -= (contract.wage / 30) * round(worked_days.UNJUSTIFIED_ABSENCE.number_of_days)
+if worked_days.MATERNITY_LEAVE:
+    total -= (contract.wage / 30) * round(worked_days.MATERNITY_LEAVE.number_of_days)
+if worked_days.PARENTAL_LEAVE:
+    total -= (contract.wage / 30) * round(worked_days.PARENTAL_LEAVE.number_of_days)
+if worked_days.PATERNITY_LEAVE:
+    total -= (contract.wage / 30) * round(worked_days.PATERNITY_LEAVE.number_of_days)
+result = total
+        </field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+    <record id="mz_employees_occ_monthly_base" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.BASIC"/>
+        <field name="name">Base Salary</field>
+        <field name="code">BASIC</field>
+        <field name="sequence">1</field>
+        <field name="condition_select">none</field>
+        <field name="appears_on_payslip" eval="True"/>
+        <field name="amount_select">code</field>
+        <field name="account_debit" ref="l10n_mz.account62911"/>
+        <field name="amount_python_compute">
+total = contract.wage
+if worked_days.SICK_LEAVE_NOT_PAID:
+    total -= (contract.wage / 30) * round(worked_days.SICK_LEAVE_NOT_PAID.number_of_days)
+if worked_days.LEAVE_WITHOUT_PAY:
+    total -= (contract.wage / 30) * round(worked_days.LEAVE_WITHOUT_PAY.number_of_days)
+if worked_days.UNJUSTIFIED_ABSENCE:
+    total -= (contract.wage / 30) * round(worked_days.UNJUSTIFIED_ABSENCE.number_of_days)
+if worked_days.MATERNITY_LEAVE:
+    total -= (contract.wage / 30) * round(worked_days.MATERNITY_LEAVE.number_of_days)
+if worked_days.PARENTAL_LEAVE:
+    total -= (contract.wage / 30) * round(worked_days.PARENTAL_LEAVE.number_of_days)
+if worked_days.PATERNITY_LEAVE:
+    total -= (contract.wage / 30) * round(worked_days.PATERNITY_LEAVE.number_of_days)
+result = total
+        </field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_occasional_salary"/>
+    </record>
+
+    <!--    NET-->
+    <record id="mz_employees_monthly_net" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.NET"/>
+        <field name="name">Net Salary</field>
+        <field name="code">NET</field>
+        <field name="sequence">17</field>
+        <field name="condition_select">none</field>
+        <field name="appears_on_payslip" eval="True"/>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">result = categories.GROSS + categories.DED</field>
+        <field name="struct_id" ref="l10n_mz_hr_payroll.hr_payroll_structure_mz_employee_salary"/>
+    </record>
+    <record id="mz_employees_union_monthly_net" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.NET"/>
+        <field name="name">Net Salary</field>
+        <field name="code">NET</field>
+        <field name="sequence">17</field>
+        <field name="condition_select">none</field>
+        <field name="appears_on_payslip" eval="True"/>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">result = categories.GROSS + categories.DED</field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+    <record id="mz_employees_occ_monthly_net" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.NET"/>
+        <field name="name">Net Salary Occasional</field>
+        <field name="code">NET</field>
+        <field name="sequence">12</field>
+        <field name="condition_select">none</field>
+        <field name="appears_on_payslip" eval="True"/>
+        <field name="amount_select">code</field>
+        <field name="account_credit" ref="l10n_mz.account4629"/>
+        <field name="amount_python_compute">result = categories.GROSS + categories.DED</field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_occasional_salary"/>
+    </record>
+
+    <!--    IRPS-->
+    <record id="mz_employees_irps" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.DED"/>
+        <field name="name">IRPS - Dependent Work</field>
+        <field name="code">IRPS</field>
+        <field name="sequence">16</field>
+        <field name="condition_select">none</field>
+        <field name="appears_on_payslip" eval="True"/>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">result = -compute_irps(categories, employee)</field>
+        <field name="account_credit" ref="l10n_mz.account4421"/>
+        <field name="struct_id" ref="l10n_mz_hr_payroll.hr_payroll_structure_mz_employee_salary"/>
+    </record>
+    <record id="mz_employees_union_irps" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.DED"/>
+        <field name="name">IRPS - Dependent Work</field>
+        <field name="code">IRPS</field>
+        <field name="sequence">16</field>
+        <field name="condition_select">none</field>
+        <field name="appears_on_payslip" eval="True"/>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">result = -compute_irps(categories, employee)</field>
+        <field name="account_credit" ref="l10n_mz.account4421"/>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+    <record id="mz_employees_occ_irps" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.DED"/>
+        <field name="name">IRPS - Professional Work</field>
+        <field name="code">IRPS</field>
+        <field name="sequence">11</field>
+        <field name="condition_select">none</field>
+        <field name="appears_on_payslip" eval="True"/>
+        <field name="amount_select">code</field>
+        <field name="account_credit" ref="l10n_mz.account4422"/>
+        <field name="amount_python_compute">result = -categories.GROSS * 0.20</field>
+        <field name="struct_id" ref="hr_payroll_structure_mz_employee_occasional_salary"/>
+    </record>
+
+    <!--    NISS-->
+    <record id="mz_employees_union_niss" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.DED"/>
+        <field name="name">Social Security 3%</field>
+        <field name="code">NISS</field>
+        <field name="sequence">15</field>
+        <field name="condition_select">none</field>
+        <field name="appears_on_payslip" eval="True"/>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">result = -(0.03 * categories.GROSS) if employee.subject_to_social_security else 0.0
+        </field>
+        <field name="account_credit" ref="l10n_mz.account449"/>
+        <field name="struct_id" ref="hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+    <record id="mz_employees_niss" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.DED"/>
+        <field name="name">Social Security 3%</field>
+        <field name="code">NISS</field>
+        <field name="sequence">15</field>
+        <field name="condition_select">none</field>
+        <field name="appears_on_payslip" eval="True"/>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">result = -(0.03 * categories.GROSS) if employee.subject_to_social_security else 0.0
+        </field>
+        <field name="account_credit" ref="l10n_mz.account449"/>
+        <field name="struct_id" ref="l10n_mz_hr_payroll.hr_payroll_structure_mz_employee_salary"/>
+    </record>
+
+    <record id="mz_employees_union_niss_04" model="hr.salary.rule">
+        <field name="category_id" ref="payroll_arxi.niss4"/>
+        <field name="name">Social Security 4%</field>
+        <field name="code">NISS4</field>
+        <field name="sequence">15</field>
+        <field name="condition_select">none</field>
+        <field name="appears_on_payslip" eval="False"/>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">result = -(0.04 * categories.GROSS) if employee.subject_to_social_security else 0.0
+        </field>
+        <field name="account_credit" ref="l10n_mz.account449"/>
+        <field name="struct_id" ref="hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+    <record id="mz_employees_niss_04" model="hr.salary.rule">
+        <field name="category_id" ref="payroll_arxi.niss4"/>
+        <field name="name">Social Security 4%</field>
+        <field name="code">NISS4</field>
+        <field name="sequence">15</field>
+        <field name="condition_select">none</field>
+        <field name="appears_on_payslip" eval="False"/>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">result = -(0.04 * categories.GROSS) if employee.subject_to_social_security else 0.0
+        </field>
+        <field name="account_credit" ref="l10n_mz.account449"/>
+        <field name="struct_id" ref="l10n_mz_hr_payroll.hr_payroll_structure_mz_employee_salary"/>
+    </record>
+
+
+    <!--    UNION FEE-->
+    <record id="mz_employees_union_fee" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.DED"/>
+        <field name="name">Union</field>
+        <field name="code">UNION</field>
+        <field name="sequence">14</field>
+        <field name="condition_select">none</field>
+        <field name="appears_on_payslip" eval="True"/>
+        <field name="amount_select">code</field>
+        <field name="account_credit" ref="l10n_mz.account463"/>
+        <field name="amount_python_compute">result = -0.01 * categories.BASIC</field>
+        <field name="struct_id" ref="hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+
+    <!--    ALLOWANCES-->
+    <record id="mz_employees_union_food_allowance" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Food Allowance</field>
+        <field name="code">FOOD_ALLW</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">4</field>
+        <field name="condition_select">none</field>
+        <field name="amount_python_compute">
+result = 0
+total = 0
+worked_hours = []
+hours_not_working = 0
+hours = 0
+work_entries = payslip.env['hr.work.entry'].search([('employee_id', '=', employee.id),('date_start', '>=', payslip.date_from), ('date_start', '&lt;', payslip.date_to)])
+total_worked = worked_days.WORK100.number_of_hours if worked_days.WORK100 else worked_days.LEAVE_WITH_PAY.number_of_hours
+for transfer in contract.transfer_ids:
+    if transfer.is_deslocated:
+        if transfer.transfer_end_date and transfer.transfer_start_date:
+            if transfer.transfer_end_date >= payslip.date_from and transfer.transfer_end_date &lt;= payslip.date_to:
+                if transfer.transfer_start_date >= payslip.date_from:
+                    days = abs((transfer.transfer_end_date - transfer.transfer_start_date).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+                else:
+                    days = abs((transfer.transfer_end_date.day - payslip.date_from.day).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+            else:
+                if transfer.transfer_start_date >= payslip.date_from:
+                    days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+                elif transfer.transfer_end_date > payslip.date_to:
+                    days = 30
+                    hours = days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+        elif transfer.transfer_end_date:
+            if transfer.transfer_start_date >= payslip.date_from:
+                days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+                hours += days * contract.resource_calendar_id.hours_per_day
+                total = hours
+            else :
+                days = abs((payslip.date_to.day - payslip.date_from.day).days) + 1
+                hours += days * contract.resource_calendar_id.hours_per_day
+                total = hours
+        elif not transfer.transfer_end_date and transfer.transfer_start_date >= payslip.date_from:
+                days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+                hours += days * contract.resource_calendar_id.hours_per_day
+                total = hours
+        else:
+            days = 30
+            hours = days * contract.resource_calendar_id.hours_per_day
+            total = hours
+
+    for entry in work_entries:
+        start = entry.date_start.date()
+        stop = entry.date_stop.date()
+        if entry.work_entry_type_id.code == 'BAIXA':
+            if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                total += entry.duration
+    if worked_days.VACATION:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'VACATION':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.HOLIDAY:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'HOLIDAY':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.MARRIAGE_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'MARRIAGE_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.BEREAVEMENT_LEAVE_2_DAYS:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BEREAVEMENT_LEAVE_2_DAYS':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.BEREAVEMENT_LEAVE_5_DAYS:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BEREAVEMENT_LEAVE_5_DAYS':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.SICK_LEAVE_NOT_PAID:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'SICK_LEAVE_NOT_PAID':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.SICK_LEAVE_PAID:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'SICK_LEAVE_PAID':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE_WITHOUT_PAY:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE_WITHOUT_PAY':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.UNJUSTIFIED_ABSENCE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'UNJUSTIFIED_ABSENCE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.MATERNITY_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'MATERNITY_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.PATERNITY_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'PATERNITY_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.BREASTFEEDING_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BREASTFEEDING_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.PARENTAL_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'PARENTAL_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.WORKER_STUDENT_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'WORKER_STUDENT_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.WORKER_STUDENT_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'WORKER_STUDENT_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE100:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE100':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE105:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE105':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE110:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE110':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE120:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE120':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+total_days = total / contract.resource_calendar_id.hours_per_day
+if total_days.is_integer():
+    total_days = total_days
+else:
+    total_days = round(total_days)
+days = (total_worked / contract.resource_calendar_id.hours_per_day) - total_days
+if days &lt; 0:
+    days = 0
+result = round(days) * contract.food_allowance
+        </field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+
+       <record id="mz_employees_occ_food_allowance" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Food Allowance</field>
+        <field name="code">FOOD_ALLW</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">2</field>
+        <field name="condition_select">none</field>
+        <field name="amount_python_compute">
+result = 0
+total = 0
+worked_hours = []
+hours_not_working = 0
+hours = 0
+work_entries = payslip.env['hr.work.entry'].search([('employee_id', '=', employee.id),('date_start', '>=', payslip.date_from), ('date_start', '&lt;', payslip.date_to)])
+total_worked = worked_days.WORK100.number_of_hours if worked_days.WORK100 else worked_days.LEAVE_WITH_PAY.number_of_hours
+for transfer in contract.transfer_ids:
+    if transfer.is_deslocated:
+        if transfer.transfer_end_date and transfer.transfer_start_date:
+            if transfer.transfer_end_date >= payslip.date_from and transfer.transfer_end_date &lt;= payslip.date_to:
+                if transfer.transfer_start_date >= payslip.date_from:
+                    days = abs((transfer.transfer_end_date - transfer.transfer_start_date).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+                else:
+                    days = abs((transfer.transfer_end_date.day - payslip.date_from.day).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+            else:
+                if transfer.transfer_start_date >= payslip.date_from:
+                    days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+                elif transfer.transfer_end_date > payslip.date_to:
+                    days = 30
+                    hours = days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+        elif transfer.transfer_end_date:
+            if transfer.transfer_start_date >= payslip.date_from:
+                days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+                hours += days * contract.resource_calendar_id.hours_per_day
+                total = hours
+            else :
+                days = abs((payslip.date_to.day - payslip.date_from.day).days) + 1
+                hours += days * contract.resource_calendar_id.hours_per_day
+                total = hours
+        elif not transfer.transfer_end_date and transfer.transfer_start_date >= payslip.date_from:
+                days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+                hours += days * contract.resource_calendar_id.hours_per_day
+                total = hours
+        else:
+            days = 30
+            hours = days * contract.resource_calendar_id.hours_per_day
+            total = hours
+
+    for entry in work_entries:
+        start = entry.date_start.date()
+        stop = entry.date_stop.date()
+        if entry.work_entry_type_id.code == 'BAIXA':
+            if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                total += entry.duration
+    if worked_days.VACATION:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'VACATION':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.HOLIDAY:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'HOLIDAY':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.MARRIAGE_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'MARRIAGE_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.BEREAVEMENT_LEAVE_2_DAYS:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BEREAVEMENT_LEAVE_2_DAYS':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.BEREAVEMENT_LEAVE_5_DAYS:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BEREAVEMENT_LEAVE_5_DAYS':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.SICK_LEAVE_NOT_PAID:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'SICK_LEAVE_NOT_PAID':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.SICK_LEAVE_PAID:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'SICK_LEAVE_PAID':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE_WITHOUT_PAY:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE_WITHOUT_PAY':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.UNJUSTIFIED_ABSENCE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'UNJUSTIFIED_ABSENCE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.MATERNITY_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'MATERNITY_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.PATERNITY_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'PATERNITY_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.BREASTFEEDING_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BREASTFEEDING_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.PARENTAL_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'PARENTAL_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.WORKER_STUDENT_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'WORKER_STUDENT_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.WORKER_STUDENT_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'WORKER_STUDENT_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE100:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE100':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE105:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE105':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE110:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE110':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE120:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE120':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+total_days = total / contract.resource_calendar_id.hours_per_day
+if total_days.is_integer():
+    total_days = total_days
+else:
+    total_days = round(total_days)
+days = (total_worked / contract.resource_calendar_id.hours_per_day) - total_days
+if days &lt; 0:
+    days = 0
+result = round(days) * contract.food_allowance
+        </field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_occasional_salary"/>
+    </record>
+
+    <record id="mz_employees_food_allowance" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Food Allowance</field>
+        <field name="code">FOOD_ALLW</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">4</field>
+        <field name="condition_select">none</field>
+        <field name="account_debit" ref="l10n_mz.account6225"/>
+        <field name="amount_python_compute">
+result = 0
+total = 0
+worked_hours = []
+hours_not_working = 0
+hours = 0
+work_entries = payslip.env['hr.work.entry'].search([('employee_id', '=', employee.id),('date_start', '>=', payslip.date_from), ('date_start', '&lt;', payslip.date_to)])
+total_worked = worked_days.WORK100.number_of_hours if worked_days.WORK100 else worked_days.LEAVE_WITH_PAY.number_of_hours
+for transfer in contract.transfer_ids:
+    if transfer.is_deslocated:
+        if transfer.transfer_end_date and transfer.transfer_start_date:
+            if transfer.transfer_end_date >= payslip.date_from and transfer.transfer_end_date &lt;= payslip.date_to:
+                if transfer.transfer_start_date >= payslip.date_from:
+                    days = abs((transfer.transfer_end_date - transfer.transfer_start_date).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+                else:
+                    days = abs((transfer.transfer_end_date.day - payslip.date_from.day).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+            else:
+                if transfer.transfer_start_date >= payslip.date_from:
+                    days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+                elif transfer.transfer_end_date > payslip.date_to:
+                    days = 30
+                    hours = days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+        elif transfer.transfer_end_date:
+            if transfer.transfer_start_date >= payslip.date_from:
+                days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+                hours += days * contract.resource_calendar_id.hours_per_day
+                total = hours
+            else :
+                days = abs((payslip.date_to.day - payslip.date_from.day).days) + 1
+                hours += days * contract.resource_calendar_id.hours_per_day
+                total = hours
+        elif not transfer.transfer_end_date and transfer.transfer_start_date >= payslip.date_from:
+                days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+                hours += days * contract.resource_calendar_id.hours_per_day
+                total = hours
+        else:
+            days = 30
+            hours = days * contract.resource_calendar_id.hours_per_day
+            total = hours
+
+    for entry in work_entries:
+        start = entry.date_start.date()
+        stop = entry.date_stop.date()
+        if entry.work_entry_type_id.code == 'BAIXA':
+            if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                total += entry.duration
+    if worked_days.VACATION:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'VACATION':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.HOLIDAY:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'HOLIDAY':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.MARRIAGE_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'MARRIAGE_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.BEREAVEMENT_LEAVE_2_DAYS:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BEREAVEMENT_LEAVE_2_DAYS':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.BEREAVEMENT_LEAVE_5_DAYS:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BEREAVEMENT_LEAVE_5_DAYS':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.SICK_LEAVE_NOT_PAID:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'SICK_LEAVE_NOT_PAID':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.SICK_LEAVE_PAID:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'SICK_LEAVE_PAID':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE_WITHOUT_PAY:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE_WITHOUT_PAY':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.UNJUSTIFIED_ABSENCE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'UNJUSTIFIED_ABSENCE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.MATERNITY_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'MATERNITY_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.PATERNITY_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'PATERNITY_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.BREASTFEEDING_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BREASTFEEDING_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.PARENTAL_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'PARENTAL_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.WORKER_STUDENT_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'WORKER_STUDENT_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.WORKER_STUDENT_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'WORKER_STUDENT_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE100:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE100':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE105:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE105':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE110:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE110':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE120:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE120':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+total_days = total / contract.resource_calendar_id.hours_per_day
+if total_days.is_integer():
+    total_days = total_days
+else:
+    total_days = round(total_days)
+days = (total_worked / contract.resource_calendar_id.hours_per_day) - total_days
+if days &lt; 0:
+    days = 0
+result = round(days) * contract.food_allowance
+        </field>
+        <field name="struct_id" ref="l10n_mz_hr_payroll.hr_payroll_structure_mz_employee_salary"/>
+    </record>
+
+    <record id="mz_employees_union_transport_allowance" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Transport Allowance</field>
+        <field name="code">TRANSP_ALLW</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">5</field>
+        <field name="condition_select">none</field>
+        <field name="amount_python_compute">
+result = 0
+total = 0
+worked_hours = []
+hours_not_working = 0
+hours = 0
+work_entries = payslip.env['hr.work.entry'].search([('employee_id', '=', employee.id),('date_start', '>=', payslip.date_from), ('date_start', '&lt;', payslip.date_to)])
+total_worked = worked_days.WORK100.number_of_hours if worked_days.WORK100 else worked_days.LEAVE_WITH_PAY.number_of_hours
+for transfer in contract.transfer_ids:
+    if transfer.is_deslocated:
+        if transfer.transfer_end_date and transfer.transfer_start_date:
+            if transfer.transfer_end_date >= payslip.date_from and transfer.transfer_end_date &lt;= payslip.date_to:
+                if transfer.transfer_start_date >= payslip.date_from:
+                    days = abs((transfer.transfer_end_date - transfer.transfer_start_date).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+                else:
+                    days = abs((transfer.transfer_end_date.day - payslip.date_from.day).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+            else:
+                if transfer.transfer_start_date >= payslip.date_from:
+                    days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+                elif transfer.transfer_end_date > payslip.date_to:
+                    days = 30
+                    hours = days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+        elif transfer.transfer_end_date:
+            if transfer.transfer_start_date >= payslip.date_from:
+                days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+                hours += days * contract.resource_calendar_id.hours_per_day
+                total = hours
+            else :
+                days = abs((payslip.date_to.day - payslip.date_from.day).days) + 1
+                hours += days * contract.resource_calendar_id.hours_per_day
+                total = hours
+        elif not transfer.transfer_end_date and transfer.transfer_start_date >= payslip.date_from:
+                days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+                hours += days * contract.resource_calendar_id.hours_per_day
+                total = hours
+        else:
+            days = 30
+            hours = days * contract.resource_calendar_id.hours_per_day
+            total = hours
+
+    for entry in work_entries:
+        start = entry.date_start.date()
+        stop = entry.date_stop.date()
+        if entry.work_entry_type_id.code == 'BAIXA':
+            if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                total += entry.duration
+    if worked_days.VACATION:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'VACATION':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.HOLIDAY:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'HOLIDAY':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.MARRIAGE_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'MARRIAGE_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.BEREAVEMENT_LEAVE_2_DAYS:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BEREAVEMENT_LEAVE_2_DAYS':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.BEREAVEMENT_LEAVE_5_DAYS:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BEREAVEMENT_LEAVE_5_DAYS':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.SICK_LEAVE_NOT_PAID:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'SICK_LEAVE_NOT_PAID':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.SICK_LEAVE_PAID:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'SICK_LEAVE_PAID':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE_WITHOUT_PAY:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE_WITHOUT_PAY':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.UNJUSTIFIED_ABSENCE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'UNJUSTIFIED_ABSENCE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.MATERNITY_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'MATERNITY_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.PATERNITY_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'PATERNITY_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.BREASTFEEDING_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BREASTFEEDING_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.PARENTAL_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'PARENTAL_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.WORKER_STUDENT_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'WORKER_STUDENT_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.WORKER_STUDENT_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'WORKER_STUDENT_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE100:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE100':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE105:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE105':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE110:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE110':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE120:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE120':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+total_days = total / contract.resource_calendar_id.hours_per_day
+if total_days.is_integer():
+    total_days = total_days
+else:
+    total_days = round(total_days)
+days = (total_worked / contract.resource_calendar_id.hours_per_day) - total_days
+if days &lt; 0:
+    days = 0
+result = round(days) * contract.transport_allowance
+        </field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+
+    <record id="mz_employees_transport_allowance" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Transport Allowance</field>
+        <field name="code">TRANSP_ALLW</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">5</field>
+        <field name="condition_select">none</field>
+        <field name="amount_python_compute">
+result = 0
+total = 0
+worked_hours = []
+hours_not_working = 0
+hours = 0
+work_entries = payslip.env['hr.work.entry'].search([('employee_id', '=', employee.id),('date_start', '>=', payslip.date_from), ('date_start', '&lt;', payslip.date_to)])
+total_worked = worked_days.WORK100.number_of_hours if worked_days.WORK100 else worked_days.LEAVE_WITH_PAY.number_of_hours
+for transfer in contract.transfer_ids:
+    if transfer.is_deslocated:
+        if transfer.transfer_end_date and transfer.transfer_start_date:
+            if transfer.transfer_end_date >= payslip.date_from and transfer.transfer_end_date &lt;= payslip.date_to:
+                if transfer.transfer_start_date >= payslip.date_from:
+                    days = abs((transfer.transfer_end_date - transfer.transfer_start_date).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+                else:
+                    days = abs((transfer.transfer_end_date.day - payslip.date_from.day).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+            else:
+                if transfer.transfer_start_date >= payslip.date_from:
+                    days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+                elif transfer.transfer_end_date > payslip.date_to:
+                    days = 30
+                    hours = days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+        elif transfer.transfer_end_date:
+            if transfer.transfer_start_date >= payslip.date_from:
+                days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+                hours += days * contract.resource_calendar_id.hours_per_day
+                total = hours
+            else :
+                days = abs((payslip.date_to.day - payslip.date_from.day).days) + 1
+                hours += days * contract.resource_calendar_id.hours_per_day
+                total = hours
+        elif not transfer.transfer_end_date and transfer.transfer_start_date >= payslip.date_from:
+                days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+                hours += days * contract.resource_calendar_id.hours_per_day
+                total = hours
+        else:
+            days = 30
+            hours = days * contract.resource_calendar_id.hours_per_day
+            total = hours
+
+    for entry in work_entries:
+        start = entry.date_start.date()
+        stop = entry.date_stop.date()
+        if entry.work_entry_type_id.code == 'BAIXA':
+            if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                total += entry.duration
+    if worked_days.VACATION:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'VACATION':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.HOLIDAY:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'HOLIDAY':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.MARRIAGE_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'MARRIAGE_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.BEREAVEMENT_LEAVE_2_DAYS:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BEREAVEMENT_LEAVE_2_DAYS':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.BEREAVEMENT_LEAVE_5_DAYS:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BEREAVEMENT_LEAVE_5_DAYS':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.SICK_LEAVE_NOT_PAID:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'SICK_LEAVE_NOT_PAID':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.SICK_LEAVE_PAID:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'SICK_LEAVE_PAID':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE_WITHOUT_PAY:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE_WITHOUT_PAY':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.UNJUSTIFIED_ABSENCE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'UNJUSTIFIED_ABSENCE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.MATERNITY_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'MATERNITY_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.PATERNITY_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'PATERNITY_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.BREASTFEEDING_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BREASTFEEDING_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.PARENTAL_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'PARENTAL_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.WORKER_STUDENT_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'WORKER_STUDENT_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.WORKER_STUDENT_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'WORKER_STUDENT_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE100:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE100':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE105:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE105':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE110:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE110':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE120:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE120':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+total_days = total / contract.resource_calendar_id.hours_per_day
+if total_days.is_integer():
+    total_days = total_days
+else:
+    total_days = round(total_days)
+days = (total_worked / contract.resource_calendar_id.hours_per_day) - total_days
+if days &lt; 0:
+    days = 0
+result = round(days) * contract.transport_allowance
+        </field>
+        <field name="struct_id" ref="l10n_mz_hr_payroll.hr_payroll_structure_mz_employee_salary"/>
+    </record>
+
+        <record id="mz_employees_occ_transport_allowance" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Transport Allowance</field>
+        <field name="code">TRANSP_ALLW</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">3</field>
+        <field name="condition_select">none</field>
+        <field name="amount_python_compute">
+result = 0
+total = 0
+worked_hours = []
+hours_not_working = 0
+hours = 0
+work_entries = payslip.env['hr.work.entry'].search([('employee_id', '=', employee.id),('date_start', '>=', payslip.date_from), ('date_start', '&lt;', payslip.date_to)])
+total_worked = worked_days.WORK100.number_of_hours if worked_days.WORK100 else worked_days.LEAVE_WITH_PAY.number_of_hours
+for transfer in contract.transfer_ids:
+    if transfer.is_deslocated:
+        if transfer.transfer_end_date and transfer.transfer_start_date:
+            if transfer.transfer_end_date >= payslip.date_from and transfer.transfer_end_date &lt;= payslip.date_to:
+                if transfer.transfer_start_date >= payslip.date_from:
+                    days = abs((transfer.transfer_end_date - transfer.transfer_start_date).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+                else:
+                    days = abs((transfer.transfer_end_date.day - payslip.date_from.day).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+            else:
+                if transfer.transfer_start_date >= payslip.date_from:
+                    days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+                elif transfer.transfer_end_date > payslip.date_to:
+                    days = 30
+                    hours = days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+        elif transfer.transfer_end_date:
+            if transfer.transfer_start_date >= payslip.date_from:
+                days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+                hours += days * contract.resource_calendar_id.hours_per_day
+                total = hours
+            else :
+                days = abs((payslip.date_to.day - payslip.date_from.day).days) + 1
+                hours += days * contract.resource_calendar_id.hours_per_day
+                total = hours
+        elif not transfer.transfer_end_date and transfer.transfer_start_date >= payslip.date_from:
+                days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+                hours += days * contract.resource_calendar_id.hours_per_day
+                total = hours
+        else:
+            days = 30
+            hours = days * contract.resource_calendar_id.hours_per_day
+            total = hours
+
+    for entry in work_entries:
+        start = entry.date_start.date()
+        stop = entry.date_stop.date()
+        if entry.work_entry_type_id.code == 'BAIXA':
+            if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                total += entry.duration
+    if worked_days.VACATION:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'VACATION':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.HOLIDAY:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'HOLIDAY':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.MARRIAGE_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'MARRIAGE_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.BEREAVEMENT_LEAVE_2_DAYS:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BEREAVEMENT_LEAVE_2_DAYS':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.BEREAVEMENT_LEAVE_5_DAYS:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BEREAVEMENT_LEAVE_5_DAYS':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.SICK_LEAVE_NOT_PAID:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'SICK_LEAVE_NOT_PAID':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.SICK_LEAVE_PAID:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'SICK_LEAVE_PAID':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE_WITHOUT_PAY:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE_WITHOUT_PAY':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.UNJUSTIFIED_ABSENCE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'UNJUSTIFIED_ABSENCE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.MATERNITY_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'MATERNITY_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.PATERNITY_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'PATERNITY_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.BREASTFEEDING_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BREASTFEEDING_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.PARENTAL_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'PARENTAL_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.WORKER_STUDENT_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'WORKER_STUDENT_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.WORKER_STUDENT_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'WORKER_STUDENT_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE100:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE100':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE105:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE105':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE110:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE110':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+    if worked_days.LEAVE120:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE120':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total += entry.duration
+total_days = total / contract.resource_calendar_id.hours_per_day
+if total_days.is_integer():
+    total_days = total_days
+else:
+    total_days = round(total_days)
+days = (total_worked / contract.resource_calendar_id.hours_per_day) - total_days
+if days &lt; 0:
+    days = 0
+result = round(days) * contract.transport_allowance
+        </field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_occasional_salary"/>
+    </record>
+
+    <record id="mz_employees_travel_allowance" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Deslocation Allowance</field>
+        <field name="code">SD</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">6</field>
+        <field name="condition_select">none</field>
+        <field name="amount_python_compute">
+result = 0
+total = 0
+worked_hours = []
+hours_not_working = 0
+hours = 0
+work_entries = payslip.env['hr.work.entry'].search(
+    [('employee_id', '=', employee.id), ('date_start', '>=', payslip.date_from), ('date_start', '&lt;', payslip.date_to)])
+for transfer in contract.transfer_ids:
+    if transfer.is_deslocated:
+        if transfer.transfer_end_date and transfer.transfer_start_date:
+            if transfer.transfer_end_date >= payslip.date_from and transfer.transfer_end_date &lt;= payslip.date_to:
+                if transfer.transfer_start_date >= payslip.date_from:
+                    days = abs((transfer.transfer_end_date - transfer.transfer_start_date).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+                else:
+                    days = abs((transfer.transfer_end_date.day - payslip.date_from.day).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+            else:
+                if transfer.transfer_start_date >= payslip.date_from:
+                    days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+                elif transfer.transfer_end_date > payslip.date_to:
+                    days = 30
+                    hours = days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+        elif transfer.transfer_end_date:
+            if transfer.transfer_start_date >= payslip.date_from:
+                days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+                hours += days * contract.resource_calendar_id.hours_per_day
+                total = hours
+            else:
+                days = abs((payslip.date_to.day - payslip.date_from.day).days) + 1
+                hours += days * contract.resource_calendar_id.hours_per_day
+                total = hours
+        elif not transfer.transfer_end_date and transfer.transfer_start_date >= payslip.date_from:
+            days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+            hours += days * contract.resource_calendar_id.hours_per_day
+            total = hours
+        else:
+            days = 30
+            hours = days * contract.resource_calendar_id.hours_per_day
+            total = hours
+if total > 0:
+    for entry in work_entries:
+        start = entry.date_start.date()
+        stop = entry.date_stop.date()
+        if entry.work_entry_type_id.code == 'BAIXA':
+            if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                total -= entry.duration
+    if worked_days.VACATION:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'VACATION':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.HOLIDAY:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'HOLIDAY':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.MARRIAGE_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'MARRIAGE_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.BEREAVEMENT_LEAVE_2_DAYS:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BEREAVEMENT_LEAVE_2_DAYS':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.BEREAVEMENT_LEAVE_5_DAYS:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BEREAVEMENT_LEAVE_5_DAYS':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.SICK_LEAVE_NOT_PAID:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'SICK_LEAVE_NOT_PAID':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.SICK_LEAVE_PAID:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'SICK_LEAVE_PAID':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.LEAVE_WITHOUT_PAY:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE_WITHOUT_PAY':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.UNJUSTIFIED_ABSENCE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'UNJUSTIFIED_ABSENCE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.MATERNITY_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'MATERNITY_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.PATERNITY_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'PATERNITY_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.BREASTFEEDING_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BREASTFEEDING_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.PARENTAL_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'PARENTAL_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.WORKER_STUDENT_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'WORKER_STUDENT_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.WORKER_STUDENT_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'WORKER_STUDENT_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.LEAVE100:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE100':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.LEAVE105:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE105':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.LEAVE110:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE110':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.LEAVE120:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE120':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+total_days = total / contract.resource_calendar_id.hours_per_day
+result = (total_days if total_days.is_integer() else round(total_days)) / 30 * (contract.wage * 0.2)
+        </field>
+        <field name="struct_id" ref="l10n_mz_hr_payroll.hr_payroll_structure_mz_employee_salary"/>
+    </record>
+
+    <record id="mz_employees_union_travel_allowance" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Deslocation Allowance</field>
+        <field name="code">SD</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">6</field>
+        <field name="condition_select">none</field>
+        <field name="amount_python_compute">
+result = 0
+total = 0
+worked_hours = []
+hours_not_working = 0
+hours = 0
+work_entries = payslip.env['hr.work.entry'].search(
+    [('employee_id', '=', employee.id), ('date_start', '>=', payslip.date_from), ('date_start', '&lt;', payslip.date_to)])
+for transfer in contract.transfer_ids:
+    if transfer.is_deslocated:
+        if transfer.transfer_end_date and transfer.transfer_start_date:
+            if transfer.transfer_end_date >= payslip.date_from and transfer.transfer_end_date &lt;= payslip.date_to:
+                if transfer.transfer_start_date >= payslip.date_from:
+                    days = abs((transfer.transfer_end_date - transfer.transfer_start_date).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+                else:
+                    days = abs((transfer.transfer_end_date.day - payslip.date_from.day).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+            else:
+                if transfer.transfer_start_date >= payslip.date_from:
+                    days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+                elif transfer.transfer_end_date > payslip.date_to:
+                    days = 30
+                    hours = days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+        elif transfer.transfer_end_date:
+            if transfer.transfer_start_date >= payslip.date_from:
+                days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+                hours += days * contract.resource_calendar_id.hours_per_day
+                total = hours
+            else:
+                days = abs((payslip.date_to.day - payslip.date_from.day).days) + 1
+                hours += days * contract.resource_calendar_id.hours_per_day
+                total = hours
+        elif not transfer.transfer_end_date and transfer.transfer_start_date >= payslip.date_from:
+            days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+            hours += days * contract.resource_calendar_id.hours_per_day
+            total = hours
+        else:
+            days = 30
+            hours = days * contract.resource_calendar_id.hours_per_day
+            total = hours
+if total > 0:
+    for entry in work_entries:
+        start = entry.date_start.date()
+        stop = entry.date_stop.date()
+        if entry.work_entry_type_id.code == 'BAIXA':
+            if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                total -= entry.duration
+    if worked_days.VACATION:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'VACATION':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.HOLIDAY:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'HOLIDAY':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.MARRIAGE_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'MARRIAGE_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.BEREAVEMENT_LEAVE_2_DAYS:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BEREAVEMENT_LEAVE_2_DAYS':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.BEREAVEMENT_LEAVE_5_DAYS:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BEREAVEMENT_LEAVE_5_DAYS':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.SICK_LEAVE_NOT_PAID:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'SICK_LEAVE_NOT_PAID':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.SICK_LEAVE_PAID:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'SICK_LEAVE_PAID':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.LEAVE_WITHOUT_PAY:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE_WITHOUT_PAY':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.UNJUSTIFIED_ABSENCE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'UNJUSTIFIED_ABSENCE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.MATERNITY_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'MATERNITY_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.PATERNITY_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'PATERNITY_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.BREASTFEEDING_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BREASTFEEDING_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.PARENTAL_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'PARENTAL_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.WORKER_STUDENT_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'WORKER_STUDENT_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.WORKER_STUDENT_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'WORKER_STUDENT_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.LEAVE100:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE100':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.LEAVE105:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE105':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.LEAVE110:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE110':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.LEAVE120:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE120':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+total_days = total / contract.resource_calendar_id.hours_per_day
+result = (total_days if total_days.is_integer() else round(total_days)) / 30 * (contract.wage * 0.2)
+        </field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+
+       <record id="mz_employees_occ_travel_allowance" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Deslocation Allowance</field>
+        <field name="code">SD</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">4</field>
+        <field name="condition_select">none</field>
+        <field name="amount_python_compute">
+result = 0
+total = 0
+worked_hours = []
+hours_not_working = 0
+hours = 0
+work_entries = payslip.env['hr.work.entry'].search(
+    [('employee_id', '=', employee.id), ('date_start', '>=', payslip.date_from), ('date_start', '&lt;', payslip.date_to)])
+for transfer in contract.transfer_ids:
+    if transfer.is_deslocated:
+        if transfer.transfer_end_date and transfer.transfer_start_date:
+            if transfer.transfer_end_date >= payslip.date_from and transfer.transfer_end_date &lt;= payslip.date_to:
+                if transfer.transfer_start_date >= payslip.date_from:
+                    days = abs((transfer.transfer_end_date - transfer.transfer_start_date).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+                else:
+                    days = abs((transfer.transfer_end_date.day - payslip.date_from.day).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+            else:
+                if transfer.transfer_start_date >= payslip.date_from:
+                    days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+                    hours += days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+                elif transfer.transfer_end_date > payslip.date_to:
+                    days = 30
+                    hours = days * contract.resource_calendar_id.hours_per_day
+                    total = hours
+        elif transfer.transfer_end_date:
+            if transfer.transfer_start_date >= payslip.date_from:
+                days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+                hours += days * contract.resource_calendar_id.hours_per_day
+                total = hours
+            else:
+                days = abs((payslip.date_to.day - payslip.date_from.day).days) + 1
+                hours += days * contract.resource_calendar_id.hours_per_day
+                total = hours
+        elif not transfer.transfer_end_date and transfer.transfer_start_date >= payslip.date_from:
+            days = abs((payslip.date_to.day - transfer.transfer_start_date.day).days) + 1
+            hours += days * contract.resource_calendar_id.hours_per_day
+            total = hours
+        else:
+            days = 30
+            hours = days * contract.resource_calendar_id.hours_per_day
+            total = hours
+if total > 0:
+    for entry in work_entries:
+        start = entry.date_start.date()
+        stop = entry.date_stop.date()
+        if entry.work_entry_type_id.code == 'BAIXA':
+            if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                total -= entry.duration
+    if worked_days.VACATION:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'VACATION':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.HOLIDAY:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'HOLIDAY':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.MARRIAGE_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'MARRIAGE_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.BEREAVEMENT_LEAVE_2_DAYS:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BEREAVEMENT_LEAVE_2_DAYS':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.BEREAVEMENT_LEAVE_5_DAYS:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BEREAVEMENT_LEAVE_5_DAYS':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.SICK_LEAVE_NOT_PAID:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'SICK_LEAVE_NOT_PAID':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.SICK_LEAVE_PAID:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'SICK_LEAVE_PAID':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.LEAVE_WITHOUT_PAY:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE_WITHOUT_PAY':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.UNJUSTIFIED_ABSENCE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'UNJUSTIFIED_ABSENCE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.MATERNITY_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'MATERNITY_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.PATERNITY_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'PATERNITY_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.BREASTFEEDING_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'BREASTFEEDING_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.PARENTAL_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'PARENTAL_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.WORKER_STUDENT_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'WORKER_STUDENT_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.WORKER_STUDENT_LEAVE:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'WORKER_STUDENT_LEAVE':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.LEAVE100:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE100':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.LEAVE105:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE105':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.LEAVE110:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE110':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+    if worked_days.LEAVE120:
+        for entry in work_entries:
+            start = entry.date_start.date()
+            stop = entry.date_stop.date()
+            if entry.work_entry_type_id.code == 'LEAVE120':
+                if start >= payslip.date_from and stop &lt;= payslip.date_to:
+                    total -= entry.duration
+total_days = total / contract.resource_calendar_id.hours_per_day
+result = (total_days if total_days.is_integer() else round(total_days)) / 30 * (contract.wage * 0.2)
+    </field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_occasional_salary"/>
+    </record>
+
+
+    <!--    BONUS-->
+    <record id="mz_employees_attendance_bonus" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Assiduity Bonus</field>
+        <field name="code">PA</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">7</field>
+        <field name="condition_select">python</field>
+        <field name="condition_python">result = inputs.ASSID_BONUS</field>
+        <field name="amount_python_compute">
+if worked_days.UNJUSTIFIED_ABSENCE:
+    result = 0
+else:
+    result = inputs.ASSID_BONUS.amount
+        </field>
+        <field name="struct_id" ref="l10n_mz_hr_payroll.hr_payroll_structure_mz_employee_salary"/>
+    </record>
+    <record id="mz_employees_union_attendance_bonus" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Assiduity Bonus</field>
+        <field name="code">PA</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">7</field>
+        <field name="condition_select">python</field>
+        <field name="condition_python">result = inputs.ASSID_BONUS</field>
+        <field name="amount_python_compute">
+if worked_days.UNJUSTIFIED_ABSENCE:
+    result = 0
+else:
+    result = inputs.ASSID_BONUS.amount
+        </field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+    <record id="mz_employees_occ_attendance_bonus" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Assiduity Bonus</field>
+        <field name="code">PA</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">5</field>
+        <field name="condition_select">python</field>
+        <field name="condition_python">result = inputs.ASSID_BONUS</field>
+        <field name="amount_python_compute">
+if worked_days.UNJUSTIFIED_ABSENCE:
+    result = 0
+else:
+    result = inputs.ASSID_BONUS.amount
+        </field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_occasional_salary"/>
+    </record>
+    <record id="mz_employees_productivity_bonus" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Productivity Bonus</field>
+        <field name="code">PP</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">8</field>
+        <field name="condition_select">python</field>
+        <field name="condition_python">result = inputs.PROD_BONUS</field>
+        <field name="amount_python_compute">
+total_worked = worked_days.WORK100.number_of_hours if worked_days.WORK100 else worked_days.LEAVE_WITH_PAY.number_of_hours
+hours = contract._get_work_hours(payslip.date_from, payslip.date_to, domain=None)
+hours_total = sum(hours.values())
+days_total = round(hours_total/ contract.resource_calendar_id.hours_per_day)
+absences = 0
+if worked_days.SICK_LEAVE_NOT_PAID:
+    absences += round(worked_days.SICK_LEAVE_NOT_PAID.number_of_days)
+if worked_days.LEAVE_WITHOUT_PAY:
+    absences += round(worked_days.LEAVE_WITHOUT_PAY.number_of_days)
+if worked_days.UNJUSTIFIED_ABSENCE:
+    absences += round(worked_days.UNJUSTIFIED_ABSENCE.number_of_days)
+if worked_days.MATERNITY_LEAVE:
+    absences += round(worked_days.MATERNITY_LEAVE.number_of_days)
+if worked_days.PARENTAL_LEAVE:
+    absences += round(worked_days.PARENTAL_LEAVE.number_of_days)
+if worked_days.PATERNITY_LEAVE:
+    absences += round(worked_days.PATERNITY_LEAVE.number_of_days)
+if worked_days.FERIADO:
+    holiday_days = round(worked_days.FERIADO.number_of_days)
+    if round(total_worked / contract.resource_calendar_id.hours_per_day) + holiday_days == days_total:
+        result = inputs.PROD_BONUS.amount
+    else:
+        days= (total_worked + worked_days.FERIADO.number_of_hours) / contract.resource_calendar_id.hours_per_day
+        result = inputs.PROD_BONUS.amount
+elif round(total_worked / contract.resource_calendar_id.hours_per_day) == days_total:
+    result = inputs.PROD_BONUS.amount
+else:
+    days= total_worked / contract.resource_calendar_id.hours_per_day
+    result = (inputs.PROD_BONUS.amount / 30) * (30- absences)
+        </field>
+        <field name="struct_id" ref="l10n_mz_hr_payroll.hr_payroll_structure_mz_employee_salary"/>
+    </record>
+    <record id="mz_employees_union_productivity_bonus" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Productivity Bonus</field>
+        <field name="code">PP</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">8</field>
+        <field name="condition_select">python</field>
+        <field name="condition_python">result = inputs.PROD_BONUS</field>
+        <field name="amount_python_compute">
+total_worked = worked_days.WORK100.number_of_hours if worked_days.WORK100 else worked_days.LEAVE_WITH_PAY.number_of_hours
+hours = contract._get_work_hours(payslip.date_from, payslip.date_to, domain=None)
+hours_total = sum(hours.values())
+days_total = round(hours_total/ contract.resource_calendar_id.hours_per_day)
+absences = 0
+if worked_days.SICK_LEAVE_NOT_PAID:
+    absences += round(worked_days.SICK_LEAVE_NOT_PAID.number_of_days)
+if worked_days.LEAVE_WITHOUT_PAY:
+    absences += round(worked_days.LEAVE_WITHOUT_PAY.number_of_days)
+if worked_days.UNJUSTIFIED_ABSENCE:
+    absences += round(worked_days.UNJUSTIFIED_ABSENCE.number_of_days)
+if worked_days.MATERNITY_LEAVE:
+    absences += round(worked_days.MATERNITY_LEAVE.number_of_days)
+if worked_days.PARENTAL_LEAVE:
+    absences += round(worked_days.PARENTAL_LEAVE.number_of_days)
+if worked_days.PATERNITY_LEAVE:
+    absences += round(worked_days.PATERNITY_LEAVE.number_of_days)
+if worked_days.FERIADO:
+    holiday_days = round(worked_days.FERIADO.number_of_days)
+    if round(total_worked / contract.resource_calendar_id.hours_per_day) + holiday_days == days_total:
+        result = inputs.PROD_BONUS.amount
+    else:
+        days= (total_worked + worked_days.FERIADO.number_of_hours) / contract.resource_calendar_id.hours_per_day
+        result = inputs.PROD_BONUS.amount
+elif round(total_worked / contract.resource_calendar_id.hours_per_day) == days_total:
+    result = inputs.PROD_BONUS.amount
+else:
+    days= total_worked / contract.resource_calendar_id.hours_per_day
+    result = (inputs.PROD_BONUS.amount / 30) * (30- absences)
+        </field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+    <record id="mz_employees_occ_productivity_bonus" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Productivity Bonus</field>
+        <field name="code">PP</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">6</field>
+        <field name="condition_select">python</field>
+        <field name="condition_python">result = inputs.PROD_BONUS</field>
+        <field name="amount_python_compute">
+total_worked = worked_days.WORK100.number_of_hours if worked_days.WORK100 else worked_days.LEAVE_WITH_PAY.number_of_hours
+hours = contract._get_work_hours(payslip.date_from, payslip.date_to, domain=None)
+hours_total = sum(hours.values())
+days_total = round(hours_total/ contract.resource_calendar_id.hours_per_day)
+absences = 0
+if worked_days.SICK_LEAVE_NOT_PAID:
+    absences += round(worked_days.SICK_LEAVE_NOT_PAID.number_of_days)
+if worked_days.LEAVE_WITHOUT_PAY:
+    absences += round(worked_days.LEAVE_WITHOUT_PAY.number_of_days)
+if worked_days.UNJUSTIFIED_ABSENCE:
+    absences += round(worked_days.UNJUSTIFIED_ABSENCE.number_of_days)
+if worked_days.MATERNITY_LEAVE:
+    absences += round(worked_days.MATERNITY_LEAVE.number_of_days)
+if worked_days.PARENTAL_LEAVE:
+    absences += round(worked_days.PARENTAL_LEAVE.number_of_days)
+if worked_days.PATERNITY_LEAVE:
+    absences += round(worked_days.PATERNITY_LEAVE.number_of_days)
+if worked_days.FERIADO:
+    holiday_days = round(worked_days.FERIADO.number_of_days)
+    if round(total_worked / contract.resource_calendar_id.hours_per_day) + holiday_days == days_total:
+        result = inputs.PROD_BONUS.amount
+    else:
+        days= (total_worked + worked_days.FERIADO.number_of_hours) / contract.resource_calendar_id.hours_per_day
+        result = inputs.PROD_BONUS.amount
+elif round(total_worked / contract.resource_calendar_id.hours_per_day) == days_total:
+    result = inputs.PROD_BONUS.amount
+else:
+    days= total_worked / contract.resource_calendar_id.hours_per_day
+    result = (inputs.PROD_BONUS.amount / 30) * (30- absences)
+        </field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_occasional_salary"/>
+    </record>
+    <record id="mz_employees_maintenance_bonus" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Maintenance Bonus</field>
+        <field name="code">PM</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">9</field>
+        <field name="condition_select">python</field>
+        <field name="condition_python">result = inputs.MAINT_BONUS</field>
+        <field name="amount_python_compute">
+total_worked = worked_days.WORK100.number_of_hours if worked_days.WORK100 else worked_days.LEAVE_WITH_PAY.number_of_hours
+hours = contract._get_work_hours(payslip.date_from, payslip.date_to, domain=None)
+hours_total = sum(hours.values())
+days_total = round(hours_total/ contract.resource_calendar_id.hours_per_day)
+absences = 0
+if worked_days.SICK_LEAVE_NOT_PAID:
+    absences += round(worked_days.SICK_LEAVE_NOT_PAID.number_of_days)
+if worked_days.LEAVE_WITHOUT_PAY:
+    absences += round(worked_days.LEAVE_WITHOUT_PAY.number_of_days)
+if worked_days.UNJUSTIFIED_ABSENCE:
+    absences += round(worked_days.UNJUSTIFIED_ABSENCE.number_of_days)
+if worked_days.MATERNITY_LEAVE:
+    absences += round(worked_days.MATERNITY_LEAVE.number_of_days)
+if worked_days.PARENTAL_LEAVE:
+    absences += round(worked_days.PARENTAL_LEAVE.number_of_days)
+if worked_days.PATERNITY_LEAVE:
+    absences += round(worked_days.PATERNITY_LEAVE.number_of_days)
+if worked_days.FERIADO:
+    holiday_days = round(worked_days.FERIADO.number_of_days)
+    if round(total_worked / contract.resource_calendar_id.hours_per_day) + holiday_days == days_total:
+        result = inputs.MAINT_BONUS.amount
+    else:
+        days= (total_worked + worked_days.FERIADO.number_of_hours) / contract.resource_calendar_id.hours_per_day
+        result = inputs.MAINT_BONUS.amount
+elif round(total_worked / contract.resource_calendar_id.hours_per_day) == days_total:
+    result = inputs.MAINT_BONUS.amount
+else:
+    days= total_worked / contract.resource_calendar_id.hours_per_day
+    result = (inputs.MAINT_BONUS.amount / 30) * (30- absences)
+        </field>
+        <field name="struct_id" ref="l10n_mz_hr_payroll.hr_payroll_structure_mz_employee_salary"/>
+    </record>
+    <record id="mz_employees_union_maintenance_bonus" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Maintenance Bonus</field>
+        <field name="code">PM</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">9</field>
+        <field name="condition_select">python</field>
+        <field name="condition_python">result = inputs.MAINT_BONUS</field>
+        <field name="amount_python_compute">
+total_worked = worked_days.WORK100.number_of_hours if worked_days.WORK100 else worked_days.LEAVE_WITH_PAY.number_of_hours
+hours = contract._get_work_hours(payslip.date_from, payslip.date_to, domain=None)
+hours_total = sum(hours.values())
+days_total = round(hours_total/ contract.resource_calendar_id.hours_per_day)
+absences = 0
+if worked_days.SICK_LEAVE_NOT_PAID:
+    absences += round(worked_days.SICK_LEAVE_NOT_PAID.number_of_days)
+if worked_days.LEAVE_WITHOUT_PAY:
+    absences += round(worked_days.LEAVE_WITHOUT_PAY.number_of_days)
+if worked_days.UNJUSTIFIED_ABSENCE:
+    absences += round(worked_days.UNJUSTIFIED_ABSENCE.number_of_days)
+if worked_days.MATERNITY_LEAVE:
+    absences += round(worked_days.MATERNITY_LEAVE.number_of_days)
+if worked_days.PARENTAL_LEAVE:
+    absences += round(worked_days.PARENTAL_LEAVE.number_of_days)
+if worked_days.PATERNITY_LEAVE:
+    absences += round(worked_days.PATERNITY_LEAVE.number_of_days)
+if worked_days.FERIADO:
+    holiday_days = round(worked_days.FERIADO.number_of_days)
+    if round(total_worked / contract.resource_calendar_id.hours_per_day) + holiday_days == days_total:
+        result = inputs.MAINT_BONUS.amount
+    else:
+        days= (total_worked + worked_days.FERIADO.number_of_hours) / contract.resource_calendar_id.hours_per_day
+        result = inputs.MAINT_BONUS.amount
+elif round(total_worked / contract.resource_calendar_id.hours_per_day) == days_total:
+    result = inputs.MAINT_BONUS.amount
+else:
+    days= total_worked / contract.resource_calendar_id.hours_per_day
+    result = (inputs.MAINT_BONUS.amount / 30) * (30- absences)
+        </field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+    <record id="mz_employees_occ_maintenance_bonus" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Maintenance Bonus</field>
+        <field name="code">PM</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">7</field>
+        <field name="condition_select">python</field>
+        <field name="condition_python">result = inputs.MAINT_BONUS</field>
+        <field name="amount_python_compute">
+total_worked = worked_days.WORK100.number_of_hours if worked_days.WORK100 else worked_days.LEAVE_WITH_PAY.number_of_hours
+hours = contract._get_work_hours(payslip.date_from, payslip.date_to, domain=None)
+hours_total = sum(hours.values())
+days_total = round(hours_total/ contract.resource_calendar_id.hours_per_day)
+absences = 0
+if worked_days.SICK_LEAVE_NOT_PAID:
+    absences += round(worked_days.SICK_LEAVE_NOT_PAID.number_of_days)
+if worked_days.LEAVE_WITHOUT_PAY:
+    absences += round(worked_days.LEAVE_WITHOUT_PAY.number_of_days)
+if worked_days.UNJUSTIFIED_ABSENCE:
+    absences += round(worked_days.UNJUSTIFIED_ABSENCE.number_of_days)
+if worked_days.MATERNITY_LEAVE:
+    absences += round(worked_days.MATERNITY_LEAVE.number_of_days)
+if worked_days.PARENTAL_LEAVE:
+    absences += round(worked_days.PARENTAL_LEAVE.number_of_days)
+if worked_days.PATERNITY_LEAVE:
+    absences += round(worked_days.PATERNITY_LEAVE.number_of_days)
+if worked_days.FERIADO:
+    holiday_days = round(worked_days.FERIADO.number_of_days)
+    if round(total_worked / contract.resource_calendar_id.hours_per_day) + holiday_days == days_total:
+        result = inputs.MAINT_BONUS.amount
+    else:
+        days= (total_worked + worked_days.FERIADO.number_of_hours) / contract.resource_calendar_id.hours_per_day
+        result = inputs.MAINT_BONUS.amount
+elif round(total_worked / contract.resource_calendar_id.hours_per_day) == days_total:
+    result = inputs.MAINT_BONUS.amount
+else:
+    days= total_worked / contract.resource_calendar_id.hours_per_day
+    result = (inputs.MAINT_BONUS.amount / 30) * (30- absences)
+        </field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_occasional_salary"/>
+    </record>
+    <record id="mz_employees_other_bonus" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Other Bonus</field>
+        <field name="code">other_bonus</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">10</field>
+        <field name="condition_select">python</field>
+        <field name="account_debit" ref="l10n_mz.account6221"/>
+        <field name="condition_python">result = inputs.other_bonus</field>
+        <field name="amount_python_compute">
+result = inputs.other_bonus.amount
+result_name = inputs.other_bonus.name
+        </field>
+        <field name="struct_id" ref="l10n_mz_hr_payroll.hr_payroll_structure_mz_employee_salary"/>
+    </record>
+    <record id="mz_employees_union_other_bonus" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Other Bonus</field>
+        <field name="code">other_bonus</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">10</field>
+        <field name="condition_select">python</field>
+        <field name="condition_python">result = inputs.other_bonus</field>
+        <field name="amount_python_compute">
+result = inputs.other_bonus.amount
+result_name = inputs.other_bonus.name
+        </field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+    <record id="mz_employees_occ_other_bonus" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Other Bonus</field>
+        <field name="code">other_bonus</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">8</field>
+        <field name="condition_select">python</field>
+        <field name="condition_python">result = inputs.other_bonus</field>
+        <field name="amount_python_compute">
+result = inputs.other_bonus.amount
+result_name = inputs.other_bonus.name
+        </field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_occasional_salary"/>
+    </record>
+
+    <record id="mz_employees_retro" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Retroactives</field>
+        <field name="code">retroactive</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">11</field>
+        <field name="condition_select">python</field>
+        <field name="account_debit" ref="l10n_mz.account6221"/>
+        <field name="condition_python">result = inputs.retroactive</field>
+        <field name="amount_python_compute">
+result = inputs.retroactive.amount
+result_name = inputs.retroactive.name
+        </field>
+        <field name="struct_id" ref="l10n_mz_hr_payroll.hr_payroll_structure_mz_employee_salary"/>
+    </record>
+
+
+    <record id="mz_employees_union_retro" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Retroactives</field>
+        <field name="code">retroactive</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">11</field>
+        <field name="condition_select">python</field>
+        <field name="account_debit" ref="l10n_mz.account6221"/>
+        <field name="condition_python">result = inputs.retroactive</field>
+        <field name="amount_python_compute">
+result = inputs.retroactive.amount
+result_name = inputs.retroactive.name
+        </field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+
+    <record id="mz_employees_occ_retro" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Retroactives</field>
+        <field name="code">retroactive</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">9</field>
+        <field name="condition_select">python</field>
+        <field name="account_debit" ref="l10n_mz.account6221"/>
+        <field name="condition_python">result = inputs.retroactive</field>
+        <field name="amount_python_compute">
+result = inputs.retroactive.amount
+result_name = inputs.retroactive.name
+        </field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_occasional_salary"/>
+    </record>
+
+
+    <!--    EXTRA HOURS-->
+
+    <record id="mz_employees_extra_hours_50" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Extra Hours 50%</field>
+        <field name="code">extra_hours_50</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">2</field>
+        <field name="condition_select">none</field>
+        <field name="account_debit" ref="l10n_mz.account622"/>
+        <field name="amount_python_compute">
+total = 0
+work_entries = payslip.env['hr.work.entry'].search([('employee_id', '=', employee.id),('date_start', '>=', payslip.date_from), ('date_start', '&lt;', payslip.date_to)])
+for entry in work_entries:
+    if entry.work_entry_type_id.code == 'EXTRA_HOURS':
+        if (entry.date_start.hour + 1) &lt; 20 and (entry.date_stop.hour + 1) &lt; 20:
+            total += ((contract.wage / 208) * 1.5) * entry.duration
+        if (entry.date_start.hour + 1) &lt; 20 and ((entry.date_stop.hour + 1) > 20 or entry.date_stop.day > entry.date_start.day):
+            minutes = entry.date_start.minute / 60
+            before_20_duration = 20 - (entry.date_start.hour + 1 + minutes)
+            before_20 = before_20_duration * ((contract.wage / 208) * 1.5)
+            total += before_20
+result = total
+        </field>
+        <field name="struct_id" ref="l10n_mz_hr_payroll.hr_payroll_structure_mz_employee_salary"/>
+    </record>
+
+        <record id="mz_employees_union_extra_hours_50" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Extra Hours 50%</field>
+        <field name="code">extra_hours_50</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">2</field>
+        <field name="condition_select">none</field>
+        <field name="account_debit" ref="l10n_mz.account622"/>
+        <field name="amount_python_compute">
+total = 0
+work_entries = payslip.env['hr.work.entry'].search([('employee_id', '=', employee.id),('date_start', '>=', payslip.date_from), ('date_start', '&lt;', payslip.date_to)])
+for entry in work_entries:
+    if entry.work_entry_type_id.code == 'EXTRA_HOURS':
+        if (entry.date_start.hour + 1) &lt; 20 and (entry.date_stop.hour + 1) &lt; 20:
+            total += ((contract.wage / 208) * 1.5) * entry.duration
+        if (entry.date_start.hour + 1) &lt; 20 and ((entry.date_stop.hour + 1) > 20 or entry.date_stop.day > entry.date_start.day):
+            minutes = entry.date_start.minute / 60
+            before_20_duration = 20 - (entry.date_start.hour + 1 + minutes)
+            before_20 = before_20_duration * ((contract.wage / 208) * 1.5)
+            total += before_20
+result = total
+        </field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+
+
+    <record id="mz_employees_extra_hours_100" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Extra Hours 100%</field>
+        <field name="code">extra_hours_100</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">3</field>
+        <field name="condition_select">none</field>
+        <field name="account_debit" ref="l10n_mz.account622"/>
+        <field name="amount_python_compute">
+total = 0
+work_entries = payslip.env['hr.work.entry'].search([('employee_id', '=', employee.id),('date_start', '>=', payslip.date_from), ('date_start', '&lt;', payslip.date_to)])
+for entry in work_entries:
+    if entry.work_entry_type_id.code == 'EXTRA_HOURS':
+        if (entry.date_start.hour + 1) &lt; 20 and ((entry.date_stop.hour + 1) > 20 or entry.date_stop.day > entry.date_start.day):
+            minutes = entry.date_start.minute / 60
+            before_20_duration = 20 - (entry.date_start.hour + 1 + minutes)
+            after_20 = (entry.duration - before_20_duration) * ((contract.wage / 208) * 2)
+            total += after_20
+result = total
+        </field>
+        <field name="struct_id" ref="l10n_mz_hr_payroll.hr_payroll_structure_mz_employee_salary"/>
+    </record>
+
+        <record id="mz_employees_union_extra_hours_100" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Extra Hours 100%</field>
+        <field name="code">extra_hours_100</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">3</field>
+        <field name="condition_select">none</field>
+        <field name="account_debit" ref="l10n_mz.account622"/>
+        <field name="amount_python_compute">
+total = 0
+work_entries = payslip.env['hr.work.entry'].search([('employee_id', '=', employee.id),('date_start', '>=', payslip.date_from), ('date_start', '&lt;', payslip.date_to)])
+for entry in work_entries:
+    if entry.work_entry_type_id.code == 'EXTRA_HOURS':
+        if (entry.date_start.hour + 1) &lt; 20 and ((entry.date_stop.hour + 1) > 20 or entry.date_stop.day > entry.date_start.day):
+            minutes = entry.date_start.minute / 60
+            before_20_duration = 20 - (entry.date_start.hour + 1 + minutes)
+            after_20 = (entry.duration - before_20_duration) * ((contract.wage / 208) * 2)
+            total += after_20
+result = total
+        </field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+
+     <!--    RESTING DAY WORKED-->
+    <record id="mz_employees_union_resting_day_worked" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Resting Day Worked</field>
+        <field name="code">resting_worked</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">3</field>
+        <field name="condition_select">none</field>
+<!--        <field name="account_debit" ref="l10n_mz.account622"/>-->
+        <field name="amount_python_compute">
+total = 0
+work_entries = payslip.env['hr.work.entry'].search([('employee_id', '=', employee.id),('date_start', '>=', payslip.date_from), ('date_start', '&lt;=', payslip.date_to)])
+for entry in work_entries:
+    if entry.work_entry_type_id.code == 'RESTING_WORKED':
+        total += entry.duration * ((contract.wage / 208) * 2)
+result = total
+        </field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+
+    <record id="mz_employees_resting_day_worked" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Resting Day Worked</field>
+        <field name="code">resting_worked</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">3</field>
+        <field name="condition_select">none</field>
+<!--        <field name="account_debit" ref="l10n_mz.account622"/>-->
+        <field name="amount_python_compute">
+total = 0
+work_entries = payslip.env['hr.work.entry'].search([('employee_id', '=', employee.id),('date_start', '>=', payslip.date_from), ('date_start', '&lt;=', payslip.date_to)])
+for entry in work_entries:
+    if entry.work_entry_type_id.code == 'RESTING_WORKED':
+        total += entry.duration * ((contract.wage / 208) * 2)
+result = total
+        </field>
+        <field name="struct_id" ref="l10n_mz_hr_payroll.hr_payroll_structure_mz_employee_salary"/>
+    </record>
+
+     <record id="mz_employees_occ_resting_day_worked" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Resting Day Worked</field>
+        <field name="code">resting_worked</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">3</field>
+        <field name="condition_select">none</field>
+<!--        <field name="account_debit" ref="l10n_mz.account622"/>-->
+        <field name="amount_python_compute">
+total = 0
+work_entries = payslip.env['hr.work.entry'].search([('employee_id', '=', employee.id),('date_start', '>=', payslip.date_from), ('date_start', '&lt;', payslip.date_to)])
+for entry in work_entries:
+    if entry.work_entry_type_id.code == 'RESTING_WORKED':
+        total += entry.duration * ((contract.wage / 208) * 2)
+result = total
+        </field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_occasional_salary"/>
+    </record>
+
+     <record id="mz_employees_indemn" model="hr.salary.rule">
+        <field name="category_id" ref="payroll_arxi.indemn"/>
+        <field name="name">Indemnity</field>
+        <field name="code">indemnity</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">18</field>
+        <field name="condition_select">python</field>
+                <field name="account_debit" ref="l10n_mz.account6221"/>
+        <field name="condition_python">result = inputs.indemnity</field>
+        <field name="amount_python_compute">
+result = inputs.indemnity.amount
+result_name = inputs.indemnity.name
+        </field>
+        <field name="struct_id" ref="l10n_mz_hr_payroll.hr_payroll_structure_mz_employee_salary"/>
+    </record>
+
+    <record id="mz_employees_union_indemn" model="hr.salary.rule">
+        <field name="category_id" ref="payroll_arxi.indemn"/>
+        <field name="name">Indemnity</field>
+        <field name="code">indemnity</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">19</field>
+        <field name="condition_select">python</field>
+        <!--        <field name="account_debit" ref="l10n_mz.account6221"/>-->
+        <field name="condition_python">result = inputs.indemnity</field>
+        <field name="amount_python_compute">
+result = inputs.indemnity.amount
+result_name = inputs.indemnity.name
+        </field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+
+
+
+
+    <record id="mz_employees_vac_prop" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Vacation Proportion</field>
+        <field name="code">vac_prop</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">12</field>
+        <field name="condition_select">python</field>
+        <!--        <field name="account_debit" ref="l10n_mz.account6221"/>-->
+        <field name="condition_python">result = inputs.vac_prop</field>
+        <field name="amount_python_compute">
+result = inputs.vac_prop.amount * (contract.wage / 30)
+result_name = inputs.vac_prop.name
+        </field>
+        <field name="struct_id" ref="l10n_mz_hr_payroll.hr_payroll_structure_mz_employee_salary"/>
+    </record>
+
+    <record id="mz_employees_union_vac_prop" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Vacation Proportion</field>
+        <field name="code">vac_prop</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">12</field>
+        <field name="condition_select">python</field>
+        <!--        <field name="account_debit" ref="l10n_mz.account6221"/>-->
+        <field name="condition_python">result = inputs.vac_prop</field>
+        <field name="amount_python_compute">
+result = inputs.vac_prop.amount * (contract.wage / 30)
+result_name = inputs.vac_prop.name
+        </field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+
+
+    <!--    GROSS-->
+    <record id="mz_employees_monthly_gross" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.GROSS"/>
+        <field name="name">Gross Salary</field>
+        <field name="code">GROSS</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">13</field>
+        <field name="condition_select">none</field>
+        <field name="amount_python_compute">result = categories.BASIC + categories.ALW</field>
+        <field name="struct_id" ref="l10n_mz_hr_payroll.hr_payroll_structure_mz_employee_salary"/>
+    </record>
+    <record id="mz_employees_union_monthly_gross" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.GROSS"/>
+        <field name="name">Gross Salary</field>
+        <field name="code">GROSS</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">13</field>
+        <field name="condition_select">none</field>
+        <field name="amount_python_compute">result = categories.BASIC + categories.ALW</field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+    <record id="mz_employees_occ_monthly_gross" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.GROSS"/>
+        <field name="name">Gross Salary</field>
+        <field name="code">GROSS</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">10</field>
+        <field name="condition_select">none</field>
+        <field name="amount_python_compute">result = categories.BASIC + categories.ALW</field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_occasional_salary"/>
+    </record>
+
+
+    <!--    ADVANCE-->
+    <record id="mz_employees_advance" model="hr.salary.rule">
+        <field name="category_id" ref="payroll_arxi.attachment"/>
+        <field name="name">Advance</field>
+        <field name="code">advance</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">19</field>
+        <field name="condition_select">python</field>
+        <field name="account_credit" ref="l10n_mz.account4512"/>
+        <field name="condition_python">result = inputs.advance</field>
+        <field name="amount_python_compute">
+result = -inputs.advance.amount
+result_name = inputs.advance.name
+        </field>
+        <field name="struct_id" ref="l10n_mz_hr_payroll.hr_payroll_structure_mz_employee_salary"/>
+    </record>
+    <record id="mz_employees_union_advance" model="hr.salary.rule">
+        <field name="category_id" ref="payroll_arxi.attachment"/>
+        <field name="name">Advance</field>
+        <field name="code">advance</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">20</field>
+        <field name="condition_select">python</field>
+        <field name="account_credit" ref="l10n_mz.account4512"/>
+        <field name="condition_python">result = inputs.advance</field>
+        <field name="amount_python_compute">
+result = -inputs.advance.amount
+result_name = inputs.advance.name
+        </field>
+        <field name="struct_id" ref="hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+    <record id="mz_employees_occasional_advance" model="hr.salary.rule">
+        <field name="category_id" ref="payroll_arxi.attachment"/>
+        <field name="name">Advance</field>
+        <field name="code">advance</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">13</field>
+        <field name="condition_select">python</field>
+        <field name="account_credit" ref="l10n_mz.account4512"/>
+        <field name="condition_python">result = inputs.advance</field>
+        <field name="amount_python_compute">
+result = -inputs.advance.amount
+result_name = inputs.advance.name
+        </field>
+        <field name="struct_id" ref="hr_payroll_structure_mz_employee_occasional_salary"/>
+    </record>
+
+    <!--    LOAN-->
+    <record id="mz_employees_loan" model="hr.salary.rule">
+        <field name="category_id" ref="payroll_arxi.attachment"/>
+        <field name="name">Loan</field>
+        <field name="code">loan</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">20</field>
+        <field name="condition_select">python</field>
+        <field name="account_credit" ref="l10n_mz.account4512"/>
+        <field name="condition_python">result = inputs.loan</field>
+        <field name="amount_python_compute">
+result = -inputs.loan.amount
+result_name = inputs.loan.name
+        </field>
+        <field name="struct_id" ref="l10n_mz_hr_payroll.hr_payroll_structure_mz_employee_salary"/>
+    </record>
+    <record id="mz_employees_union_loan" model="hr.salary.rule">
+        <field name="category_id" ref="payroll_arxi.attachment"/>
+        <field name="name">Loan</field>
+        <field name="code">loan</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">21</field>
+        <field name="condition_select">python</field>
+        <field name="account_credit" ref="l10n_mz.account4512"/>
+        <field name="condition_python">result = inputs.loan</field>
+        <field name="amount_python_compute">
+result = -inputs.loan.amount
+result_name = inputs.loan.name
+        </field>
+        <field name="struct_id" ref="hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+    <record id="mz_employees_occasional_loan" model="hr.salary.rule">
+        <field name="category_id" ref="payroll_arxi.attachment"/>
+        <field name="name">Loan</field>
+        <field name="code">loan</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">14</field>
+        <field name="condition_select">python</field>
+        <field name="account_credit" ref="l10n_mz.account4512"/>
+        <field name="condition_python">result = inputs.loan</field>
+        <field name="amount_python_compute">
+result = -inputs.loan.amount
+result_name = inputs.loan.name
+        </field>
+        <field name="struct_id" ref="hr_payroll_structure_mz_employee_occasional_salary"/>
+    </record>
+
+    <!--    Contract Penalty-->
+    <record id="mz_employees_cont_penalty" model="hr.salary.rule">
+        <field name="category_id" ref="payroll_arxi.attachment"/>
+        <field name="name">Contract Penalty</field>
+        <field name="code">cont_penalty</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">21</field>
+        <field name="condition_select">python</field>
+        <field name="account_credit" ref="l10n_mz.account4512"/>
+        <field name="condition_python">result = inputs.cont_penalty</field>
+        <field name="amount_python_compute">
+result = -inputs.cont_penalty.amount
+result_name = inputs.cont_penalty.name
+        </field>
+        <field name="struct_id" ref="l10n_mz_hr_payroll.hr_payroll_structure_mz_employee_salary"/>
+    </record>
+    <record id="mz_employees_union_cont_penalty" model="hr.salary.rule">
+        <field name="category_id" ref="payroll_arxi.attachment"/>
+        <field name="name">Contract Penalty</field>
+        <field name="code">cont_penalty</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">22</field>
+        <field name="condition_select">python</field>
+        <field name="account_credit" ref="l10n_mz.account4512"/>
+        <field name="condition_python">result = inputs.cont_penalty</field>
+        <field name="amount_python_compute">
+result = -inputs.cont_penalty.amount
+result_name = inputs.cont_penalty.name
+        </field>
+        <field name="struct_id" ref="hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+    <record id="mz_employees_occasional_cont_penalty" model="hr.salary.rule">
+        <field name="category_id" ref="payroll_arxi.attachment"/>
+        <field name="name">Contract Penalty</field>
+        <field name="code">cont_penalty</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">15</field>
+        <field name="condition_select">python</field>
+        <field name="account_credit" ref="l10n_mz.account4512"/>
+        <field name="condition_python">result = inputs.cont_penalty</field>
+        <field name="amount_python_compute">
+result = -inputs.cont_penalty.amount
+result_name = inputs.cont_penalty.name
+        </field>
+        <field name="struct_id" ref="hr_payroll_structure_mz_employee_occasional_salary"/>
+    </record>
+
+    <!--    Premium Reversal-->
+    <record id="mz_employees_prem_reverse" model="hr.salary.rule">
+        <field name="category_id" ref="payroll_arxi.attachment"/>
+        <field name="name">Premium Reversal</field>
+        <field name="code">prem_reverse</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">22</field>
+        <field name="condition_select">python</field>
+        <field name="account_credit" ref="l10n_mz.account4512"/>
+        <field name="condition_python">result = inputs.prem_reverse</field>
+        <field name="amount_python_compute">
+result = -inputs.prem_reverse.amount
+result_name = inputs.prem_reverse.name
+        </field>
+        <field name="struct_id" ref="l10n_mz_hr_payroll.hr_payroll_structure_mz_employee_salary"/>
+    </record>
+    <record id="mz_employees_union_prem_reverse" model="hr.salary.rule">
+        <field name="category_id" ref="payroll_arxi.attachment"/>
+        <field name="name">Premium Reversal</field>
+        <field name="code">prem_reverse</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">23</field>
+        <field name="condition_select">python</field>
+        <field name="account_credit" ref="l10n_mz.account4512"/>
+        <field name="condition_python">result = inputs.prem_reverse</field>
+        <field name="amount_python_compute">
+result = -inputs.prem_reverse.amount
+result_name = inputs.prem_reverse.name
+        </field>
+        <field name="struct_id" ref="hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+    <record id="mz_employees_occasional_prem_reverse" model="hr.salary.rule">
+        <field name="category_id" ref="payroll_arxi.attachment"/>
+        <field name="name">Premium Reversal</field>
+        <field name="code">prem_reverse</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">16</field>
+        <field name="condition_select">python</field>
+        <field name="account_credit" ref="l10n_mz.account4512"/>
+        <field name="condition_python">result = inputs.prem_reverse</field>
+        <field name="amount_python_compute">
+result = -inputs.prem_reverse.amount
+result_name = inputs.prem_reverse.name
+        </field>
+        <field name="struct_id" ref="hr_payroll_structure_mz_employee_occasional_salary"/>
+    </record>
+
+    <!--    Judicial Attachment-->
+    <record id="mz_employees_jud_attach" model="hr.salary.rule">
+        <field name="category_id" ref="payroll_arxi.attachment"/>
+        <field name="name">Judicial Attachment</field>
+        <field name="code">jud_attach</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">23</field>
+        <field name="condition_select">python</field>
+        <field name="account_credit" ref="l10n_mz.account4512"/>
+        <field name="condition_python">result = inputs.jud_attach</field>
+        <field name="amount_python_compute">
+result = -inputs.jud_attach.amount
+result_name = inputs.jud_attach.name
+        </field>
+        <field name="struct_id" ref="l10n_mz_hr_payroll.hr_payroll_structure_mz_employee_salary"/>
+    </record>
+    <record id="mz_employees_union_jud_attach" model="hr.salary.rule">
+        <field name="category_id" ref="payroll_arxi.attachment"/>
+        <field name="name">Judicial Attachment</field>
+        <field name="code">jud_attach</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">24</field>
+        <field name="condition_select">python</field>
+        <field name="account_credit" ref="l10n_mz.account4512"/>
+        <field name="condition_python">result = inputs.jud_attach</field>
+        <field name="amount_python_compute">
+result = -inputs.jud_attach.amount
+result_name = inputs.jud_attach.name
+        </field>
+        <field name="struct_id" ref="hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+    <record id="mz_employees_occasional_jud_attach" model="hr.salary.rule">
+        <field name="category_id" ref="payroll_arxi.attachment"/>
+        <field name="name">Judicial Attachment</field>
+        <field name="code">jud_attach</field>
+        <field name="amount_select">code</field>
+        <field name="sequence">17</field>
+        <field name="condition_select">python</field>
+        <field name="account_credit" ref="l10n_mz.account4512"/>
+        <field name="condition_python">result = inputs.jud_attach</field>
+        <field name="amount_python_compute">
+result = -inputs.jud_attach.amount
+result_name = inputs.jud_attach.name
+        </field>
+        <field name="struct_id" ref="hr_payroll_structure_mz_employee_occasional_salary"/>
+    </record>
+
+     <record id="mz_employees_monthly_pay" model="hr.salary.rule">
+        <field name="category_id" ref="payroll_arxi.pay"/>
+        <field name="name">Salary To Pay</field>
+        <field name="code">VP</field>
+        <field name="sequence">24</field>
+        <field name="condition_select">none</field>
+        <field name="appears_on_payslip" eval="True"/>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">result = categories.NET + categories.indemnity + categories.attachment</field>
+        <field name="struct_id" ref="l10n_mz_hr_payroll.hr_payroll_structure_mz_employee_salary"/>
+    </record>
+
+    <record id="mz_employees_union_monthly_pay" model="hr.salary.rule">
+        <field name="category_id" ref="payroll_arxi.pay"/>
+        <field name="name">Salary To Pay</field>
+        <field name="code">VP</field>
+        <field name="sequence">25</field>
+        <field name="condition_select">none</field>
+        <field name="appears_on_payslip" eval="True"/>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">result = categories.NET + categories.indemnity + categories.attachment</field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_union_salary"/>
+    </record>
+
+    <record id="mz_employees_occ_monthly_pay" model="hr.salary.rule">
+        <field name="category_id" ref="payroll_arxi.pay"/>
+        <field name="name">Salary To Pay</field>
+        <field name="code">VP</field>
+        <field name="sequence">18</field>
+        <field name="condition_select">none</field>
+        <field name="appears_on_payslip" eval="True"/>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">result = categories.NET + categories.attachment</field>
+        <field name="struct_id" ref="payroll_arxi.hr_payroll_structure_mz_employee_occasional_salary"/>
+    </record>
+</odoo>

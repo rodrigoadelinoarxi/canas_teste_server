@@ -1,0 +1,20 @@
+<odoo>
+    <record id="view_employee_form_payroll_arxi" model="ir.ui.view">
+        <field name="name">view.employee.form.payroll.arxi</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <field name="job_id" position="after">
+                <field name="vat"/>
+                <field name="niss"/>
+                <field name="establishment_id" domain="[('company_id', '=', company_id)]" options="{'no_create': True, 'no_edit': True}"/>
+                <field name="establishment_ssc"/>
+                <field name="children"/>
+                <field name="insurance"/>
+                <field name="policy_number"/>
+                <field name="is_unionized"/>
+                <field name="is_occasional"/>
+            </field>
+        </field>
+    </record>
+</odoo>

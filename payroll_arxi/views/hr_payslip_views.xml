@@ -1,0 +1,58 @@
+<odoo>
+    <record id="hr_payslip_view_form_canas" model="ir.ui.view">
+        <field name="name">hr.payslip.view.form.canas</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//separator[last()]" position="before">
+                <group>
+                    <group>
+                        <label for="productivity_bonus_perc" string="Productivity Bonus"/>
+                        <div class="o_row">
+                            <field name="productivity_bonus_perc"/>
+                            <span>%</span>
+                        </div>
+                        <label for="maintenance_bonus_perc" string="Maintenance Bonus"/>
+                        <div class="o_row">
+                            <field name="maintenance_bonus_perc"/>
+                            <span>%</span>
+                        </div>
+                        <button class="oe_highlight" string="Calculate" type="object" name="calculate_payment_bonuses"
+                                attrs="{'invisible': [('state', 'not in', ('draft'))]}"/>
+                    </group>
+                    <group>
+                    </group>
+
+                </group>
+            </xpath>
+            <xpath expr="//field[@name='input_line_ids']" position="before">
+                <div class="alert alert-warning" role="alert"
+                     attrs="{'invisible': [('bonus_warning','=',False)]}">
+                    <field name="bonus_warning"/>
+                </div>
+            </xpath>
+            <xpath expr="//field[@name='worked_days_line_ids']//field[@name='amount']" position="attributes">
+                <attribute name="optional">hide</attribute>
+            </xpath>
+            <xpath expr="//field[@name='state']" position="replace">
+                <field name="state" widget="statusbar" statusbar_visible="draft,validate,done,paid"/>
+            </xpath>
+            <xpath expr="//button[@name='compute_sheet']" position="attributes">
+                <attribute name="attrs">{'invisible': [('state', '!=', 'validate')]}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_to_view_user_employees" model="ir.actions.server">
+        <field name="name">Work Entries</field>
+        <field name="model_id" ref="hr_work_entry.model_hr_work_entry"/>
+        <field name="state">code</field>
+        <field name="code">action = model.action_view_work_entries()</field>
+    </record>
+
+    <menuitem
+            id="hr_work_entry_contract_enterprise.menu_work_entry"
+            action="payroll_arxi.action_to_view_user_employees"
+            parent="hr_work_entry_contract_enterprise.menu_hr_payroll_work_entries_root"
+            sequence="25"/>
+</odoo>

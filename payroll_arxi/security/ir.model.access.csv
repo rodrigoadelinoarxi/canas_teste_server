@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_res_branch,access_res_branch,model_res_branch,base.group_user,1,1,1,1
+access_update_allowances_wizard,access_update_allowances_wizard,model_update_allowances_wizard,base.group_user,1,1,1,1
+access_allowance_line,access_allowance_line,model_allowance_line,base.group_user,1,1,1,1
+payroll_arxi.access_hr_contract_transfer,access_hr_contract_transfer,payroll_arxi.model_hr_contract_transfer,base.group_user,1,1,1,1

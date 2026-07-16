@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_payroll_structure_mz_employee_union_salary" model="hr.payroll.structure">
+        <field name="name">Trabalhadores com Sindicatos</field>
+        <field name="code">MZUNMONTHLY</field>
+        <field name="country_id" ref="base.mz"/>
+        <field name="type_id" ref="l10n_mz_hr_payroll.structure_type_employee_mz"/>
+    </record>
+
+    <record id="hr_payroll_structure_mz_employee_occasional_salary" model="hr.payroll.structure">
+        <field name="name">Trabalhadores Eventuais</field>
+        <field name="code">MZOCMONTHLY</field>
+        <field name="country_id" ref="base.mz"/>
+        <field name="type_id" ref="l10n_mz_hr_payroll.structure_type_employee_mz"/>
+    </record>
+</odoo>

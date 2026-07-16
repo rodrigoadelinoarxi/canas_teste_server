@@ -1,0 +1,930 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* payroll_arxi
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-26 18:07+0000\n"
+"PO-Revision-Date: 2023-12-26 18:07+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,help:payroll_arxi.field_hr_payslip__state
+msgid ""
+"* When the payslip is created the status is 'Draft'\n"
+"                    \n"
+"* If the payslip is under verification, the status is 'Waiting'.\n"
+"                    \n"
+"* If the payslip is confirmed then status is set to 'Done'.\n"
+"                    \n"
+"* When user cancel payslip the status is 'Rejected'."
+msgstr ""
+
+#. module: payroll_arxi
+#: model_terms:ir.ui.view,arch_db:payroll_arxi.hr_payslip_view_form_canas
+msgid "<span>%</span>"
+msgstr ""
+
+#. module: payroll_arxi
+#: model_terms:ir.ui.view,arch_db:payroll_arxi.hr_contract_view_form
+msgid "<span>/ day</span>"
+msgstr "<span>/ dia</span>"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_salary_attachment__addition_type
+msgid "Addition Type"
+msgstr "Tipo"
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_advance
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_occasional_advance
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_advance
+#: model:hr.salary.rule.category,name:payroll_arxi.advance
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_salary_attachment__deduction_type__advance
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_salary_attachment__deduction_type_select__advance
+msgid "Advance"
+msgstr "Adiantamento"
+
+#. module: payroll_arxi
+#: model:ir.actions.act_window,name:payroll_arxi.allowance_line_treeview_action
+msgid "Allowance Lines"
+msgstr "Linhas de Subsidio"
+
+#. module: payroll_arxi
+#: model:ir.ui.menu,name:payroll_arxi.menu_item_allowance_line
+msgid "Allowance Lines Update"
+msgstr "Atualizar Linhas de Subsidio"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract_transfer__analytic_account_id
+msgid "Analytic Account"
+msgstr "Conta Analítica"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,help:payroll_arxi.field_hr_contract_transfer__analytic_account_id
+msgid ""
+"Analytic account to which this project is linked for financial management. "
+"Use an analytic account to record cost and revenue on your project."
+msgstr ""
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_attendance_bonus
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_occ_attendance_bonus
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_attendance_bonus
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract__assiduity_bonus
+msgid "Assiduity Bonus"
+msgstr "Prémio de Assiduidade"
+
+#. module: payroll_arxi
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_salary_attachment__deduction_type_select__assignment
+msgid "Assignment of Salary"
+msgstr ""
+
+#. module: payroll_arxi
+#: model:hr.salary.rule.category,name:payroll_arxi.attachment
+msgid "Attachment"
+msgstr "Descontos"
+
+#. module: payroll_arxi
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_salary_attachment__deduction_type_select__attachment
+msgid "Attachment of Salary"
+msgstr "Dedução Salarial"
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/models/hr_payroll_structure.py:0
+#: code:addons/payroll_arxi/models/hr_payroll_structure.py:0
+#, python-format
+msgid "Base"
+msgstr ""
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_monthly_base
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_occ_monthly_base
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_monthly_base
+msgid "Base Salary"
+msgstr "Vencimento Base"
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/models/hr_payslip.py:0
+#, python-format
+msgid "Basic Salary"
+msgstr "Vencimento Base"
+
+#. module: payroll_arxi
+#: model_terms:ir.ui.view,arch_db:payroll_arxi.hr_contract_view_form
+msgid "Bonus"
+msgstr "Prémios"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_payslip__bonus_warning
+msgid "Bonus Warning"
+msgstr ""
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract__employee_establishment
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_employee__establishment_id
+msgid "Branch"
+msgstr "Estabelecimento"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_res_company__branch_ids
+msgid "Branches"
+msgstr "Estabelecimentos"
+
+#. module: payroll_arxi
+#: model_terms:ir.ui.view,arch_db:payroll_arxi.hr_payslip_view_form_canas
+msgid "Calculate"
+msgstr "Calcular"
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/models/hr_contract.py:0
+#, python-format
+msgid ""
+"Can't be more than one construction transferation open at the same time. \n"
+"Correct construction transferation dates"
+msgstr ""
+"Não pode haber mais de uma transferência de construção aberta ao mesmo.\n"
+"Verificar a data da ultima nova transferência"
+
+#. module: payroll_arxi
+#: model_terms:ir.ui.view,arch_db:payroll_arxi.hr_salary_addition_view_form
+#: model_terms:ir.ui.view,arch_db:payroll_arxi.update_allowances_wizard_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: payroll_arxi
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_salary_attachment__deduction_type_select__child_support
+msgid "Child Support"
+msgstr ""
+
+#. module: payroll_arxi
+#: model:ir.model,name:payroll_arxi.model_res_company
+msgid "Companies"
+msgstr "Empresas"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_res_branch__company_id
+msgid "Company"
+msgstr "Empresa"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract_transfer__construction_id
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_work_entry_regeneration_wizard__construction_id
+msgid "Construction"
+msgstr "Obra"
+
+#. module: payroll_arxi
+#: model_terms:ir.ui.view,arch_db:payroll_arxi.hr_contract_view_form
+msgid "Construction Transfer History"
+msgstr "Transferencia de Obras"
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/models/hr_contract.py:0
+#, python-format
+msgid ""
+"Construction transfer date can't be before or at the same date as the "
+"construction transfer end or start date before."
+msgstr ""
+"A data de inicio da uma deslocação não pode ser inferior ou igual a data de "
+"inicio ou fim da deslocação anterior a mesma"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract_transfer__contract_id
+msgid "Contract"
+msgstr "Contrato"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract__contract_history_count
+msgid "Contract History Count"
+msgstr "Nº de Contratos"
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_cont_penalty
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_occasional_cont_penalty
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_cont_penalty
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_salary_attachment__deduction_type__cont_penalty
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_salary_attachment__deduction_type_select__cont_penalty
+msgid "Contract Penalty"
+msgstr "Penalização Contratual"
+
+#. module: payroll_arxi
+#: model:hr.salary.rule.category,name:payroll_arxi.cont_penalty
+msgid "Contract penalty"
+msgstr "Penalização Contratual"
+
+#. module: payroll_arxi
+#: model_terms:ir.ui.view,arch_db:payroll_arxi.hr_contract_view_form
+msgid "Contracts"
+msgstr ""
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_allowance_line__create_uid
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract_transfer__create_uid
+#: model:ir.model.fields,field_description:payroll_arxi.field_res_branch__create_uid
+#: model:ir.model.fields,field_description:payroll_arxi.field_update_allowances_wizard__create_uid
+msgid "Created by"
+msgstr "Criado por"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_allowance_line__create_date
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract_transfer__create_date
+#: model:ir.model.fields,field_description:payroll_arxi.field_res_branch__create_date
+#: model:ir.model.fields,field_description:payroll_arxi.field_update_allowances_wizard__create_date
+msgid "Created on"
+msgstr "Criado em"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_allowance_line__date
+#: model_terms:ir.ui.view,arch_db:payroll_arxi.hr_salary_addition_view_form
+msgid "Date"
+msgstr "Data"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_payslip_run__date_start
+msgid "Date From"
+msgstr "Data a partir de"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_payslip_run__date_end
+msgid "Date To"
+msgstr "Data para"
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/models/hr_payslip.py:0
+#, python-format
+msgid "Deduction"
+msgstr "Dedução"
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_occ_travel_allowance
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_travel_allowance
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_travel_allowance
+msgid "Deslocation Allowance"
+msgstr "Subsídio de Deslocação"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_allowance_line__display_name
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract_transfer__display_name
+#: model:ir.model.fields,field_description:payroll_arxi.field_res_branch__display_name
+#: model:ir.model.fields,field_description:payroll_arxi.field_update_allowances_wizard__display_name
+msgid "Display Name"
+msgstr "Nome"
+
+#. module: payroll_arxi
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_payslip__state__done
+msgid "Done"
+msgstr "Concluído"
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/models/hr_payslip.py:0
+#, python-format
+msgid "Double Holiday Pay"
+msgstr ""
+
+#. module: payroll_arxi
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_payslip__state__draft
+msgid "Draft"
+msgstr "Rascunho"
+
+#. module: payroll_arxi
+#: model:ir.model,name:payroll_arxi.model_hr_employee
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_work_entry_regeneration_wizard__employee_id
+msgid "Employee"
+msgstr "Funcionário"
+
+#. module: payroll_arxi
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_payslip__state__validate
+msgid "Engineer"
+msgstr "Engenheiro"
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_extra_hours_100
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_extra_hours_100
+msgid "Extra Hours 100%"
+msgstr "Horas Extras 100%"
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_extra_hours_50
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_extra_hours_50
+msgid "Extra Hours 50%"
+msgstr "Horas Extras 50%"
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_food_allowance
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_occ_food_allowance
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_food_allowance
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract__food_allowance
+#: model:ir.model.fields,field_description:payroll_arxi.field_update_allowances_wizard__food_allowance
+msgid "Food Allowance"
+msgstr "Subsídio de Alimentação"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_allowance_line__food_allowance_value
+msgid "Food Allowance Value"
+msgstr "Valor do Subsidio de Alim."
+
+#. module: payroll_arxi
+#: model_terms:ir.ui.view,arch_db:payroll_arxi.update_allowances_wizard_form
+msgid "Form"
+msgstr "Formulário"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_payslip__date_to
+msgid "From"
+msgstr "De"
+
+#. module: payroll_arxi
+#: model:ir.model,name:payroll_arxi.model_hr_payslip_employees
+msgid "Generate payslips for all selected employees"
+msgstr "Gerar recibos de vencimento para todos os funcionários selecionados"
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/models/hr_payroll_structure.py:0
+#: code:addons/payroll_arxi/models/hr_payroll_structure.py:0
+#: code:addons/payroll_arxi/models/hr_payslip.py:0
+#, python-format
+msgid "Gross"
+msgstr "Bruto"
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_monthly_gross
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_occ_monthly_gross
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_monthly_gross
+msgid "Gross Salary"
+msgstr "Vencimento Bruto"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_allowance_line__id
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract_transfer__id
+#: model:ir.model.fields,field_description:payroll_arxi.field_res_branch__id
+#: model:ir.model.fields,field_description:payroll_arxi.field_update_allowances_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/models/hr_payroll_structure.py:0
+#: code:addons/payroll_arxi/models/hr_payroll_structure.py:0
+#, python-format
+msgid "IRPS"
+msgstr ""
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_irps
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_irps
+msgid "IRPS - Dependent Work"
+msgstr "IRPS - Trabalho Dependente"
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_occ_irps
+msgid "IRPS - Professional Work"
+msgstr "IRPS - Trabalho Profissional"
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/wizard/work_entry_regeneration_wizard.py:0
+#, python-format
+msgid ""
+"In order to regenerate the work entries, you need to provide the wizard with"
+" an employee_id, a date_from and a date_to. In addition to that, the time "
+"interval defined by date_from and date_to must not contain any validated "
+"work entries."
+msgstr ""
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_indemn
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_indemn
+#: model:hr.salary.rule.category,name:payroll_arxi.indemn
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_salary_attachment__addition_type__indemnity
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_salary_attachment__deduction_type__indemnity
+msgid "Indemnity"
+msgstr "Indemnização"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract__employee_insurance
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_employee__insurance
+msgid "Insurance"
+msgstr "Seguro"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_res_company__insurance_company
+msgid "Insurance Company"
+msgstr "Companhia de Seguros"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_res_company__insurance_policy
+msgid "Insurance Policy"
+msgstr "Apólice"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract_transfer__is_deslocated
+msgid "Is Deslocated"
+msgstr "Deslocado"
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_jud_attach
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_occasional_jud_attach
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_jud_attach
+#: model:hr.salary.rule.category,name:payroll_arxi.judicial_attachment
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_salary_attachment__deduction_type__jud_attach
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_salary_attachment__deduction_type_select__jud_attach
+msgid "Judicial Attachment"
+msgstr "Penhora Judicial"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_allowance_line____last_update
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract_transfer____last_update
+#: model:ir.model.fields,field_description:payroll_arxi.field_res_branch____last_update
+#: model:ir.model.fields,field_description:payroll_arxi.field_update_allowances_wizard____last_update
+msgid "Last Modified on"
+msgstr "Última Modificação a"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_allowance_line__write_uid
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract_transfer__write_uid
+#: model:ir.model.fields,field_description:payroll_arxi.field_res_branch__write_uid
+#: model:ir.model.fields,field_description:payroll_arxi.field_update_allowances_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Último Update por"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_allowance_line__write_date
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract_transfer__write_date
+#: model:ir.model.fields,field_description:payroll_arxi.field_res_branch__write_date
+#: model:ir.model.fields,field_description:payroll_arxi.field_update_allowances_wizard__write_date
+msgid "Last Updated on"
+msgstr "Último Update a"
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_loan
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_occasional_loan
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_loan
+#: model:hr.salary.rule.category,name:payroll_arxi.loan
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_salary_attachment__deduction_type__loan
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_salary_attachment__deduction_type_select__loan
+msgid "Loan"
+msgstr "Empréstimo"
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_maintenance_bonus
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_occ_maintenance_bonus
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_maintenance_bonus
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract__maintenance_bonus
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_payslip__maintenance_bonus_perc
+#: model_terms:ir.ui.view,arch_db:payroll_arxi.hr_payslip_view_form_canas
+msgid "Maintenance Bonus"
+msgstr "Prémio de Manutenção"
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/models/hr_payslip.py:0
+#, python-format
+msgid "Maintenance bonus amount is higher than the amount in the contract!"
+msgstr "O Bónus de Manutenção é superior ao valor do Contrato!"
+
+#. module: payroll_arxi
+#: model_terms:ir.ui.view,arch_db:payroll_arxi.hr_salary_addition_view_form
+msgid "Mark as Completed"
+msgstr ""
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract__employee_niss
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_employee__niss
+msgid "NISS"
+msgstr ""
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_res_branch__name
+msgid "Name"
+msgstr "Nome"
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/models/hr_payroll_structure.py:0
+#: code:addons/payroll_arxi/models/hr_payroll_structure.py:0
+#, python-format
+msgid "Net"
+msgstr "Liquido"
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/models/hr_payslip.py:0
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_monthly_net
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_monthly_net
+#, python-format
+msgid "Net Salary"
+msgstr "Vencimento Líquido"
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_occ_monthly_net
+msgid "Net Salary Occasional"
+msgstr "Vencimento Líquido Eventuais"
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/wizard/hr_payroll_payslips_by_employees.py:0
+#, python-format
+msgid "New Payslip"
+msgstr "Novo Recibo"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract__employee_children
+msgid "Number of Children"
+msgstr "Nº Dependentes"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_salary_attachment__number_of_days
+msgid "Number of Days"
+msgstr "Nº de Dias"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract__employee_is_occasional
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_employee__is_occasional
+msgid "Occasional"
+msgstr "Eventual"
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_occ_other_bonus
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_other_bonus
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_other_bonus
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_salary_attachment__addition_type__other_bonus
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_salary_attachment__deduction_type__other_bonus
+msgid "Other Bonus"
+msgstr "Outros Prémios"
+
+#. module: payroll_arxi
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_payslip__state__paid
+msgid "Paid"
+msgstr "Pago"
+
+#. module: payroll_arxi
+#: model:ir.actions.server,name:payroll_arxi.ir_cron_update_allowances_ir_actions_server
+#: model:ir.cron,cron_name:payroll_arxi.ir_cron_update_allowances
+#: model:ir.cron,name:payroll_arxi.ir_cron_update_allowances
+msgid "Payroll: Update Allowances"
+msgstr "Folha de Salários: Atualizar Subsidios"
+
+#. module: payroll_arxi
+#: model:ir.model,name:payroll_arxi.model_hr_payslip_run
+msgid "Payslip Batches"
+msgstr "Lotes de Recibos de Vencimento"
+
+#. module: payroll_arxi
+#: model_terms:ir.ui.view,arch_db:payroll_arxi.hr_salary_addition_view_form
+msgid "Payslips"
+msgstr ""
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract__employee_policy_number
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_employee__policy_number
+msgid "Policy Number"
+msgstr "Nº Apólice"
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_occasional_prem_reverse
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_prem_reverse
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_prem_reverse
+#: model:hr.salary.rule.category,name:payroll_arxi.prem_reverse
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_salary_attachment__deduction_type__prem_reverse
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_salary_attachment__deduction_type_select__prem_reverse
+msgid "Premium Reversal"
+msgstr "Estorno de Prémio"
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_occ_productivity_bonus
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_productivity_bonus
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_productivity_bonus
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract__productivity_bonus
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_payslip__productivity_bonus_perc
+#: model_terms:ir.ui.view,arch_db:payroll_arxi.hr_payslip_view_form_canas
+msgid "Productivity Bonus"
+msgstr "Prémio de Produtividade"
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/models/hr_payslip.py:0
+#, python-format
+msgid "Productivity bonus amount is higher than the amount in the contract!"
+msgstr "O Bónus de Produtividade é superior ao valor do Contrato!"
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/models/hr_payslip.py:0
+#, python-format
+msgid "Prorated end-of-year bonus"
+msgstr ""
+
+#. module: payroll_arxi
+#: model:ir.model,name:payroll_arxi.model_hr_work_entry_regeneration_wizard
+msgid "Regenerate Employee Work Entries"
+msgstr "Regenerar Entradas de Trabalho de Funcionário"
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/models/hr_payslip.py:0
+#, python-format
+msgid "Reimbursement"
+msgstr ""
+
+#. module: payroll_arxi
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_payslip__state__cancel
+msgid "Rejected"
+msgstr "Rejeitado"
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_occ_resting_day_worked
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_resting_day_worked
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_resting_day_worked
+msgid "Resting Day Worked"
+msgstr "Dia de Descanso Trabalhado"
+
+#. module: payroll_arxi
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_salary_attachment__addition_type__retroactive
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_salary_attachment__deduction_type__retroactive
+msgid "Retroactive"
+msgstr "Retroativos"
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_occ_retro
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_retro
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_retro
+msgid "Retroactives"
+msgstr "Retroativos"
+
+#. module: payroll_arxi
+#: model_terms:ir.ui.view,arch_db:payroll_arxi.hr_salary_addition_view_form
+msgid "Running"
+msgstr ""
+
+#. module: payroll_arxi
+#: model:ir.actions.act_window,name:payroll_arxi.hr_salary_addition_action
+msgid "Salary Addition"
+msgstr "Acréscimo Salarial"
+
+#. module: payroll_arxi
+#: model:ir.ui.menu,name:payroll_arxi.hr_menu_salary_additions
+msgid "Salary Additions"
+msgstr "Acréscimos Salariais"
+
+#. module: payroll_arxi
+#: model:ir.model,name:payroll_arxi.model_hr_salary_attachment
+#: model_terms:ir.ui.view,arch_db:payroll_arxi.hr_salary_addition_view_form
+msgid "Salary Attachment"
+msgstr "Dedução Salarial"
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/models/hr_payslip.py:0
+#, python-format
+msgid "Salary Slip"
+msgstr ""
+
+#. module: payroll_arxi
+#: model:ir.model,name:payroll_arxi.model_hr_payroll_structure
+msgid "Salary Structure"
+msgstr "Estrutura do salário"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_allowance_line__salary_structure_type_ids
+#: model:ir.model.fields,field_description:payroll_arxi.field_update_allowances_wizard__salary_structure_type_ids
+msgid "Salary Structure Type"
+msgstr "Tipo de Estrutura Salarial"
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_monthly_pay
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_occ_monthly_pay
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_monthly_pay
+msgid "Salary To Pay"
+msgstr "Vencimento a Pagar"
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/models/hr_payroll_structure.py:0
+#, python-format
+msgid "Social Security"
+msgstr "Segurança Social"
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_niss
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_niss
+msgid "Social Security 3%"
+msgstr "Segurança Social 3%"
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_niss_04
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_niss_04
+#: model:hr.salary.rule.category,name:payroll_arxi.niss4
+msgid "Social Security 4%"
+msgstr "Segurança Social 4%"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract__establishment_ssc
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_employee__establishment_ssc
+#: model:ir.model.fields,field_description:payroll_arxi.field_res_branch__ssc
+msgid "Social Security Code"
+msgstr "Código da Segurança Social"
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/wizard/hr_payroll_payslips_by_employees.py:0
+#, python-format
+msgid "Some work entries could not be validated."
+msgstr "Alguns pontos não puderam ser validados"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_payslip__state
+msgid "Status"
+msgstr "Estado"
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/wizard/work_entry_regeneration_wizard.py:0
+#, python-format
+msgid ""
+"The from date must be >= '%(earliest_available_date)s' and the to date must "
+"be <= '%(latest_available_date)s', which correspond to the generated work "
+"entries time interval."
+msgstr ""
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/models/hr_payslip_run.py:0
+#, python-format
+msgid "There are non validated work entries! "
+msgstr "Existem pontos por validar!"
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/models/hr_payslip.py:0
+#, python-format
+msgid ""
+"This payslip can be erroneous! Work entries falling outside the range of "
+"%(start)s to %(end)s may not be processed."
+msgstr ""
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/wizard/work_entry_regeneration_wizard.py:0
+#, python-format
+msgid "This user is not allocated to that Construction"
+msgstr "Este funcionário não está alocado a esta Obra"
+
+#. module: payroll_arxi
+#: model:ir.model,name:payroll_arxi.model_hr_leave
+msgid "Time Off"
+msgstr "Ausência"
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/wizard/hr_payroll_payslips_by_employees.py:0
+#, python-format
+msgid "Time intervals to look for:%s"
+msgstr "Intervalos de tempo a analisar:%s"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_payslip__date_from
+msgid "To"
+msgstr "A"
+
+#. module: payroll_arxi
+#: model:hr.salary.rule.category,name:payroll_arxi.pay
+msgid "To Pay"
+msgstr "Pagar"
+
+#. module: payroll_arxi
+#: model_terms:ir.ui.view,arch_db:payroll_arxi.hr_salary_addition_view_form
+msgid "Total Amount"
+msgstr "Valor Total"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract__transfer_ids
+msgid "Transfer"
+msgstr "Transferência"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract_transfer__transfer_start_date
+msgid "Transfer Construction Date"
+msgstr "Data de Transferência"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract_transfer__transfer_end_date
+msgid "Transfer Construction End Date"
+msgstr "Data Final de Transferência"
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_occ_transport_allowance
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_transport_allowance
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_transport_allowance
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract__transport_allowance
+#: model:ir.model.fields,field_description:payroll_arxi.field_update_allowances_wizard__transport_allowance
+msgid "Transport Allowance"
+msgstr "Subsidio de Transporte"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_allowance_line__transport_allowance_value
+msgid "Transport Allowance Value"
+msgstr "Valor de Subsidio de Transp."
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_salary_attachment__deduction_type
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_salary_attachment__deduction_type_select
+msgid "Type"
+msgstr "Tipo"
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/models/hr_payroll_structure.py:0
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_fee
+#, python-format
+msgid "Union"
+msgstr "Sindicato"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract__employee_is_unionized
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_employee__is_unionized
+msgid "Unionized"
+msgstr "Sindicato"
+
+#. module: payroll_arxi
+#: model:hr.leave.type,name:payroll_arxi.unjustified_absence
+msgid "Unjustified Absence"
+msgstr "Falta Injustificada"
+
+#. module: payroll_arxi
+#: model:ir.actions.act_window,name:payroll_arxi.update_allowances_wizard_action
+#: model:ir.ui.menu,name:payroll_arxi.menu_item_update_allowances_wizard
+msgid "Update Allowances"
+msgstr "Atualizar Subsidios"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_update_allowances_wizard__update_date
+msgid "Update Date"
+msgstr "Data de Atualização"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_allowance_line__updated
+msgid "Updated"
+msgstr "Atualizado"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_contract__employee_vat
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_employee__vat
+msgid "VAT"
+msgstr "NIF"
+
+#. module: payroll_arxi
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_union_vac_prop
+#: model:hr.salary.rule,name:payroll_arxi.mz_employees_vac_prop
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_salary_attachment__addition_type__vac_prop
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_salary_attachment__deduction_type__vac_prop
+msgid "Vacation Proportion"
+msgstr "Proporcionais de Férias"
+
+#. module: payroll_arxi
+#: model_terms:ir.ui.view,arch_db:payroll_arxi.update_allowances_wizard_form
+msgid "Validate"
+msgstr "Validar"
+
+#. module: payroll_arxi
+#: model:ir.model.fields.selection,name:payroll_arxi.selection__hr_payslip__state__verify
+msgid "Waiting"
+msgstr "Em Espera"
+
+#. module: payroll_arxi
+#: model:ir.model.fields,field_description:payroll_arxi.field_hr_payslip_run__warning_message
+msgid "Warning Message"
+msgstr ""
+
+#. module: payroll_arxi
+#: model:ir.actions.server,name:payroll_arxi.action_to_view_user_employees
+msgid "Work Entries"
+msgstr "Ponto"
+
+#. module: payroll_arxi
+#: code:addons/payroll_arxi/wizard/hr_payroll_payslips_by_employees.py:0
+#, python-format
+msgid ""
+"You must validate all work entries for each employee in order to create "
+"payslips."
+msgstr ""
+"É necessário validar todas as entradas de trabalho para cada funcionário "
+"para criar recibos de vencimento."
+
+#. module: payroll_arxi
+#: model:ir.model,name:payroll_arxi.model_allowance_line
+msgid "allowance.line"
+msgstr ""
+
+#. module: payroll_arxi
+#: model:ir.model,name:payroll_arxi.model_hr_contract
+msgid "hr.contract Inherit"
+msgstr ""
+
+#. module: payroll_arxi
+#: model:ir.model,name:payroll_arxi.model_hr_contract_transfer
+msgid "hr.contract.transfer"
+msgstr ""
+
+#. module: payroll_arxi
+#: model:ir.model,name:payroll_arxi.model_hr_payslip
+msgid "hr_payslip_inherit"
+msgstr ""
+
+#. module: payroll_arxi
+#: model:ir.model,name:payroll_arxi.model_res_branch
+msgid "res.branch"
+msgstr ""
+
+#. module: payroll_arxi
+#: model:ir.model,name:payroll_arxi.model_update_allowances_wizard
+msgid "update.allowances.wizard"
+msgstr ""

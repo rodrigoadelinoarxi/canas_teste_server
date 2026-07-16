@@ -1,0 +1,84 @@
+<odoo>
+    <record id="hr_contract_view_form" model="ir.ui.view">
+        <field name="name">hr.contract.form.inherit.hr_extra_info</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='salary']" position="inside">
+                <label for="food_allowance"/>
+                <div class="o_row" name="food_allowance">
+                    <field name="food_allowance" nolabel="1"/>
+                    <span>/ day</span>
+                </div>
+                <label for="transport_allowance"/>
+                <div class="o_row" name="transport_allowance">
+                    <field name="transport_allowance" nolabel="1"/>
+                    <span>/ day</span>
+                </div>
+                <field name="employee_vat"/>
+                <field name="employee_niss"/>
+                <field name="employee_establishment"/>
+                <field name="establishment_ssc"/>
+                <field name="employee_children"/>
+                <field name="employee_insurance"/>
+                <field name="employee_policy_number"/>
+                <field name="employee_is_unionized"/>
+                <field name="employee_is_occasional"/>
+            </xpath>
+            <xpath expr="//group[@name='salary']" position="after">
+                <group string="Bonus">
+                    <field name="assiduity_bonus"/>
+                    <field name="productivity_bonus"/>
+                    <field name="maintenance_bonus"/>
+                </group>
+            </xpath>
+            <xpath expr="//page[@name='other']" position="before">
+                <page string="Construction Transfer History">
+                    <field name="transfer_ids">
+                        <tree>
+                            <field name="transfer_start_date"/>
+                            <field name="transfer_end_date"/>
+                            <field name="construction_id"/>
+                            <field name="analytic_account_id"/>
+                            <field name="is_deslocated"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+            <xpath expr="//div[@name='button_box']//button[@name='action_open_payslips']" position="before">
+                <button class="oe_stat_button" name="action_open_contracts"
+                        type="object" icon="fa-file-text" groups="hr_payroll.group_hr_payroll_user">
+                    <field name="contract_history_count" string="Contracts" widget="statinfo"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_contract_transfer_view_form_payroll" model="ir.ui.view">
+        <field name="name">hr.contract.transfer.view.payroll</field>
+        <field name="model">hr.contract.transfer</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="contract_id" invisible="1"/>
+                    <group>
+                        <group name="project_info">
+                            <field name="construction_id"/>
+                            <field name="analytic_account_id"/>
+                        </group>
+                        <group name="transfer_dates">
+                            <field name="transfer_start_date"/>
+                            <field name="transfer_end_date"/>
+                        </group>
+                    </group>
+
+                    <group>
+                        <field name="is_deslocated"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>
