@@ -1,0 +1,27 @@
+<odoo>
+    <record id="product_supplierinfo_tree_view_inherited" model="ir.ui.view">
+        <field name="name">product.supplierinfo.tree.view.inherited</field>
+        <field name="model">product.supplierinfo</field>
+        <field name="inherit_id" ref="product.product_supplierinfo_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='price']" position="before">
+                <field name="price_without_discount"/>
+                <field name="first_discount"/>
+                <field name="second_discount"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="product_supplierinfo_form_view" model="ir.ui.view">
+        <field name="name">product.supplierinfo.form.view</field>
+        <field name="model">product.supplierinfo</field>
+        <field name="inherit_id" ref="product.product_supplierinfo_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//label[@for='price']" position="before">
+                <field name="price_without_discount"/>
+                <field name="first_discount"/>
+                <field name="second_discount"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
